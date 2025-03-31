@@ -466,6 +466,6 @@ def fetch_message_zalo():
         print(f"Chưa click vào nhóm")
               
 print("Bắt đầu thu thập dữ liệu...")
-while True:
+def start_crawling():
     scroll_and_click_groups(browser)
     time.sleep(5)
