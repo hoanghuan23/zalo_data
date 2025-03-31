@@ -1,0 +1,1 @@
+# ZaloMessage model definition
