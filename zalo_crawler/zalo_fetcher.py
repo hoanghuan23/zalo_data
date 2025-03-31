@@ -17,14 +17,10 @@ import re
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-
-
-browser = webdriver.Chrome()
-browser.get('https://chat.zalo.me')
-time.sleep(30)
-
 unique_messages = set()
 processed_images = set()
+browser = None
+group_link = ""
 
 keywords = {
     "phân loại tin" : {
@@ -467,5 +463,16 @@ def fetch_message_zalo():
               
 print("Bắt đầu thu thập dữ liệu...")
 def start_crawling():
-    scroll_and_click_groups(browser)
-    time.sleep(5)
+    global browser
+    try:
+        browser = webdriver.Chrome()
+        browser.get('https://chat.zalo.me')
+        time.sleep(30)  # Đợi người dùng đăng nhập
+        scroll_and_click_groups(browser)
+    except Exception as e:
+        print(f"Lỗi khi khởi động crawler: {e}")
+    finally:
+        if browser:
+            browser.quit()
+
+print("Module zalo_fetcher đã được khởi tạo...")
