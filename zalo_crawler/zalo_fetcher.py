@@ -14,6 +14,8 @@ from selenium.webdriver.chrome.options import Options
 import time
 from datetime import datetime
 import re
+import sqlite3
+from datetime import datetime
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -337,18 +339,46 @@ def scroll_and_click_groups(browser, interval=20):
 
 
 # Hàm lưu dữ liệu vào file excel
-def append_row_to_excel(values, file_path="hiepmeo.xlsx"):
-    columns = ["Nhóm", "Nội dung", "Phân loại tin", "Loại hình visa", "Trình độ ngoại ngữ", "Giới tính", "Ngành", "Công việc chi tiết", "INSIGHT", "Vùng/Tỉnh/Thành phố", "Lương yên/giờ", "Lương cơ bản/tháng", "Lương về tay/tháng", "Người đăng", "Thời gian", "Ngày tháng năm", "Link nhóm"]
+def append_row_to_sqlite(values):
+    columns = ["group_name", "content", "message_type", "visa_type", "language_level", "gender", "industry", 
+              "job_details", "insight", "location", "hourly_wage", "base_salary", "take_home_salary",
+              "poster", "timestamp", "date", "group_link"]
 
-    if os.path.exists(file_path):
-        existing_data = pd.read_excel(file_path)            
-        updated_data = pd.concat([existing_data, pd.DataFrame([values], columns=existing_data.columns)], ignore_index=True)
-        
-    else:
-        updated_data = pd.DataFrame([values], columns=columns)
+    conn = sqlite3.connect('zalo_messages.db')
+    cursor = conn.cursor()
 
-    updated_data.to_excel(file_path, index=False)
-    print(f"Dữ liệu đã được lưu vào {file_path}")
+    # Create table if it doesn't exist
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS zalo_messages (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            group_name TEXT,
+            content TEXT,
+            message_type TEXT,
+            visa_type TEXT, 
+            language_level TEXT,
+            gender TEXT,
+            industry TEXT,
+            job_details TEXT,
+            insight TEXT,
+            location TEXT,
+            hourly_wage TEXT,
+            base_salary TEXT,
+            take_home_salary TEXT,
+            poster TEXT,
+            timestamp INTEGER,
+            date TEXT,
+            group_link TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Insert the new row
+    placeholders = ','.join(['?' for _ in values])
+    cursor.execute(f'INSERT INTO zalo_messages ({",".join(columns)}) VALUES ({placeholders})', values)
+    
+    conn.commit()
+    conn.close()
+    print("Dữ liệu đã được lưu vào SQLite database")
 
 # Hàm thu thập tin nhắn từ Zalo
 def fetch_message_zalo():
@@ -397,7 +427,7 @@ def fetch_message_zalo():
                     new_row = [group_name, message_text, phân_loại_tin, loại_hình_visa, trình_độ_ngoại_ngữ, giới_tính, ngành,
                             công_việc_chi_tiết, insight, vùng_tỉnh_thành,luong_yen_gio, luong_cb_man, luong_vt_man,
                             user_name, timestamp, ngay_thang_nam, group_link]
-                    append_row_to_excel(new_row)
+                    append_row_to_sqlite(new_row)
 
             
             if images:
@@ -454,7 +484,7 @@ def fetch_message_zalo():
                             new_row = new_row = [group_name,message_text, phân_loại_tin, loại_hình_visa, trình_độ_ngoại_ngữ, giới_tính, ngành,
                             công_việc_chi_tiết, insight, vùng_tỉnh_thành,luong_yen_gio, luong_cb_man, luong_vt_man, 
                             user_name, timestamp, ngay_thang_nam, group_link]
-                            append_row_to_excel(new_row)
+                            append_row_to_sqlite(new_row)
 
                         os.remove(local_image_path) 
 
