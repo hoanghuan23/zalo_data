@@ -7,7 +7,7 @@ import random
 import os
 
 
-load_dotenv(dotenv_path = 'key.env')
+load_dotenv()       
 bucket_name='cdn.hellojob.jp'
 aws_access_key= os.getenv('AWS_ACCESS_KEY')
 aws_secret_key= os.getenv('AWS_SECRET_KEY')
@@ -41,9 +41,9 @@ def generate_random_image_name(extension):
     suffix = random.randint(100, 999)
     return f"{millis}{suffix}.{extension}"
 
-if __name__ == "__main__":
-    local_file_path = "F:/images/anhcanh.jpg"  # Thay đổi đường dẫn file local của bạn
-    result = upload_to_s3(local_file_path)
-    if result:
-        print("Link ảnh sau khi upload:")
-        print(result)
+# if __name__ == "__main__":
+#     local_file_path = "F:/images/anhcanh.jpg"  # Thay đổi đường dẫn file local của bạn
+#     result = upload_to_s3(local_file_path)
+#     if result:
+#         print("Link ảnh sau khi upload:")
+#         print(result)

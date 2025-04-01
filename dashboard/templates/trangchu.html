@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-right: 1px solid #dee2e6;
+            position: fixed;
+        }
+
+        .sidebar h1 {
+            color: #0d6efd;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            margin-bottom: 5px;
+            color: #666;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-item:hover {
+            background-color: #e9ecef;
+            color: #0d6efd;
+        }
+
+        .nav-item.active {
+            background-color: #e7f1ff;
+            color: #0d6efd;
+        }
+
+        .nav-item i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Admin Panel</h1>
+        <nav>
+            <a href="#" class="nav-item" data-section="dashboard">
+                <i class="fas fa-chart-line"></i>
+                Thống kê
+            </a>
+            <a href="#" class="nav-item active" data-section="crawl-data">
+                <i class="fas fa-list"></i>
+                Crawl dữ liệu
+            </a>
+            <a href="#" class="nav-item" data-section="ai-analysis">
+                <i class="fas fa-box"></i>
+                Phân tích dữ liệu AI
+            </a>
+        </nav>
+    </div>
+
+    <div class="main-content" id="dashboard" style="display: none;">
+        <div class="container">
+            <h2>Thống kê</h2>
+            <!-- Nội dung thống kê sẽ được thêm sau -->
+        </div>
+    </div>
+
+    <div class="main-content" id="crawl-data">
+        <div class="container">
+            <h2>Thu thập dữ liệu</h2>
+            <form method="post" style="margin-top: 20px;">
+                {% csrf_token %}
+                <button type="submit">
+                    <i class="fas fa-sync"></i>
+                    Bắt đầu thu thập Zalo
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-content" id="ai-analysis" style="display: none;">
+        <div class="container">
+            <h2>Phân tích dữ liệu AI</h2>
+            <!-- Nội dung phân tích AI sẽ được thêm sau -->
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.main-content');
+
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
+            });
+        }
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+                
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+            });
+        });
+
+        // Mặc định hiển thị phần crawl-data
+        showSection('crawl-data');
+    });
+    </script>
+</body>
+</html>
+
