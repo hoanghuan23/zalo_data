@@ -67,7 +67,7 @@ def scroll_and_click_groups(browser, interval=20):
                     fetch_message_zalo()
                     time.sleep(interval)
                 except Exception as e:
-                    print(f"Không thể click nhóm thứ {i+1}: {e}")
+                    print(f"Không thể click nhóm thứ {i + 1}")
                     continue
     except Exception as e:
         print(f"Lỗi ngoài vòng lặp: {e}")
@@ -99,13 +99,12 @@ def append_row_to_sqlite(values):
 
 #kiểm tra tin nhắn đã có trong database chưa
 def message_exit_data(content):
-    conn = sqlite3.connect('zalo_message.db')
+    conn = sqlite3.connect('zalo_messages.db')
     cursor = conn.cursor()
-    cursor.execute("""SELECT  1 FROM zalo_messages WHERE content = ? AND group_link = ? LIMIT 1""", (content,))
+    cursor.execute("""SELECT 1 FROM zalo_messages WHERE content = ? LIMIT 1""", (content,))
     result = cursor.fetchone()
     conn.close()
-    
-
+    return result is not None
 
 def fetch_message_zalo():
     time.sleep(5)
