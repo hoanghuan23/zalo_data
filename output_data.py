@@ -20,10 +20,12 @@ def export_sqlite_to_excel(db_path, output_path):
         date,
         image_url
     FROM zalo_messages
+    WHERE date = 'Ngày 08 Tháng 04 Năm 2025'
     ORDER BY id ASC
     """
     
     df = pd.read_sql_query(query, conn)
+    df = df.drop(columns=['id'])
     
     if os.path.exists(output_path):
         existing_df = pd.read_excel(output_path)
