@@ -1,6 +1,12 @@
 # Environment variables
 .env
 
+# dữ liệu ảnh
+temp_images
+
+# Sqlite database files
+zalo_messages.db
+
 # Python
 __pycache__/
 *.py[cod]

@@ -63,7 +63,7 @@ def scroll_and_click_groups(browser, interval=20):
             fetch_message_zalo()
             time.sleep(5)
     except Exception as e:
-        print(f"loi {str(e)}")
+        print(f"loi")
 
 # chống trùng lặp ảnh
 def get_image_hash(filename):
@@ -80,30 +80,25 @@ def get_image_hash(filename):
 def extract_text_from_image(image_path):
     try:
         with Image.open(image_path) as img:
-            # Chuyển đổi sang RGB nếu cần
             if img.mode != 'RGB':
                 img = img.convert('RGB')
             
-            # Tăng kích thước ảnh để cải thiện độ chính xác
             width, height = img.size
             if width < 1000 or height < 1000:
                 scale = max(1000/width, 1000/height)
                 new_size = (int(width * scale), int(height * scale))
                 img = img.resize(new_size, Image.Resampling.LANCZOS)
             
-            # Tăng độ tương phản
             from PIL import ImageEnhance
             enhancer = ImageEnhance.Contrast(img)
-            img = enhancer.enhance(1.5)  # Tăng độ tương phản lên 1.5 lần
+            img = enhancer.enhance(1.5) 
             
-            # Chuyển sang grayscale để giảm nhiễu
             img = img.convert('L')
             
-            # Thử nhiều cấu hình khác nhau
             configs = [
-                '--oem 1 --psm 3',  # Tự động phát hiện hướng văn bản
-                '--oem 1 --psm 6',  # Giả định văn bản là một khối thống nhất
-                '--oem 1 --psm 11'  # Tự động phát hiện hướng và sắp xếp
+                '--oem 1 --psm 3',  
+                '--oem 1 --psm 6', 
+                '--oem 1 --psm 11' 
             ]
             
             for config in configs:
@@ -291,8 +286,9 @@ def download_image(driver, blob_url, filename):
             print(f"Đã trích xuất văn bản từ ảnh: {extracted_text[:100]}...")
 
         s3_url = upload_to_s3(file_path)
+        os.remove(file_path)
+
         if s3_url:
-            # Trả về cả URL và văn bản trích xuất được
             return s3_url, img_hash, extracted_text
 
         try:
