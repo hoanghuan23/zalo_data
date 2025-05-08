@@ -20,7 +20,7 @@ def export_sqlite_to_excel(db_path, output_path):
         date,
         image_url
     FROM zalo_messages
-    WHERE date = 'Ngày 09 Tháng 04 Năm 2025'
+    WHERE date = 'Ngày 14 Tháng 04 Năm 2025'
     ORDER BY id ASC
     """
     
