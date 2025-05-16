@@ -35,7 +35,7 @@ META_JOB_SCHEMA = {
                 "postType": {
                     "type": "string",
                     "description": """Phân loại nội dung tin đầu vào chỉ lấy dữ liệu thực tập sinh.
-                    - Nếu có các từ liên TKT, KS, tokutei, kĩ sư, nội dung không phải nước nhật bản (hàn quốc, đài loan..), không liên quan đến tuyển dụng => 'Tin rác'.
+                    - Nếu nội dung không liên quan đến công việc, ngành nghề xuất khẩu lao động. Địa điểm làm việc thuộc các tỉnh (Đài trung, đài bắc, chương hóa.. ) hoặc đất nước (Đài Loan, Đức, Hy Lạp...) không thuộc Nhật bản => 'Tin rác'.
                     - Nếu không phân loại được trả về 'VIỆC LÀM NHẬT'.
                     """,
                     "enum": ["VIỆC LÀM NHẬT", "Tin rác"]
@@ -65,11 +65,11 @@ META_JOB_SCHEMA = {
                     "description": "Trả về bất cứ tỉnh, thành phố, khu vực nào được nhắc đến trong đơn hàng. Nếu không có thông tin về địa điểm làm việc thì trả về 'Empty'.",
                 },
 
-                "interviewFormat": {
-                    "type": "string",
-                    "description": "Nếu nội dung có nhắc đến phần phỏng vấn Online thì trả về 'Online', nếu không nhắc đến thì để mặc định là 'Trực tiếp'",
-                    "enum": ["Online", "Trực tiếp"]
-                },
+                # "interviewFormat": {
+                #     "type": "string",
+                #     "description": "Nếu nội dung có nhắc đến phần phỏng vấn Online thì trả về 'Online', nếu không nhắc đến thì để mặc định là 'Trực tiếp'",
+                #     "enum": ["Online", "Trực tiếp"]
+                # },
 
                 "languageLevel": {
                     "type": "string",
@@ -79,7 +79,7 @@ META_JOB_SCHEMA = {
 
                 },
                 "hourlyWage": {
-                    "type": "string",
+                    "type": "number",
                     "description": """Mức lương theo giờ của đơn hàng.
                      - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
                      - đơn hàng  có cụm 1s5 => 1500 yên/giờ, 1300h => 1300 yên/giờ.
@@ -90,7 +90,7 @@ META_JOB_SCHEMA = {
                 },
 
                 "basicSalary": {
-                    "type": "string",
+                    "type": "number",
                     "description": """Mức lương cơ bản của đơn hàng.
                      - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
                      - nếu trong đơn có 20tr/f, 20tr/form, '1400-15-5300', 25-35%/1h  => không phải lương.
@@ -102,7 +102,7 @@ META_JOB_SCHEMA = {
                   
                 },
                 "realSalary": {
-                    "type": "string",
+                    "type": "number",
                     "description": """Mức lương thực lĩnh (lương về tay) của đơn hàng.
                      - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
                      - nếu trong đơn có '20tr/f', '20tr/form', '1400-15-5300', '25-35%/1h', 'TC 30-40h'  => không phải lương.
@@ -112,12 +112,6 @@ META_JOB_SCHEMA = {
                 
                 },
               
-                "candidates": {
-                    "type": "string",
-                    "description": """Số lượng thi tuyển
-                                nếu trong đơn có ghi số lượng thi tuyển ghi là 6 => 6. Nếu không có nhắc tới số lượng thi tuyển => 'Empty'
-                                """,
-                },
                 "success-candidate": {
                     "type": "string",
                     "description": """Số lượng trúng tuyển
@@ -131,7 +125,7 @@ META_JOB_SCHEMA = {
 
                 "date": {
                     "type": "string",
-                    "description": """ngày phỏng vấn trong đơn hàng nếu có ví dụ '24/02' ghi 'ngày 24 tháng 2'. Nếu không có nhắc tới ngày phỏng vấn => 'Empty'""",
+                    "description": """ngày phỏng vấn trong đơn hàng nếu có ví dụ '24/02' hoặc 'ngày 24 tháng 2' => "24-02-2025". Nếu không có nhắc tới ngày phỏng vấn => 'Empty'""",
                 },
 
                 "phi": {
@@ -146,6 +140,16 @@ META_JOB_SCHEMA = {
                 "coche": {
                     "type": "number",
                     "description":  "đơn hàng có ghi 'Phí: 5600-1200-3tr', '5000-1000-3 triệu', '5000-1000-3'=> '3.0000.000', các đơn có ghi 15tr/form , 15 triệu/form, 15tr/f, ghi 15tr ở đầu nội dung => 15000000. Nếu chỉ ghi '5400-2000' => 'Empty'. Nếu không có phí => 'Empty'"
+                },
+
+                "min_age": {
+                    "type": "number",
+                    "description": """Độ tuổi tối thiểu yêu cầu trong đơn hàng, ví dụ "18-30" => 18. Nếu không có nhắc tới độ tuổi tối thiểu => 'Empty'""",
+                },
+
+                "max_age": {
+                    "type": "number",
+                    "description": """Độ tuổi tối đa yêu cầu trong đơn hàng, ví dụ "18-30" => 30. Nếu không có nhắc tới độ tuổi tối đa => 'Empty'""",
                 },
 
 
@@ -200,15 +204,15 @@ META_JOB_SCHEMA = {
                 "hourlyWage",
                 "basicSalary",
                 "realSalary",
-                "candidates",
                 "success-candidate",
-                "phone",
+                "makeAI",
+                "min_age",
+                "max_age",
                 "date",
+                "phone",
                 "phi",
                 "back",
                 "coche",
-                "interviewFormat",
-                "makeAI",
             ],
         "additionalProperties": False
     }

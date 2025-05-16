@@ -22,9 +22,9 @@ def authenticate_google_sheets():
 def analyze_job():
     start_time = time.time()
     service = authenticate_google_sheets()
-    RANGE_NAME = "KHO ĐƠN 5/5!C36:C42"
+    RANGE_NAME = "KHO ĐƠN 13/5!D2:D"
     result = service.spreadsheets().values().get(
-        spreadsheetId='1fOfCJ_GQwn-nGxFuQIKAEg0LNYxG9JKKqEB-tKBye5g', range=RANGE_NAME
+        spreadsheetId='1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI', range=RANGE_NAME
     ).execute()
     values = result.get('values', [])
 
@@ -35,7 +35,6 @@ def analyze_job():
     global lastSenderName
     unique_messages = []
     rowInserted = 1
-    # print(values)
     for chatItem in values:
         # groupName = chatItem[0]
         # lastSenderName = chatItem[1]
@@ -43,11 +42,9 @@ def analyze_job():
         if message:
             if message and message not in unique_messages:
                 unique_messages.append(message)
-                analyzeJobContent = analyzeAndSplitJobContent("", message)
+                analyzeJobContent = analyzeAndSplitJobContent(message)
                 analyzeJobContentUsage = analyzeJobContent.usage
                 choiceJsonStr = analyzeJobContent.choices[0].message.content
-                # print(f"{choiceJsonStr}")
-                # print("============")
                 count = 0
                 try:
                     if not choiceJsonStr:
@@ -61,7 +58,7 @@ def analyze_job():
                 for job in decodedJobs:
                     if len(job) >= 2:
                         # phân tích thông tin công việc
-                        analyzeJobInfo = analyzeJobInformation("", "", job)
+                        analyzeJobInfo = analyzeJobInformation(job)
                         # print(f"{analyzeJobInfo}")
                         prompt_tokens = 0
                         completion_tokens = 0
@@ -109,11 +106,11 @@ def analyze_job():
 def append_row_to_google_sheet(service, values):
     sheet = service.spreadsheets()
     body = {
-        'values': [values]  # Danh sách dữ liệu cho một dòng
+        'values': [values]
     }
     result = sheet.values().append(
-        spreadsheetId='1fOfCJ_GQwn-nGxFuQIKAEg0LNYxG9JKKqEB-tKBye5g',
-        range='KHO ĐƠN ĐÃ PHÂN TÍCH 5/5!A2',  # Ghi dữ liệu vào Sheet1, bắt đầu từ A2
+        spreadsheetId='1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI',
+        range='KHO ĐƠN ĐÃ PHÂN TÍCH 13/5!A2',  
         valueInputOption='RAW',
         body=body
     ).execute()
@@ -132,15 +129,15 @@ def formatJob(data):
         "hourlyWage",
         "basicSalary",
         "realSalary",
-        "candidates",
         "success-candidate",
-        "phone", 
+        "makeAI",
+        "min_age",
+        "max_age",
         "date",
+        "phone",
         "phi",
         "back",
         "coche",
-        "interviewFormat",
-        "makeAI",
     ]
 
     result = []

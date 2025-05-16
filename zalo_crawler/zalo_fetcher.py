@@ -1,5 +1,8 @@
-# Placeholder for Zalo crawling logic
+import sys
 import os
+import time
+import rapidjson
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) 
 import pandas as pd
 import base64
 from PIL import Image
@@ -14,9 +17,14 @@ from PIL import Image
 import imagehash        
 from datetime import datetime
 import sqlite3
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import json
+from openai import OpenAI
+from meta_schema import META_JOB_SCHEMA, CAREER_NOTE
+from google.oauth2.service_account import Credentials
+from googleapiclient.discovery import build
 from upload_image import upload_to_s3
+from analyze_job import authenticate_google_sheets, formatJob
+from openaitool import analyzeAndSplitJobContent, analyzeJobInformation
 
 
 unique_messages = set()
@@ -118,9 +126,22 @@ def extract_text_from_image(image_path):
         print(f"Lỗi khi trích xuất văn bản từ hình ảnh: {str(e)}")
         return None
 
+def append_row_to_google_sheet(service, spreadsheet_id, sheet_range, row_values):
+    sheet = service.spreadsheets()
+    body = {
+        'values': [row_values]  # Data for a single row
+    }
+    result = sheet.values().append(
+        spreadsheetId=spreadsheet_id,
+        range=sheet_range,
+        valueInputOption='RAW',
+        body=body
+    ).execute()
+    print(f"Successfully written {result.get('updates').get('updatedCells')} cells to Google Sheets.")
+
 
 # thêm dữ liệu vào sqlite
-def append_row_to_sqlite(values):
+def append_row_to_sqlite_and_sheet(values):
     columns = ["group_name", "poster", "content", "group_link", "created_at", "date", "image_url", "image_hash"]
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -144,6 +165,16 @@ def append_row_to_sqlite(values):
     conn.commit()
     conn.close()
     print("Da luu vao SQLite")
+
+    try:
+        sheet_values = values[:-1]
+        spreadsheet_id = '1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI'
+        sheet_range = 'Sheet190!B2'
+        service = authenticate_google_sheets()
+        append_row_to_google_sheet(service, spreadsheet_id, sheet_range, sheet_values)
+        analyze_and_update_sheet('1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI', 'Sheet190')
+    except Exception as e:
+        print(f"Error while pushing to Google Sheets: {e}")
 
 #kiểm tra tin nhắn, hình ảnh đã có trong database chưa
 def message_exit_data(content = None, image_hash = None):
@@ -222,13 +253,13 @@ def fetch_message_zalo():
                             combined_text = combined_text + "\n" + extracted_text if combined_text else extracted_text
                         
                         new_row = [group_name, user_name, combined_text, group_link, created_at, ngay_thang_nam, s3_url, img_hash]
-                        append_row_to_sqlite(new_row)
+                        append_row_to_sqlite_and_sheet(new_row)
                         print(f"Da luu anh {idx+1}: {s3_url} (text: {'co' if combined_text else 'trong'})")
                 else:
                     new_row = [group_name, user_name, message_text, group_link, created_at, ngay_thang_nam, None, None]
-                    append_row_to_sqlite(new_row)
+                    append_row_to_sqlite_and_sheet(new_row)
                     print(f"Da luu tin nhan chi co text")
-
+            
     except:
         print("loi khong the lay tin nhan")
 
@@ -301,6 +332,84 @@ def download_image(driver, blob_url, filename):
     except Exception as e:
         print(f"Loi khi tai anh: {str(e)}")
         return None
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# hàm kiểm tra dòng dữ liệu đã được phân tích chưa
+
+# hàm phân tích và cập nhật dữ liệu vào Google Sheets
+def analyze_and_update_sheet(spreadsheet_id, sheet_name):
+    
+    
+    service = authenticate_google_sheets()
+
+    range_name = f"{sheet_name}!C2:AA"
+    result = service.spreadsheets().values().get(
+        spreadsheetId=spreadsheet_id, range=range_name).execute()
+    values = result.get('values', [])
+    if not values:
+        print("Khong tim thay du lieu.")
+        return
+    
+    for row_index, row in enumerate(values, start=2):
+        if not row:
+            continue
+        message = row[0]
+        
+        processed_status = row[-1]
+
+        if not message or processed_status == "Waiting":
+            continue
+        print(f"Đang phân tích tin nhắn: {row_index}")
+        
+        try:
+            analyze_result = analyzeAndSplitJobContent(message)
+            content = analyze_result.choices[0].message.content
+
+            job_info = analyzeJobInformation(content)
+            job_info_content = job_info.choices[0].message.content
+
+            try:
+                job_data = rapidjson.loads(job_info_content)
+                formatted_job = formatJob(job_data)
+
+                update_values = []
+
+                for field in formatted_job:
+                    update_values.append(field if field is not None else "")
+                
+                last_col = chr(ord('H') + len(update_values) - 1)
+                update_ranger = f"{sheet_name}!H{row_index}:{last_col}{row_index}"
+                
+                body = {
+                    'values': [update_values]
+                }
+                update_result = service.spreadsheets().values().update(
+                    spreadsheetId=spreadsheet_id,
+                    range=update_ranger,
+                    valueInputOption='RAW',
+                    body=body
+                ).execute()
+
+                processed_status = f"{sheet_name}!AA{row_index}"
+                processed_body = {
+                    'values': [["Waiting"]]
+                }
+                service.spreadsheets().values().update(
+                    spreadsheetId=spreadsheet_id,
+                    range=processed_status,
+                    valueInputOption='RAW',
+                    body=processed_body
+                ).execute()
+
+                updated_cells = update_result.get('updatedCells', 0)
+                print(f"Đã cập nhật thành công dòng {row_index} với {updated_cells} ô.")
+            except Exception as e:
+                print(f"Lỗi khi phân tích JSON: {e}")
+        except Exception as e:
+            print(f"Lỗi khi phân tích dòng {row_index}: {e}")
+
+        time.sleep(1)
 
 def start_crawling():
     while True:
