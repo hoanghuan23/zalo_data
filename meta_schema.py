@@ -10,8 +10,17 @@ VISA_JOB_KEYWORDS = {
     "Thực tập sinh 3 go": [
         "may 3go", "may 3 go", "3go", "3 go", 'may quay lại'
     ],
-  
+
+    "Tokutei đầu Việt": [
+        "tkt đầu Việt", "phí NET", "VN", "net", "phí Net", "tokutei đầu Việt", "đầu Việt", "đ.Việt", "đ v", "đ.v", "đầu v", "quay lại", "nhận đi mới", "nhận cả đi mới", "đi mới", "có vé", "chưa vé",'bao đỗ', 'bao đậu', 'bay gấp', 'tiếng yếu', 'bảng lương'
+    ],
+    "Tokutei đầu Nhật": [
+        "tkt đầu Nhật", "tokutei đầu Nhật", "đầu Nhật", "đ.nhật", "đ n", "đ.n", "đầu n", 'chuyển việc', 'c.việc', 'gino còn x năm', 'bonasu', "nhận x ngành", 'back x man', 'nhận nhóm ngành trên', 'nhận nhóm ngành dưới', 'ngành trên', 'ngành dưới', 'sắp hết hạn', 'thực tập sinh sắp hết hạn', 'sắp kết thúc'
+    ],
+    "Kỹ sư đầu Nhật": ["Kỹ sư", "kĩ sư", "ks", "ksu", "đầu Nhật", "đ.Nhật", "đ n", "đ.n", "đầu n", "đi làm ngay", "chuyển việc", "cv lại", "xác nhận công việc", "xncv", 'nvct', 'nhân viên chính thức'],
+    "Kỹ sư đầu Việt": ["Kỹ sư","kĩ sư", "ks", "ksu", "đầu Việt", "đ.Việt", "đ v", "đ.v", "đầu v", "bảng điểm", "xác nhận công việc", "bằng", "trình sớm", 'bay gấp', 'quay lại', 'q.lại', 'có vé', 'nvct', 'nhân viên chính thức']
 }
+
 CAREER_NOTE = """Nông nghiệp'; 'Thực phẩm'; 'In ấn'; 'Sơn'; 'Đồ gia dụng'; 'Đóng sách'; 'Đúc'; 'Hàn xì'; 'Đóng gói'; 'Sản xuất hộp'; 'Gốm'; 'Bê tông'; 'Rác thải'; 'Đường sắt'; 'Cao su, nhựa'; 'Vật liệu composite'; 'Nghề Mộc'; 'Ngư nghiệp'; 'Dệt may'; 'Xây dựng'; 'Cơ khí, kim loại'; 'Sân bay'; 'Nồi hơi'; 'Logistic'; 'Vận chuyển'; 'Điều dưỡng'; 'Chế tạo vật liệu'; 'Đóng tàu'; 'Nhà hàng'; 'Vệ sinh toà nhà'; 'Buồng phòng khách sạn'; 'Chế tạo máy'; 'Ô tô'; 'Lưu trú', 'Khách sạn'; 'Vận tải', 'Lái xe'; 'Điện, điện tử'; 'Kiến trúc'; 'Tài chính', 'Bảo hiểm'; 'Thiết kế'; 'Công nghệ thông tin'; 'Bảo trì, sửa chữa máy móc'; 'Quản lý sản xuất'; 'Giải trí', 'Du lịch'; 'Kế toán'; 'Kinh doanh, Sale, Tiếp thị'; 'Y tế'; 'Năng lượng';'Phiên dịch viên';'Giặt là'.\n
                     * Note: 
                     - 'nntt'->'Nông nghiệp trồng trọt', 'lmxd' -> 'Lái máy xây dựng\n
@@ -32,14 +41,14 @@ META_JOB_SCHEMA = {
             "type": "object",
             "description": "Return raw JSON only, without adding ``` or any other formatting or any other AI content",
             "properties": {
-                "postType": {
-                    "type": "string",
-                    "description": """Phân loại nội dung tin đầu vào chỉ lấy dữ liệu thực tập sinh.
-                    - Nếu nội dung không liên quan đến công việc, ngành nghề xuất khẩu lao động. Địa điểm làm việc thuộc các tỉnh (Đài trung, đài bắc, chương hóa.. ) hoặc đất nước (Đài Loan, Đức, Hy Lạp...) không thuộc Nhật bản => 'Tin rác'.
-                    - Nếu không phân loại được trả về 'VIỆC LÀM NHẬT'.
-                    """,
-                    "enum": ["VIỆC LÀM NHẬT", "Tin rác"]
-                },
+                # "postType": {
+                #     "type": "string",
+                #     "description": """Phân loại nội dung tin đầu vào chỉ lấy dữ liệu thực tập sinh.
+                #     - Nếu nội dung không liên quan đến công việc, ngành nghề xuất khẩu lao động. Địa điểm làm việc thuộc các tỉnh (Đài trung, đài bắc, chương hóa.. ) hoặc đất nước (Đài Loan, Đức, Hy Lạp...) không thuộc Nhật bản => ' TIN RÁC'.
+                #     - Nếu không phân loại được trả về 'VIỆC LÀM NHẬT'.
+                #     """,
+                #     "enum": ["VIỆC LÀM NHẬT", "Tin rác"]
+                # },
                 "visa": {
                     "type": "string",
                     "description": f"""- Dưới đây là danh sách tiêu đề và từ khóa liên quan:\n
@@ -52,12 +61,11 @@ META_JOB_SCHEMA = {
                     Phân tích nội dung input để tìm ra loại visa xklđ(thường là Nhật Bản) phù hợp.\n
                     Đối chiếu các từ khóa có trong input với danh sách từ khóa của từng tiêu đề và kết hợp với lưu ý, ưu tiên các trường hợp đặc biệt có trong lưu ý.\n
                     Xác định tiêu đề nào chứa nhiều từ khóa phù hợp hoặc liên quan nhất với input.\n
-                    - Output: Bắt buộc phải chọn ra 1 tiêu đề phù hợp nhất từ danh sách đã đưa và trả về. không bao gồm câu từ AI. nếu không có từ khóa rõ ràng trả về 'thực tập sinh 3 năm' """,
-                        "enum": ["Thực tập sinh 3 năm", "Thực tập sinh 1 năm", "Thực tập sinh 3 go"]
+                    - Output: Bắt buộc phải chọn ra 1 tiêu đề phù hợp nhất từ danh sách đã đưa và trả về. không bao gồm câu từ AI. nếu không có từ khóa rõ ràng trả về 'Thực tập sinh 3 năm' """,
                     },
                 "job": {
                     "type": "string",
-                    "description": "bất cứ ngành nghề , công việc nào được nhắc đến trong nội dung tin nhắn , tham khảo nếu xuất hiện từ khóa viết tắt trong {CAREER_NOTE}. Nếu không có công việc nào thì trả về 'Không cung cấp'."
+                    "description": "bất cứ ngành nghề , công việc nào được nhắc đến trong nội dung tin nhắn ví dụ (chế biến thực phẩm, đóng gói, hàn xì, bảo dưỡng ô tô, khách sạn...) , tham khảo nếu xuất hiện từ khóa viết tắt trong {CAREER_NOTE}. Nếu không có công việc nào thì trả về 'Không cung cấp'."
                 },
 
                 "workLocation": {
@@ -65,11 +73,6 @@ META_JOB_SCHEMA = {
                     "description": "Trả về bất cứ tỉnh, thành phố, khu vực nào được nhắc đến trong đơn hàng. Nếu không có thông tin về địa điểm làm việc thì trả về 'Empty'.",
                 },
 
-                # "interviewFormat": {
-                #     "type": "string",
-                #     "description": "Nếu nội dung có nhắc đến phần phỏng vấn Online thì trả về 'Online', nếu không nhắc đến thì để mặc định là 'Trực tiếp'",
-                #     "enum": ["Online", "Trực tiếp"]
-                # },
 
                 "languageLevel": {
                     "type": "string",
@@ -94,7 +97,7 @@ META_JOB_SCHEMA = {
                     "description": """Mức lương cơ bản của đơn hàng.
                      - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
                      - nếu trong đơn có 20tr/f, 20tr/form, '1400-15-5300', 25-35%/1h  => không phải lương.
-                     - nếu đơn hàng ghi như 'lcb 26', 'lương cơ bản', '18m', 'lương 18', 'lg 21-25m' ... => đó là lương cơ bản (man/tháng).
+                     - nếu đơn hàng ghi như 'lcb:26 Man', 'lương cơ bản', '18m', 'lương 18', 'lg 21-25m', 'thu nhập 25m' ... => đó là lương cơ bản (man/tháng).
                      - nếu lương có khoảng như '20-25 man', thì lấy số đứng trước dấu '-'
                      - nếu trong đơn có khoảng lương cao ví dụ'500-700' => đó là lương năm. lấy số đứng trước dấu '-' chia cho 12 để chuyển về lương tháng.
                      - nếu không có nhắc tới lương cơ bản => 'Empty'
@@ -130,7 +133,9 @@ META_JOB_SCHEMA = {
 
                 "phi": {
                     "type": "number",
-                    "description": "đơn hàng có ghi 'Phí: 5600-1200-3tr', '5600-1000-17', '56-14', 'Phí 5,6k' => '5600' hoặc Nếu chỉ ghi 'phí 5000' => '5000'. Nếu không có phí => 'Empty'"
+                    "description": """đơn hàng có ghi 'Phí: 5600-1200-3tr', '5600-1000-17', '56-14', 'Phí 5,6k' => '5600' hoặc Nếu chỉ ghi 'phí 5000' => '5000',
+                    có nhắc tới phí Net ví dụ 'phí NET: 500$' , 'Net 500$' => '500'. Nếu không có phí => 'Empty'
+                    """
                 },  
                 "back": {
                     "type": "number",
@@ -174,7 +179,7 @@ META_JOB_SCHEMA = {
                     - Nếu có nhắc đến 'vợ chồng' thì trả về 'Vợ chồng'.
                     - Nếu có nhắc đến 'không yêu cầu kinh nghiệm', 'ko yc kn'thì trả về 'không yêu cầu kinh nghiệm'.
                     - Nếu có nhắc đến 'hỗ trợ chỗ ở' thì trả về 'Hỗ trợ chỗ ở'.
-                    - Không trả về giá trị nếu từ khóa không xuất hiện trong nội dung.
+                    - Tuyệt đối không trả về các giá trị trên nếu không xuất hiện trong nội dung đơn hàng.
                     - không trả về các giá trị trùng lặp trong mảng, một giá trị chỉ xuất hiện 1 lần.
                     """,
                     "items": {
@@ -194,7 +199,7 @@ META_JOB_SCHEMA = {
                 },
             },
         "required": [
-                "postType",
+                # "postType",
                 "visa",
                 "languageLevel",
                 "gender",
