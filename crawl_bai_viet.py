@@ -280,15 +280,12 @@ for i, row in enumerate(values[tu_hang-2:den_hang-1], start=tu_hang):
                         'Ngày tháng năm': thoi_gian_text
                     }
 
-                    if ten_nguoi_dung.lower() == "người tham gia ẩn danh" or ten_nguoi_dung == "":
-                        print("Bỏ qua tên người dùng ẩn danh.")
+                    if not check_duplicate_content(noi_dung, spreadsheet_id, sheet_name):
+                        # groups_data.append(group_data)
+                        print("Đã thêm dữ liệu vào danh sách.")
+                        save_to_gg_sheet([group_data], '1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI', 'ỨNG VIÊN PHÂN TÍCH')
                     else:
-                        if not check_duplicate_content(noi_dung, spreadsheet_id, sheet_name):
-                            # groups_data.append(group_data)
-                            print("Đã thêm dữ liệu vào danh sách.")
-                            save_to_gg_sheet([group_data], '1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI', 'ỨNG VIÊN PHÂN TÍCH')
-                        else:
-                            print("Dữ liệu đã tồn tại, bỏ qua.")
+                        print("Dữ liệu đã tồn tại, bỏ qua.")
                 except Exception as e:
                     print(f"Lỗi khi tìm phần tử trong đường dẫn {url_bai_viet}: {str(e)}")
 
