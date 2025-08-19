@@ -1,6 +1,6 @@
 from openai import OpenAI
 from meta_schema import META_JOB_SCHEMA, CAREER_NOTE
-from meta_schema_uv import META_UV_SCHEMA
+from meta_schema_type import META_UV_SCHEMA
 import os
 from dotenv import load_dotenv
 load_dotenv()

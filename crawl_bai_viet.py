@@ -53,16 +53,6 @@ def tinh_thoi_gian(thoi_gian_text):
         print(f"Lỗi khi chuyển đổi chuỗi thời gian: {str(e)}")
         return None
 
-# def save_to_excel(data, directory="Bài viết/Nhật Bản/TC/11-7"):
-#     thoi_gian_ht = datetime.now()
-#     ten_file_excel = f"nhom_01_{thoi_gian_ht.strftime('%Y-%m-%d %H-%M-%S').replace(' ', '-')}.xlsx"
-#     if not os.path.exists(directory):
-#         os.makedirs(directory)
-#     filepath = os.path.join(directory, ten_file_excel)
-#     df = pd.DataFrame(data)
-#     df.to_excel(filepath, index=False)
-#     print(f"Dữ liệu đã được lưu vào tệp {filepath}.")
-
 def save_to_gg_sheet(data, spreadsheet_id, sheet_name):
     try:
         service = build('sheets', 'v4', credentials=creds)
@@ -76,6 +66,7 @@ def save_to_gg_sheet(data, spreadsheet_id, sheet_name):
             body=body
         ).execute()
         print(f"{result.get('updates').get('updatedCells')} cells updated.")
+        label_job_or_spam('1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI', 'ỨNG VIÊN PHÂN TÍCH')
     except Exception as e:
         print(f"Lỗi khi lưu dữ liệu vào Google Sheets: {str(e)}")
 
@@ -107,7 +98,7 @@ driver.refresh()
 
 url_profiles = "https://www.facebook.com/profile.php?id="
 
-creds = service_account.Credentials.from_service_account_file('update_dulieu.json')
+creds = service_account.Credentials.from_service_account_file('hellojobv5-8406e0a8eed7.json')
 service = build('sheets', 'v4', credentials=creds)
 
 spreadsheet_id = '10SL6WCt6YPrHUtxzVmsNI1futs-SOi9ebYIn_C641vc'
@@ -127,8 +118,6 @@ for i, row in enumerate(values[tu_hang-2:den_hang-1], start=tu_hang):
     count = 0
     groups_data = []
     flag = False
-    # ten_nhom = driver.find_element(
-    #     By.CSS_SELECTOR, 'span.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1xmvt09.x1lliihq.x1s928wv.xhkezso.x1gmr53x.x1cpjm7i.x1fgarty.x1943h6x.x1ill7wo.x41vudc.x1q74xe4.xyesn5m.x1xlr1w8.xzsf02u.x1yc453h a').text
     ten_nhom = driver.find_element(By.XPATH,"//div[@class='x1e56ztr x1xmf6yo']//h1//span//a").text
     print(f"Tên nhóm: {ten_nhom}")
 
@@ -169,16 +158,11 @@ for i, row in enumerate(values[tu_hang-2:den_hang-1], start=tu_hang):
                 except Exception as e:
                     ten_nguoi_dung = ""
 
-
-                # time.sleep(2000)
-
                 action = ActionChains(driver)
                 action.move_to_element(url_bai_viet_elem).perform()
                 time.sleep(2)
 
                 try:
-                    # thoi_gian = driver.find_element(
-                    #     By.CSS_SELECTOR, 'span.x193iq5w.xeuugli.x13faqbe.x1vvkbs.x1xmvt09.x1nxh6w3.x1sibtaa.xo1l8bm.xzsf02u').text
                     thoigianElm=driver.find_element(
                         By.CSS_SELECTOR, '.__fb-light-mode div[role="tooltip"],.__fb-dark-mode div[role="tooltip"]')
                     thoi_gian = thoigianElm.text
@@ -305,8 +289,42 @@ for i, row in enumerate(values[tu_hang-2:den_hang-1], start=tu_hang):
 
     for group in groups_data:
         print(group)
-
-    # if len(groups_data) > 0:
-        # save_to_excel(groups_data)
-
 driver.quit()
+
+def label_job_or_spam(spreadsheet_id, sheet_name):
+    try:
+        # Đọc dữ liệu cột B (nội dung)
+        service = build('sheets', 'v4', credentials=creds)
+        range_name = f'{sheet_name}!B2:B'
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id, range=range_name).execute()
+        values = result.get('values', [])
+
+        job_keywords = ['tìm đơn', 'xin đơn', ]
+        spam_keywords = ['lương', 'về tay', 'đơn hàng']
+
+        labels = []
+        for row in values:
+            content = row[0].lower() if row else ""
+            label = "Khác"
+            if any(kw in content for kw in job_keywords):
+                label = "ỨNG VIÊN"
+            elif any(kw in content for kw in spam_keywords):
+                label = "VIỆC LÀM NHẬT"
+            else:
+                label = "TIN RÁC"
+            labels.append([label])
+
+        # Ghi nhãn vào cột K (cột 11, bắt đầu từ K2)
+        update_range = f'{sheet_name}!K2:K{len(labels)+1}'
+        body = {'values': labels}
+        service.spreadsheets().values().update(
+            spreadsheetId=spreadsheet_id,
+            range=update_range,
+            valueInputOption='RAW',
+            body=body
+        ).execute()
+        print("Đã cập nhật nhãn vào cột K.")
+    except Exception as e:
+        print(f"Lỗi khi gán nhãn: {str(e)}")
+
