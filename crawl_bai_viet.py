@@ -17,6 +17,7 @@ import requests
 from io import BytesIO
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
+import datetime
 
 
 def extract_text_from_image(image_url):
@@ -110,6 +111,10 @@ values = result.get('values', [])
 tu_hang = 51
 den_hang = 80
 
+now = datetime.datetime.now()
+two_days_ago = now - datetime.timedelta(days=2)
+two_days_ago = int(two_days_ago.timestamp())
+
 for i, row in enumerate(values[tu_hang-2:den_hang-1], start=tu_hang):  
     driver.get(row[0] + "?sorting_setting=CHRONOLOGICAL")
     print(f"Đã tải xong nhóm: {row[0]}")
@@ -173,7 +178,7 @@ for i, row in enumerate(values[tu_hang-2:den_hang-1], start=tu_hang):
                 if thoi_gian:
                     thoi_gian_parsed = tinh_thoi_gian(thoi_gian)
                     thoi_gian = int(thoi_gian_parsed.timestamp())
-                    if thoi_gian_parsed and int(thoi_gian_parsed.timestamp()) <= 1753117200:
+                    if thoi_gian_parsed and int(thoi_gian_parsed.timestamp()) <= two_days_ago:
                         flag = True
                         break
                 else:
