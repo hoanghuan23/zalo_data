@@ -1,0 +1,372 @@
+[
+  {
+    "value": "TKT#Thực phẩm",
+    "contains_e": ["tokutei"],
+    "contains_i": ["thực phẩm", "chế biến", "bánh mì"]
+  },
+
+  {
+    "value": "TKT#Thực phẩm",
+    "contains_e": ["tokutei"],
+    "contains_i": ["thực phẩm", "chế biến", "bánh mì"]
+  },
+  {
+    "value": "TKT#Nông nghiệp trồng trọt",
+    "contains_e": ["tokutei"],
+    "contains_i": ["nông nghiệp trồng trọt", "nông nghiệp"]
+  },
+  {
+    "value": "TKT#Nông nghiệp chăn nuôi",
+    "contains_e": ["tokutei"],
+    "contains_i": ["nông nghiệp chăn nuôi", "chăn nuôi"]
+  },
+  {
+    "value": "TKT#Đúc nhựa",
+    "contains_e": ["tokutei"],
+    "contains_i": ["đúc nhựa", "cao su"]
+  },
+  {
+    "value": "TKT#Xây dựng tổng hợp",
+    "contains_e": ["tokutei"],
+    "contains_i": ["xây dựng", "xây trát"]
+  },
+  {
+    "value": "TKT#Phá dỡ",
+    "contains_e": ["tokutei"],
+    "contains_i": ["phá dỡ"]
+  },
+  {
+    "value": "TKT#Điện",
+    "contains_e": ["tokutei"],
+    "contains_i": ["điện"]
+  },
+  {
+    "value": "TKT#Cốp pha công trình",
+    "contains_e": ["tokutei"],
+    "contains_i": ["cốt pha"]
+  },
+  {
+    "value": "TKT#Bảo dưỡng ô tô",
+    "contains_e": ["tokutei"],
+    "contains_i": ["bảo dưỡng"]
+  },
+  {
+    "value": "TKT#Nhà hàng",
+    "contains_e": ["tokutei"],
+    "contains_i": ["nhà hàng", "nhân viên quán ăn"]
+  },
+  {
+    "value": "TKT#Hàn xì",
+    "contains_e": ["tokutei"],
+    "contains_i": ["hàn", "hàn xì"]
+  },
+  {
+    "value": "TKT#Gia công cơ khí",
+    "contains_e": ["tokutei"],
+    "contains_i": ["gia công cơ khí"]
+  },
+  {
+    "value": "TKT#Cơ khí",
+    "contains_e": ["tokutei"],
+    "contains_i": ["cơ khí"]
+  },
+  {
+    "value": "TKT#Đóng gói công nghiệp",
+    "contains_e": ["tokutei"],
+    "contains_i": ["đóng gói công nghiệp"]
+  },
+  {
+    "value": "TKT#Đóng gói",
+    "contains_e": ["tokutei"],
+    "contains_i": ["đóng gói", "đóng gói nấm"]
+  },
+  {
+    "value": "TKT#Chống thấm",
+    "contains_e": ["tokutei"],
+    "contains_i": ["chống thấm"]
+  },
+  {
+    "value": "TKT#Điều dưỡng, hộ lý",
+    "contains_e": ["tokutei"],
+    "contains_i": ["điều dưỡng"]
+  },
+  {
+    "value": "TKT#Sơn",
+    "contains_e": ["tokutei"],
+    "contains_i": ["sơn"]
+  },
+  {
+    "value": "TKT#Đúc",
+    "contains_e": ["tokutei"],
+    "contains_i": ["đúc"]
+  },
+  {
+    "value": "TKT#Dán tường",
+    "contains_e": ["tokutei"],
+    "contains_i": ["dán tường"]
+  },
+  {
+    "value": "TKT#Buồng phòng khách sạn",
+    "contains_e": ["tokutei"],
+    "contains_i": ["buồng phòng khách sạn"]
+  },
+  {
+    "value": "TKT#Lái xe",
+    "contains_e": ["tokutei"],
+    "contains_i": ["lái xe"]
+  },
+  {
+    "value": "TKT#Vệ sinh tòa nhà",
+    "contains_e": ["tokutei"],
+    "contains_i": ["vệ sinh tòa nhà"]
+  },
+  {
+    "value": "TKT#Hoàn thiện nội thất",
+    "contains_e": ["tokutei"],
+    "contains_i": ["hoàn thiện nội thất"]
+  },
+  {
+    "value": "TKT#Chế biến và đóng gói thịt lợn",
+    "contains_e": ["tokutei"],
+    "contains_i": ["thịt lợn"]
+  },
+  {
+    "value": "TKT#Điện tử",
+    "contains_e": ["tokutei"],
+    "contains_i": ["điện tử"]
+  },
+  {
+    "value": "TKT#Vận hành máy",
+    "contains_e": ["tokutei"],
+    "contains_i": ["vận hành máy"]
+  },
+  {
+    "value": "TKT#Buộc thép",
+    "contains_e": ["tokutei"],
+    "contains_i": ["buộc thép"]
+  },
+  {
+    "value": "TKT#Kiểm tra sản phẩm nhựa",
+    "contains_e": ["tokutei"],
+    "contains_i": ["kiểm tra sản phẩm"]
+  },
+  {
+    "value": "TKT#Lắp ghép cốt thép",
+    "contains_e": ["tokutei"],
+    "contains_i": ["cốt thép"]
+  },
+  {
+    "value": "TKT#Bảo trì máy móc",
+    "contains_e": ["tokutei"],
+    "contains_i": ["bảo trì"]
+  },
+
+
+  {
+    "value": "TTS#May mặc",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["may mặc", "dệt may", "may rèm cửa"]
+  },
+  {
+    "value": "TTS#Nông nghiệp trồng trọt",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["nông nghiệp trồng trọt", "nông nghiệp"]
+  },
+  {
+    "value": "TTS#Đúc nhựa",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["đúc nhựa"]
+  },
+  {
+    "value": "TTS#Hàn xì",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["hàn xì"]
+  },
+  {
+    "value": "TTS#Cốp pha công trình",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["cốp pha"]
+  },
+  {
+    "value": "TTS#Thực phẩm",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["thực phẩm", "chế biến", "bánh mì"]
+  },
+  {
+    "value": "TTS#Vận hành máy",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["vận hành máy", "điều khiển máy"]
+  },
+  {
+    "value": "TTS#Gia công kim loại - Tekko",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["gia công kim loại"]
+  },
+  {
+    "value": "TTS#Điều dưỡng, hộ lý",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["điều dưỡng"]
+  },
+  {
+    "value": "TTS#Bảo dưỡng ô tô",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["bảo dưỡng ô tô"]
+  },
+  {
+    "value": "TTS#Bảo trì máy móc",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["bảo dưỡng hệ thống"]
+  },
+  {
+    "value": "TTS#Giặt là",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["giặt là"]
+  },
+  {
+    "value": "TTS#Đường ống",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["đường ống"]
+  },
+  {
+    "value": "TTS#Lắp ghép cốt thép",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["cốt thép"]
+  },
+  {
+    "value": "TTS#Hoàn thiện nội thất",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["nội thất", "hoàn thiện nội thất"]
+  },
+  {
+    "value": "TTS#Cơ khí",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["cơ khí"]
+  },
+  {
+    "value": "TTS#Đóng gói",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["đóng gói"]
+  },
+  {
+    "value": "TTS#Đóng gói công nghiệp",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["đóng gói công nghiệp"]
+  },
+  {
+    "value": "TTS#In ấn",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["in ấn"]
+  },
+  {
+    "value": "TTS#Sơn xây dựng",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["sơn xây dựng"]
+  },
+  {
+    "value": "TTS#Sơn",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["sơn"]
+  },
+  {
+    "value": "TTS#Bê tông",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["bê tông"]
+  },
+  {
+    "value": "TTS#Lái máy xây dựng",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["lái máy"]
+  },
+  {
+    "value": "TTS#Linh kiện ô tô",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["linh kiện ô tô"]
+  },
+  {
+    "value": "TTS#Điện tử",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["linh kiện điện tử"]
+  },
+  {
+    "value": "TTS#Kiểm tra linh kiện ô tô",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["kiểm tra linh kiện ô tô"]
+  },
+  {
+    "value": "TTS#Hàn bán tự động",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["hàn bán tự động"]
+  },
+  {
+    "value": "TTS#Xây dựng tổng hợp",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["xây dựng"]
+  },
+  {
+    "value": "TTS#Sản xuất linh kiện ô tô",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["sản xuất linh kiện", "sản xuất phụ tùng"]
+  },
+
+
+  {
+    "value": "KS#Ô tô",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["ô tô"]
+  },
+  {
+    "value": "KS#Quản lý",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["quản lý"]
+  },
+  {
+    "value": "KS#Lập trình viên",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["công nghệ thông tin"]
+  },
+  {
+    "value": "KS#Bảo trì máy móc",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["bảo dưỡng máy móc"]
+  },
+  {
+    "value": "KS#Xây dựng tổng hợp",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["xây dựng"]
+  },
+  {
+    "value": "KS#Điện, kỹ thuật điện",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["điện"]
+  },
+  {
+    "value": "KS#Kinh tế",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["kinh tế"]
+  },
+  {
+    "value": "KS#Sản xuất sản phẩm",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["sản phẩm"]
+  },
+  {
+    "value": "KS#Dịch vụ khách sạn",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["khách sạn"]
+  },
+  {
+    "value": "KS#Cơ khí",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["cơ khí"]
+  },
+  {
+    "value": "KS#May mặc",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["may"]
+  },
+  {
+    "value": "KS#Biên dịch, phiên dịch",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["biên dịch", "phiên dịch"]
+  }
+]
