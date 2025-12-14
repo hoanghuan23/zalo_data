@@ -1,0 +1,2416 @@
+    [
+    {"label": "Nuôi sò điệp", "value": "1.1.1.1.1",
+        "valueArr": [1, 1, 1, 1, 1], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới sào", "value": "1.1.1.2.1",
+        "valueArr": [1, 1, 1, 2, 1], "parent": "Ngư nghiệp"},
+    {"label": "Đặt lưới đánh cá", "value": "1.1.1.2.2",
+        "valueArr": [1, 1, 1, 2, 2], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới rê", "value": "1.1.1.2.3",
+        "valueArr": [1, 1, 1, 2, 3], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới kéo", "value": "1.1.1.2.4",
+        "valueArr": [1, 1, 1, 2, 4], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới thả", "value": "1.1.1.2.5",
+        "valueArr": [1, 1, 1, 2, 5], "parent": "Ngư nghiệp"},
+    {"label": "Câu tôm, cua bằng lồng", "value": "1.1.1.3.1",
+        "valueArr": [1, 1, 1, 3, 1], "parent": "Ngư nghiệp"},
+    {"label": "Câu mực", "value": "1.1.1.3.2", "valueArr": [
+        1, 1, 1, 3, 2], "parent": "Ngư nghiệp"},
+    {"label": "Câu cá ngừ cần và dây", "value": "1.1.1.3.3",
+        "valueArr": [1, 1, 1, 3, 3], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá dây câu dài", "value": "1.1.1.3.4",
+        "valueArr": [1, 1, 1, 3, 4], "parent": "Ngư nghiệp"},
+    {"label": "Nông nghiệp chăn nuôi", "value": "1.1.2.4.0",
+        "valueArr": [1, 1, 2, 4, 0], "parent": "Nông Nghiệp"},
+    {"label": "Chăn nuôi bò", "value": "1.1.2.4.1",
+        "valueArr": [1, 1, 2, 4, 1], "parent": "Nông Nghiệp"},
+    {"label": "Chăn nuôi bò sữa", "value": "1.1.2.4.2",
+        "valueArr": [1, 1, 2, 4, 2], "parent": "Nông Nghiệp"},
+    {"label": "Nhặt trứng gà", "value": "1.1.2.4.3",
+        "valueArr": [1, 1, 2, 4, 3], "parent": "Nông Nghiệp"},
+    {"label": "Chăn nuôi gà", "value": "1.1.2.4.4",
+        "valueArr": [1, 1, 2, 4, 4], "parent": "Nông Nghiệp"},
+    {"label": "Chăn nuôi lợn", "value": "1.1.2.4.5",
+        "valueArr": [1, 1, 2, 4, 5], "parent": "Nông Nghiệp"},
+    {"label": "Trồng nấm công nghệ cao", "value": "1.1.2.5.1",
+        "valueArr": [1, 1, 2, 5, 1], "parent": "Nông Nghiệp"},
+    {"label": "Trồng nấm", "value": "1.1.2.5.2", "valueArr": [
+        1, 1, 2, 5, 2], "parent": "Nông Nghiệp"},
+    {"label": "Thu hoạch hoa", "value": "1.1.2.5.3",
+        "valueArr": [1, 1, 2, 5, 3], "parent": "Nông Nghiệp"},
+    {"label": "Thu hoạch hoa quả", "value": "1.1.2.5.4",
+        "valueArr": [1, 1, 2, 5, 4], "parent": "Nông Nghiệp"},
+    {"label": "Thu hoạch dâu tây", "value": "1.1.2.5.5",
+        "valueArr": [1, 1, 2, 5, 5], "parent": "Nông Nghiệp"},
+    {"label": "Thu hoạch bắp cải", "value": "1.1.2.5.6",
+        "valueArr": [1, 1, 2, 5, 6], "parent": "Nông Nghiệp"},
+    {"label": "Thu hoạch rau củ", "value": "1.1.2.5.7",
+        "valueArr": [1, 1, 2, 5, 7], "parent": "Nông Nghiệp"},
+    {"label": "Thu hoạch cà chua", "value": "1.1.2.5.8",
+        "valueArr": [1, 1, 2, 5, 8], "parent": "Nông Nghiệp"},
+    {"label": "Trồng rau củ", "value": "1.1.2.5.9",
+        "valueArr": [1, 1, 2, 5, 9], "parent": "Nông Nghiệp"},
+    {"label": "Nông nghiệp trồng trọt", "value": "1.1.2.5.12",
+        "valueArr": [1, 1, 2, 5, 12], "parent": "Nông Nghiệp"},
+    {"label": "Trồng cây ăn quả", "value": "1.1.2.5.13",
+        "valueArr": [1, 1, 2, 5, 13], "parent": "Nông Nghiệp"},
+    {"label": "Trồng trọt nhà kính", "value": "1.1.2.5.14",
+        "valueArr": [1, 1, 2, 5, 14], "parent": "Nông Nghiệp"},
+    {"label": "Bếp viện", "value": "1.1.4.1.1",
+        "valueArr": [1, 1, 4, 1, 1], "parent": "Thực phẩm"},
+    {"label": "Thức ăn cơ sở y tế", "value": "1.1.4.1.2",
+        "valueArr": [1, 1, 4, 1, 2], "parent": "Thực phẩm"},
+    {"label": "Giăm bông, xúc xích...", "value": "1.1.4.2.1",
+        "valueArr": [1, 1, 4, 2, 1], "parent": "Thực phẩm"},
+    {"label": "Chế biến thịt bò, lợn", "value": "1.1.4.2.2",
+        "valueArr": [1, 1, 4, 2, 2], "parent": "Thực phẩm"},
+    {"label": "Chế biến gia cầm", "value": "1.1.4.2.3",
+        "valueArr": [1, 1, 4, 2, 3], "parent": "Thực phẩm"},
+    {"label": "Thịt lợn", "value": "1.1.4.2.4",
+        "valueArr": [1, 1, 4, 2, 4], "parent": "Thực phẩm"},
+    {"label": "Thịt bò", "value": "1.1.4.2.5", "valueArr": [
+        1, 1, 4, 2, 5], "parent": "Thực phẩm"},
+    {"label": "Thịt gà", "value": "1.1.4.2.6", "valueArr": [
+        1, 1, 4, 2, 6], "parent": "Thực phẩm"},
+    {"label": "Thái cá sashimi", "value": "1.1.4.3.1",
+        "valueArr": [1, 1, 4, 3, 1], "parent": "Thực phẩm"},
+    {"label": "Chế biến cá", "value": "1.1.4.3.2",
+        "valueArr": [1, 1, 4, 3, 2], "parent": "Thực phẩm"},
+    {"label": "Chế biến thuỷ sản sống", "value": "1.1.4.3.3",
+        "valueArr": [1, 1, 4, 3, 3], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản gia công chế biến", "value": "1.1.4.3.4",
+        "valueArr": [1, 1, 4, 3, 4], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản khô", "value": "1.1.4.3.5",
+        "valueArr": [1, 1, 4, 3, 5], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản sấy khô", "value": "1.1.4.3.6",
+        "valueArr": [1, 1, 4, 3, 6], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản ủ muối", "value": "1.1.4.3.7",
+        "valueArr": [1, 1, 4, 3, 7], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản xông khói", "value": "1.1.4.3.8",
+        "valueArr": [1, 1, 4, 3, 8], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản lên men", "value": "1.1.4.3.9",
+        "valueArr": [1, 1, 4, 3, 9], "parent": "Thực phẩm"},
+    {"label": "Chiết xuất thuỷ sản", "value": "1.1.4.3.10",
+        "valueArr": [1, 1, 4, 3, 10], "parent": "Thực phẩm"},
+    {"label": "Tẩm ướp thuỷ sản", "value": "1.1.4.3.11",
+        "valueArr": [1, 1, 4, 3, 11], "parent": "Thực phẩm"},
+    {"label": "Sản xuất mắm cá", "value": "1.1.4.3.12",
+        "valueArr": [1, 1, 4, 3, 12], "parent": "Thực phẩm"},
+    {"label": "Đóng hộp thực phẩm", "value": "1.1.4.4.1",
+        "valueArr": [1, 1, 4, 4, 1], "parent": "Thực phẩm"},
+    {"label": "Gia công đồ ăn liền", "value": "1.1.4.4.2",
+        "valueArr": [1, 1, 4, 4, 2], "parent": "Thực phẩm"},
+    {"label": "Chế biến đồ ăn sẵn", "value": "1.1.4.4.3",
+        "valueArr": [1, 1, 4, 4, 3], "parent": "Thực phẩm"},
+    {"label": "Chế biến sushi", "value": "1.1.4.4.4",
+        "valueArr": [1, 1, 4, 4, 4], "parent": "Thực phẩm"},
+    {"label": "Cửa hàng siêu thị", "value": "1.1.4.5.1",
+        "valueArr": [1, 1, 4, 5, 1], "parent": "Thực phẩm"},
+    {"label": "Siêu thị", "value": "1.1.4.5.2",
+        "valueArr": [1, 1, 4, 5, 2], "parent": "Thực phẩm"},
+    {"label": "Đồ konbini", "value": "1.1.4.6.1",
+        "valueArr": [1, 1, 4, 6, 1], "parent": "Thực phẩm"},
+    {"label": "Salad", "value": "1.1.4.6.2", "valueArr": [
+        1, 1, 4, 6, 2], "parent": "Thực phẩm"},
+    {"label": "Sản xuất dưa muối", "value": "1.1.4.6.3",
+        "valueArr": [1, 1, 4, 6, 3], "parent": "Thực phẩm"},
+    {"label": "Đồ ăn kèm", "value": "1.1.4.6.4",
+        "valueArr": [1, 1, 4, 6, 4], "parent": "Thực phẩm"},
+    {"label": "Mỳ tôm", "value": "1.1.4.6.5", "valueArr": [
+        1, 1, 4, 6, 5], "parent": "Thực phẩm"},
+    {"label": "Sản xuất mỳ", "value": "1.1.4.6.6",
+        "valueArr": [1, 1, 4, 6, 6], "parent": "Thực phẩm"},
+    {"label": "Cơm hộp", "value": "1.1.4.6.7", "valueArr": [
+        1, 1, 4, 6, 7], "parent": "Thực phẩm"},
+    {"label": "Cơm nắm", "value": "1.1.4.6.8", "valueArr": [
+        1, 1, 4, 6, 8], "parent": "Thực phẩm"},
+    {"label": "Há cảo", "value": "1.1.4.6.9", "valueArr": [
+        1, 1, 4, 6, 9], "parent": "Thực phẩm"},
+    {"label": "Đậu hũ", "value": "1.1.4.6.10", "valueArr": [
+        1, 1, 4, 6, 10], "parent": "Thực phẩm"},
+    {"label": "Thực phẩm", "value": "1.1.4.6.14",
+        "valueArr": [1, 1, 4, 6, 14], "parent": "Thực phẩm"},
+    {"label": "Thực phẩm trứng", "value": "1.1.4.6.15",
+        "valueArr": [1, 1, 4, 6, 15], "parent": "Thực phẩm"},
+    {"label": "Thực phẩm sữa", "value": "1.1.4.6.16",
+        "valueArr": [1, 1, 4, 6, 16], "parent": "Thực phẩm"},
+    {"label": "Sản xuất bánh mì", "value": "1.1.4.7.1",
+        "valueArr": [1, 1, 4, 7, 1], "parent": "Thực phẩm"},
+    {"label": "Bánh gạo", "value": "1.1.4.7.2",
+        "valueArr": [1, 1, 4, 7, 2], "parent": "Thực phẩm"},
+    {"label": "Bánh ngọt", "value": "1.1.4.7.3",
+        "valueArr": [1, 1, 4, 7, 3], "parent": "Thực phẩm"},
+    {"label": "Làm bánh kẹo", "value": "1.1.4.7.4",
+        "valueArr": [1, 1, 4, 7, 4], "parent": "Thực phẩm"},
+    {"label": "Bánh kẹo", "value": "1.1.4.7.5",
+        "valueArr": [1, 1, 4, 7, 5], "parent": "Thực phẩm"},
+    {"label": "Đóng gói bánh kẹo", "value": "1.1.4.8.1",
+        "valueArr": [1, 1, 4, 8, 1], "parent": "Thực phẩm"},
+    {"label": "Đóng gói rau", "value": "1.1.4.8.2",
+        "valueArr": [1, 1, 4, 8, 2], "parent": "Thực phẩm"},
+    {"label": "Đóng gói rau củ", "value": "1.1.4.8.3",
+        "valueArr": [1, 1, 4, 8, 3], "parent": "Thực phẩm"},
+    {"label": "Đóng gói rong biển", "value": "1.1.4.8.4",
+        "valueArr": [1, 1, 4, 8, 4], "parent": "Thực phẩm"},
+    {"label": "Đóng gói thanh cua", "value": "1.1.4.8.5",
+        "valueArr": [1, 1, 4, 8, 5], "parent": "Thực phẩm"},
+    {"label": "Đóng gói cafe", "value": "1.1.4.8.6",
+        "valueArr": [1, 1, 4, 8, 6], "parent": "Thực phẩm"},
+    {"label": "Đóng gói gạo", "value": "1.1.4.8.7",
+        "valueArr": [1, 1, 4, 8, 7], "parent": "Thực phẩm"},
+    {
+        "label": "Đóng gói mỹ phẩm",
+        "value": "1.1.6.1.1",
+        "valueArr": [1, 1, 6, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đóng gói công nghiệp",
+        "value": "1.1.6.1.2",
+        "valueArr": [1, 1, 6, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Đóng gói", "value": "1.1.6.1.3", "valueArr": [
+        1, 1, 6, 1, 3], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {"label": "Đóng sách", "value": "1.1.6.1.4", "valueArr": [
+        1, 1, 6, 1, 4], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "In vỏ bánh kẹo",
+        "value": "1.1.7.1.1",
+        "valueArr": [1, 1, 7, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "In ống đồng", "value": "1.1.7.1.2", "valueArr": [
+        1, 1, 7, 1, 2], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {"label": "In offset", "value": "1.1.7.1.3", "valueArr": [
+        1, 1, 7, 1, 3], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Sản xuất hộp in",
+        "value": "1.1.7.2.1",
+        "valueArr": [1, 1, 7, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đục lỗ hộp in",
+        "value": "1.1.7.2.2",
+        "valueArr": [1, 1, 7, 2, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất hộp bìa cứng",
+        "value": "1.1.7.2.3",
+        "valueArr": [1, 1, 7, 2, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất hộp nhãn dán",
+        "value": "1.1.7.2.4",
+        "valueArr": [1, 1, 7, 2, 4],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất vải lanh",
+        "value": "1.1.8.1.1",
+        "valueArr": [1, 1, 8, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất pin năng lượng",
+        "value": "1.1.8.1.2",
+        "valueArr": [1, 1, 8, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất linh kiện",
+        "value": "1.1.8.1.3",
+        "valueArr": [1, 1, 8, 1, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Công việc cưa gỗ",
+        "value": "1.1.8.2.1",
+        "valueArr": [1, 1, 8, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Gỗ ép", "value": "1.1.8.2.2", "valueArr": [
+        1, 1, 8, 2, 2], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Gia công sản phẩm gỗ",
+        "value": "1.1.8.2.3",
+        "valueArr": [1, 1, 8, 2, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Gia công đồ gia dụng",
+        "value": "1.1.8.3.1",
+        "valueArr": [1, 1, 8, 3, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Sửa chữa tủ điện", "value": "1.1.9.1.1",
+        "valueArr": [1, 1, 9, 1, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Sửa chữa dụng cụ", "value": "1.1.9.1.2",
+        "valueArr": [1, 1, 9, 1, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Thiết kế bảng mạch in", "value": "1.1.9.3.1",
+        "valueArr": [1, 1, 9, 3, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Sản xuất bảng mạch in", "value": "1.1.9.3.2",
+        "valueArr": [1, 1, 9, 3, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Bản mạch in", "value": "1.1.9.3.3", "valueArr": [
+        1, 1, 9, 3, 3], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Lắp ráp linh kiện bán dẫn",
+        "value": "1.1.9.4.1",
+        "valueArr": [1, 1, 9, 4, 1],
+        "parent": "Cơ khí, kim loại"
+    },
+    {
+        "label": "Lắp ráp thiết bị điện tử",
+        "value": "1.1.9.5.1",
+        "valueArr": [1, 1, 9, 5, 1],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Lắp ráp điện tử", "value": "1.1.9.5.2",
+        "valueArr": [1, 1, 9, 5, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Điện tử", "value": "1.1.9.5.3", "valueArr": [
+        1, 1, 9, 5, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Điện", "value": "1.1.9.10.1", "valueArr": [
+        1, 1, 9, 10, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Lắp ráp điện", "value": "1.1.9.11.1", "valueArr": [
+        1, 1, 9, 11, 1], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Lắp tủ điện, tủ điều khiển",
+        "value": "1.1.9.11.2",
+        "valueArr": [1, 1, 9, 11, 2],
+        "parent": "Cơ khí, kim loại"
+    },
+    {
+        "label": "Lắp thiết bị đóng, mở",
+        "value": "1.1.9.11.3",
+        "valueArr": [1, 1, 9, 11, 3],
+        "parent": "Cơ khí, kim loại"
+    },
+    {
+        "label": "Lắp ráp thiết bị điện khí",
+        "value": "1.1.9.11.4",
+        "valueArr": [1, 1, 9, 11, 4],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Lắp ráp máy biến áp", "value": "1.1.9.11.5",
+        "valueArr": [1, 1, 9, 11, 5], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Lắp ráp thiết bị điện quay",
+        "value": "1.1.9.11.6",
+        "valueArr": [1, 1, 9, 11, 6],
+        "parent": "Cơ khí, kim loại"
+    },
+    {
+        "label": "Cuộn dây máy điện quay",
+        "value": "1.1.9.11.7",
+        "valueArr": [1, 1, 9, 11, 7],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Thi công điện", "value": "1.1.9.12.1", "valueArr": [
+        1, 1, 9, 12, 1], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Xử lý nhiệt tổng thể",
+        "value": "1.1.9.13.1",
+        "valueArr": [1, 1, 9, 13, 1],
+        "parent": "Cơ khí, kim loại"
+    },
+    {
+        "label": "Xử lý nhiệt một phần",
+        "value": "1.1.9.13.2",
+        "valueArr": [1, 1, 9, 13, 2],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Xử lý nhiệt bề mặt", "value": "1.1.9.13.3",
+        "valueArr": [1, 1, 9, 13, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Chế tạo máy", "value": "1.1.9.14.2", "valueArr": [
+        1, 1, 9, 14, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Lắp đặt tủ lạnh", "value": "1.1.9.14.3",
+        "valueArr": [1, 1, 9, 14, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Lắp đặt điều hoà", "value": "1.1.9.14.4",
+        "valueArr": [1, 1, 9, 14, 4], "parent": "Cơ khí, kim loại"},
+    {"label": "Lắp đặt máy móc", "value": "1.1.9.14.5",
+        "valueArr": [1, 1, 9, 14, 5], "parent": "Cơ khí, kim loại"},
+    {"label": "Lắp ráp máy móc", "value": "1.1.9.14.6",
+        "valueArr": [1, 1, 9, 14, 6], "parent": "Cơ khí, kim loại"},
+    {"label": "Kiểm tra máy móc", "value": "1.1.9.14.7",
+        "valueArr": [1, 1, 9, 14, 7], "parent": "Cơ khí, kim loại"},
+    {"label": "Bảo trì máy móc", "value": "1.1.9.14.8",
+        "valueArr": [1, 1, 9, 14, 8], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Sử dụng máy tiện thường",
+        "value": "1.1.9.15.1",
+        "valueArr": [1, 1, 9, 15, 1],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Sử dụng máy tiện số", "value": "1.1.9.15.2",
+        "valueArr": [1, 1, 9, 15, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Sử dụng máy phay", "value": "1.1.9.15.3",
+        "valueArr": [1, 1, 9, 15, 3], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Máy sản xuất tấm kim loại",
+        "value": "1.1.9.16.1",
+        "valueArr": [1, 1, 9, 16, 1],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Ép dập kim loại", "value": "1.1.9.16.2",
+        "valueArr": [1, 1, 9, 16, 2], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Thi công kết cấu thép",
+        "value": "1.1.9.16.3",
+        "valueArr": [1, 1, 9, 16, 3],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Vận hành máy", "value": "1.1.9.17.1", "valueArr": [
+        1, 1, 9, 17, 1], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Vận hành máy gia công",
+        "value": "1.1.9.17.2",
+        "valueArr": [1, 1, 9, 17, 2],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Vận hành máy CNC", "value": "1.1.9.17.3",
+        "valueArr": [1, 1, 9, 17, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Vận hành máy ép", "value": "1.1.9.17.4",
+        "valueArr": [1, 1, 9, 17, 4], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Vận hành máy ép nhựa",
+        "value": "1.1.9.17.5",
+        "valueArr": [1, 1, 9, 17, 5],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Cơ khí", "value": "1.1.9.19.1", "valueArr": [
+        1, 1, 9, 19, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Gia công cơ khí", "value": "1.1.9.19.2",
+        "valueArr": [1, 1, 9, 19, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Gia công tinh", "value": "1.1.9.19.4", "valueArr": [
+        1, 1, 9, 19, 4], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Gia công kim loại - Tekko",
+        "value": "1.1.9.19.5",
+        "valueArr": [1, 1, 9, 19, 5],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Đúc", "value": "1.1.9.20.1", "valueArr": [
+        1, 1, 9, 20, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Đúc gang", "value": "1.1.9.20.2", "valueArr": [
+        1, 1, 9, 20, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Đúc kim loại màu", "value": "1.1.9.20.3",
+        "valueArr": [1, 1, 9, 20, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Đúc khuôn", "value": "1.1.9.20.4", "valueArr": [
+        1, 1, 9, 20, 4], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Đúc khuôn buồng nóng",
+        "value": "1.1.9.21.5",
+        "valueArr": [1, 1, 9, 21, 5],
+        "parent": "Cơ khí, kim loại"
+    },
+    {
+        "label": "Đúc khuôn buồng lạnh",
+        "value": "1.1.9.21.6",
+        "valueArr": [1, 1, 9, 21, 6],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Dập khuôn kim loại", "value": "1.1.9.22.1",
+        "valueArr": [1, 1, 9, 22, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Gia công ép đùn", "value": "1.1.9.22.2",
+        "valueArr": [1, 1, 9, 22, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Rèn", "value": "1.1.9.22.3", "valueArr": [
+        1, 1, 9, 22, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Rèn bằng búa", "value": "1.1.9.22.4", "valueArr": [
+        1, 1, 9, 22, 4], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Hoàn thiện dụng cụ nung chảy",
+        "value": "1.1.9.23.1",
+        "valueArr": [1, 1, 9, 23, 1],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Hoàn thiện khuôn", "value": "1.1.9.23.2",
+        "valueArr": [1, 1, 9, 23, 2], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Hoàn thiện sản phẩm ép đùn",
+        "value": "1.1.9.23.3",
+        "valueArr": [1, 1, 9, 23, 3],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Mạ điện", "value": "1.1.9.23.4", "valueArr": [
+        1, 1, 9, 23, 4], "parent": "Cơ khí, kim loại"},
+    {"label": "Mạ kẽm nhúng nóng", "value": "1.1.9.23.5",
+        "valueArr": [1, 1, 9, 23, 5], "parent": "Cơ khí, kim loại"},
+    {"label": "Xử lý điện hóa nhôm", "value": "1.1.9.23.6",
+        "valueArr": [1, 1, 9, 23, 6], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Chế tạo kim loại tấm",
+        "value": "1.1.9.24.1",
+        "valueArr": [1, 1, 9, 24, 1],
+        "parent": "Cơ khí, kim loại"
+    },
+    {"label": "Hàn", "value": "1.1.9.25.1", "valueArr": [
+        1, 1, 9, 25, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn thủ công", "value": "1.1.9.25.2", "valueArr": [
+        1, 1, 9, 25, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn xì", "value": "1.1.9.25.3", "valueArr": [
+        1, 1, 9, 25, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn khí", "value": "1.1.9.25.4", "valueArr": [
+        1, 1, 9, 25, 4], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn bán tự động", "value": "1.1.9.26.1",
+        "valueArr": [1, 1, 9, 26, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn kết cấu", "value": "1.1.9.27.1", "valueArr": [
+        1, 1, 9, 27, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn khung thép", "value": "1.1.9.27.2", "valueArr": [
+        1, 1, 9, 27, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn tủ điện", "value": "1.1.9.27.3", "valueArr": [
+        1, 1, 9, 27, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Hàn tàu", "value": "1.1.9.28.2", "valueArr": [
+        1, 1, 9, 28, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Đóng tàu", "value": "1.1.9.28.3", "valueArr": [
+        1, 1, 9, 28, 3], "parent": "Cơ khí, kim loại"},
+    {"label": "Sơn", "value": "1.1.9.29.1", "valueArr": [
+        1, 1, 9, 29, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Sơn phun", "value": "1.1.9.29.2", "valueArr": [
+        1, 1, 9, 29, 2], "parent": "Cơ khí, kim loại"},
+    {"label": "Sơn kim loại", "value": "1.1.9.30.1", "valueArr": [
+        1, 1, 9, 30, 1], "parent": "Cơ khí, kim loại"},
+    {"label": "Sơn cầu thép", "value": "1.1.9.30.2", "valueArr": [
+        1, 1, 9, 30, 2], "parent": "Cơ khí, kim loại"},
+    {
+        "label": "Sơn công trình xây dựng",
+        "value": "1.1.9.30.3",
+        "valueArr": [1, 1, 9, 30, 3],
+        "parent": "Cơ khí, kim loại"
+    },
+    {
+        "label": "Lắp ráp linh kiện ô tô",
+        "value": "1.1.10.2.2",
+        "valueArr": [1, 1, 10, 2, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Linh kiện ô tô",
+        "value": "1.1.10.2.3",
+        "valueArr": [1, 1, 10, 2, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Kiểm tra linh kiện ô tô",
+        "value": "1.1.10.3.1",
+        "valueArr": [1, 1, 10, 3, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Bảo dưỡng ô tô",
+        "value": "1.1.10.4.1",
+        "valueArr": [1, 1, 10, 4, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sửa chữa ô tô",
+        "value": "1.1.10.4.2",
+        "valueArr": [1, 1, 10, 4, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Đúc nhựa", "value": "1.1.11.1.1", "valueArr": [
+        1, 1, 11, 1, 1], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Đúc nhựa nén",
+        "value": "1.1.11.1.2",
+        "valueArr": [1, 1, 11, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc nhựa thổi phồng",
+        "value": "1.1.11.1.3",
+        "valueArr": [1, 1, 11, 1, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc nhựa thổi định hình",
+        "value": "1.1.11.1.4",
+        "valueArr": [1, 1, 11, 1, 4],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc nhựa cán xếp chồng",
+        "value": "1.1.11.1.5",
+        "valueArr": [1, 1, 11, 1, 5],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đục nhựa ép phun",
+        "value": "1.1.11.1.6",
+        "valueArr": [1, 1, 11, 1, 6],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Kiểm tra sản phẩm nhựa",
+        "value": "1.1.11.2.1",
+        "valueArr": [1, 1, 11, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc khuôn cao su",
+        "value": "1.1.11.3.1",
+        "valueArr": [1, 1, 11, 3, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Trộn và cán cao su",
+        "value": "1.1.11.3.2",
+        "valueArr": [1, 1, 11, 3, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Gia công ép đùn cao su",
+        "value": "1.1.11.3.3",
+        "valueArr": [1, 1, 11, 3, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Vật liệu composite nhiều lớp",
+        "value": "1.1.11.4.1",
+        "valueArr": [1, 1, 11, 4, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "In gốm", "value": "1.1.12.2.1", "valueArr": [
+        1, 1, 12, 2, 1], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Đúc gốm bằng áp lực",
+        "value": "1.1.12.2.2",
+        "valueArr": [1, 1, 12, 2, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Nặn gốm bằng bánh xoay",
+        "value": "1.1.12.2.3",
+        "valueArr": [1, 1, 12, 2, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Nhiên liệu rắn từ rác",
+        "value": "1.1.13.1.1",
+        "valueArr": [1, 1, 13, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Hàng hóa hàng không",
+        "value": "1.1.14.1.1",
+        "valueArr": [1, 1, 14, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Hỗ trợ mặt đất máy bay",
+        "value": "1.1.14.2.1",
+        "valueArr": [1, 1, 14, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Dọn dẹp khoang hành khách",
+        "value": "1.1.14.3.1",
+        "valueArr": [1, 1, 14, 3, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Thiết bị khí nén đường sắt",
+        "value": "1.1.15.1.1",
+        "valueArr": [1, 1, 15, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Bảo trì đường sắt",
+        "value": "1.1.15.1.2",
+        "valueArr": [1, 1, 15, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Lái máy xây dựng", "value": "1.1.18.4.1",
+        "valueArr": [1, 1, 18, 4, 1], "parent": "Xây dựng"},
+    {"label": "Lái máy xúc", "value": "1.1.18.4.2",
+        "valueArr": [1, 1, 18, 4, 2], "parent": "Xây dựng"},
+    {"label": "Lái máy xúc lật", "value": "1.1.18.4.3",
+        "valueArr": [1, 1, 18, 4, 3], "parent": "Xây dựng"},
+    {"label": "Lái máy ủi", "value": "1.1.18.4.4",
+        "valueArr": [1, 1, 18, 4, 4], "parent": "Xây dựng"},
+    {"label": "Lái xe lu", "value": "1.1.18.4.5",
+        "valueArr": [1, 1, 18, 4, 5], "parent": "Xây dựng"},
+    {"label": "Phá dỡ", "value": "1.1.18.5.1", "valueArr": [
+        1, 1, 18, 5, 1], "parent": "Xây dựng"},
+    {"label": "San lấp mặt bằng", "value": "1.1.18.5.2",
+        "valueArr": [1, 1, 18, 5, 2], "parent": "Xây dựng"},
+    {"label": "Hút nước ngầm công trình", "value": "1.1.18.6.1",
+        "valueArr": [1, 1, 18, 6, 1], "parent": "Xây dựng"},
+    {"label": "Làm nền, móng", "value": "1.1.18.6.2",
+        "valueArr": [1, 1, 18, 6, 2], "parent": "Xây dựng"},
+    {"label": "Thi công móng thép", "value": "1.1.18.6.3",
+        "valueArr": [1, 1, 18, 6, 3], "parent": "Xây dựng"},
+    {"label": "Đổ nhựa đường", "value": "1.1.18.9.1",
+        "valueArr": [1, 1, 18, 9, 1], "parent": "Xây dựng"},
+    {"label": "Dựng giàn giáo", "value": "1.1.18.9.2",
+        "valueArr": [1, 1, 18, 9, 2], "parent": "Xây dựng"},
+    {"label": "Gia công sắt trong xưởng", "value": "1.1.18.10.1",
+        "valueArr": [1, 1, 18, 10, 1], "parent": "Xây dựng"},
+    {
+        "label": "Gia công khung thép trong xưởng",
+        "value": "1.1.18.10.2",
+        "valueArr": [1, 1, 18, 10, 2],
+        "parent": "Xây dựng"
+    },
+    {"label": "Gia công khung thép", "value": "1.1.18.10.3",
+        "valueArr": [1, 1, 18, 10, 3], "parent": "Xây dựng"},
+    {"label": "Hàn khung thép trên cao", "value": "1.1.18.10.4",
+        "valueArr": [1, 1, 18, 10, 4], "parent": "Xây dựng"},
+    {"label": "Lắp ghép cốt thép", "value": "1.1.18.10.5",
+        "valueArr": [1, 1, 18, 10, 5], "parent": "Xây dựng"},
+    {"label": "Buộc thép", "value": "1.1.18.10.6",
+        "valueArr": [1, 1, 18, 10, 6], "parent": "Xây dựng"},
+    {"label": "Cốp pha công trình", "value": "1.1.18.11.1",
+        "valueArr": [1, 1, 18, 11, 1], "parent": "Xây dựng"},
+    {"label": "Mộc cốp pha", "value": "1.1.18.11.2",
+        "valueArr": [1, 1, 18, 11, 2], "parent": "Xây dựng"},
+    {"label": "Bê tông", "value": "1.1.18.11.3",
+        "valueArr": [1, 1, 18, 11, 3], "parent": "Xây dựng"},
+    {"label": "Sản xuất bê tông", "value": "1.1.18.11.4",
+        "valueArr": [1, 1, 18, 11, 4], "parent": "Xây dựng"},
+    {"label": "Đổ bê tông áp lực", "value": "1.1.18.11.5",
+        "valueArr": [1, 1, 18, 11, 5], "parent": "Xây dựng"},
+    {"label": "Trát vữa", "value": "1.1.18.11.6",
+        "valueArr": [1, 1, 18, 11, 6], "parent": "Xây dựng"},
+    {"label": "Xây dựng tổng hợp", "value": "1.1.18.11.7",
+        "valueArr": [1, 1, 18, 11, 7], "parent": "Xây dựng"},
+    {"label": "Gia công vật liệu đá", "value": "1.1.18.15.1",
+        "valueArr": [1, 1, 18, 15, 1], "parent": "Xây dựng"},
+    {"label": "Lát đá", "value": "1.1.18.15.2", "valueArr": [
+        1, 1, 18, 15, 2], "parent": "Xây dựng"},
+    {"label": "Ốp lát gạch", "value": "1.1.18.15.3",
+        "valueArr": [1, 1, 18, 15, 3], "parent": "Xây dựng"},
+    {"label": "Lắp bồn tắm", "value": "1.1.18.15.4",
+        "valueArr": [1, 1, 18, 15, 4], "parent": "Xây dựng"},
+    {"label": "Lợp mái nhà", "value": "1.1.18.16.1",
+        "valueArr": [1, 1, 18, 16, 1], "parent": "Xây dựng"},
+    {"label": "Lợp ngói", "value": "1.1.18.16.2",
+        "valueArr": [1, 1, 18, 16, 2], "parent": "Xây dựng"},
+    {"label": "Chống thấm", "value": "1.1.18.17.1",
+        "valueArr": [1, 1, 18, 17, 1], "parent": "Xây dựng"},
+    {"label": "Chống thấm trần nhà", "value": "1.1.18.17.2",
+        "valueArr": [1, 1, 18, 17, 2], "parent": "Xây dựng"},
+    {
+        "label": "Công trình chống nóng, lạnh",
+        "value": "1.1.18.17.3",
+        "valueArr": [1, 1, 18, 17, 3],
+        "parent": "Xây dựng"
+    },
+    {"label": "Thợ mộc xây dựng", "value": "1.1.18.18.1",
+        "valueArr": [1, 1, 18, 18, 1], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện sàn nhựa", "value": "1.1.18.19.1",
+        "valueArr": [1, 1, 18, 19, 1], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện sàn thảm", "value": "1.1.18.19.2",
+        "valueArr": [1, 1, 18, 19, 2], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện ván", "value": "1.1.18.19.3",
+        "valueArr": [1, 1, 18, 19, 3], "parent": "Xây dựng"},
+    {"label": "Dán tường", "value": "1.1.18.19.4",
+        "valueArr": [1, 1, 18, 19, 4], "parent": "Xây dựng"},
+    {"label": "Thi công dán tường", "value": "1.1.18.19.5",
+        "valueArr": [1, 1, 18, 19, 5], "parent": "Xây dựng"},
+    {"label": "Sơn xây dựng", "value": "1.1.18.19.6",
+        "valueArr": [1, 1, 18, 19, 6], "parent": "Xây dựng"},
+    {"label": "Nội thất gỗ-xây dựng", "value": "1.1.18.19.7",
+        "valueArr": [1, 1, 18, 19, 7], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện nội thất", "value": "1.1.18.19.9",
+        "valueArr": [1, 1, 18, 19, 9], "parent": "Xây dựng"},
+    {"label": "Thi công lắp rèm", "value": "1.1.18.19.10",
+        "valueArr": [1, 1, 18, 19, 10], "parent": "Xây dựng"},
+    {"label": "Gia công đường ống", "value": "1.1.18.20.1",
+        "valueArr": [1, 1, 18, 20, 1], "parent": "Xây dựng"},
+    {"label": "Đường ống", "value": "1.1.18.20.2",
+        "valueArr": [1, 1, 18, 20, 2], "parent": "Xây dựng"},
+    {"label": "Đường ống nước", "value": "1.1.18.20.3",
+        "valueArr": [1, 1, 18, 20, 3], "parent": "Xây dựng"},
+    {"label": "Đường ống xây dựng", "value": "1.1.18.20.4",
+        "valueArr": [1, 1, 18, 20, 4], "parent": "Xây dựng"},
+    {"label": "Lắp đặt đường ống", "value": "1.1.18.20.5",
+        "valueArr": [1, 1, 18, 20, 5], "parent": "Xây dựng"},
+    {"label": "Đường ống điều hoà", "value": "1.1.18.20.6",
+        "valueArr": [1, 1, 18, 20, 6], "parent": "Xây dựng"},
+    {"label": "Lắp điện lạnh, điều hòa", "value": "1.1.18.20.7",
+        "valueArr": [1, 1, 18, 20, 7], "parent": "Xây dựng"},
+    {"label": "Đường ống nhà máy", "value": "1.1.18.20.8",
+        "valueArr": [1, 1, 18, 20, 8], "parent": "Xây dựng"},
+    {"label": "Khoan giếng máy dập", "value": "1.1.18.21.1",
+        "valueArr": [1, 1, 18, 21, 1], "parent": "Xây dựng"},
+    {"label": "Khoan giếng máy khoan", "value": "1.1.18.21.2",
+        "valueArr": [1, 1, 18, 21, 2], "parent": "Xây dựng"},
+    {"label": "Lắp đặt pin năng lượng", "value": "1.1.18.21.3",
+        "valueArr": [1, 1, 18, 21, 3], "parent": "Xây dựng"},
+    {"label": "Lắp đặt lò nung-xây dựng", "value": "1.1.18.21.4",
+        "valueArr": [1, 1, 18, 21, 4], "parent": "Xây dựng"},
+    {"label": "Khung chắn toà nhà", "value": "1.1.18.22.1",
+        "valueArr": [1, 1, 18, 22, 1], "parent": "Xây dựng"},
+    {"label": "Tấm kim loại ống gió", "value": "1.1.18.22.2",
+        "valueArr": [1, 1, 18, 22, 2], "parent": "Xây dựng"},
+    {"label": "Tấm kim loại kiến trúc", "value": "1.1.18.22.3",
+        "valueArr": [1, 1, 18, 22, 3], "parent": "Xây dựng"},
+    {
+        "label": "Vệ sinh toà nhà",
+        "value": "1.1.19.1.1",
+        "valueArr": [1, 1, 19, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Vệ sinh văn phòng",
+        "value": "1.1.19.1.2",
+        "valueArr": [1, 1, 19, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Vệ sinh phòng học",
+        "value": "1.1.19.1.3",
+        "valueArr": [1, 1, 19, 1, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Buồng phòng khách sạn",
+        "value": "1.1.19.2.1",
+        "valueArr": [1, 1, 19, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "(Khách sạn) Tiếp khách, quản lý vệ sinh",
+        "value": "1.1.19.3.1",
+        "valueArr": [1, 1, 19, 3, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Điều dưỡng, hộ lý",
+        "value": "1.1.20.1.1",
+        "valueArr": [1, 1, 20, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Công việc trước kéo sợi", "value": "1.1.21.1.1",
+        "valueArr": [1, 1, 21, 1, 1], "parent": "May mặc"},
+    {"label": "Kéo sợi tinh", "value": "1.1.21.1.2",
+        "valueArr": [1, 1, 21, 1, 2], "parent": "May mặc"},
+    {"label": "Quấn sợi", "value": "1.1.21.1.3",
+        "valueArr": [1, 1, 21, 1, 3], "parent": "May mặc"},
+    {"label": "Gia công sợi hỗn hợp", "value": "1.1.21.1.4",
+        "valueArr": [1, 1, 21, 1, 4], "parent": "May mặc"},
+    {"label": "Công việc trước khi dệt", "value": "1.1.21.2.1",
+        "valueArr": [1, 1, 21, 2, 1], "parent": "May mặc"},
+    {"label": "Gia công dệt", "value": "1.1.21.2.2",
+        "valueArr": [1, 1, 21, 2, 2], "parent": "May mặc"},
+    {"label": "Dệt hoàn thiện", "value": "1.1.21.2.3",
+        "valueArr": [1, 1, 21, 2, 3], "parent": "May mặc"},
+    {"label": "Dệt kim máy sợi dọc", "value": "1.1.21.2.4",
+        "valueArr": [1, 1, 21, 2, 4], "parent": "May mặc"},
+    {"label": "Sản xuất máy dệt kim tròn", "value": "1.1.21.2.5",
+        "valueArr": [1, 1, 21, 2, 5], "parent": "May mặc"},
+    {"label": "Nhuộm chỉ", "value": "1.1.21.3.1",
+        "valueArr": [1, 1, 21, 3, 1], "parent": "May mặc"},
+    {"label": "Nhuộm vải, đan len", "value": "1.1.21.3.2",
+        "valueArr": [1, 1, 21, 3, 2], "parent": "May mặc"},
+    {"label": "Sản xuất tất", "value": "1.1.21.4.1",
+        "valueArr": [1, 1, 21, 4, 1], "parent": "May mặc"},
+    {"label": "Sản xuất vải bạt", "value": "1.1.21.4.2",
+        "valueArr": [1, 1, 21, 4, 2], "parent": "May mặc"},
+    {"label": "Sản xuất thảm dệt", "value": "1.1.21.4.3",
+        "valueArr": [1, 1, 21, 4, 3], "parent": "May mặc"},
+    {"label": "Sản xuất thảm nhung nổi", "value": "1.1.21.4.4",
+        "valueArr": [1, 1, 21, 4, 4], "parent": "May mặc"},
+    {"label": "Sản xuất thảm đục lỗ", "value": "1.1.21.4.5",
+        "valueArr": [1, 1, 21, 4, 5], "parent": "May mặc"},
+    {"label": "Quần áo phụ nữ, trẻ em", "value": "1.1.21.5.1",
+        "valueArr": [1, 1, 21, 5, 1], "parent": "May mặc"},
+    {"label": "May quần áo nam", "value": "1.1.21.5.2",
+        "valueArr": [1, 1, 21, 5, 2], "parent": "May mặc"},
+    {"label": "Sản xuất đồ lót", "value": "1.1.21.5.3",
+        "valueArr": [1, 1, 21, 5, 3], "parent": "May mặc"},
+    {"label": "Sản xuất áo sơ mi", "value": "1.1.21.5.4",
+        "valueArr": [1, 1, 21, 5, 4], "parent": "May mặc"},
+    {"label": "May quần áo", "value": "1.1.21.5.5",
+        "valueArr": [1, 1, 21, 5, 5], "parent": "May mặc"},
+    {"label": "May khăn mặt", "value": "1.1.21.5.6",
+        "valueArr": [1, 1, 21, 5, 6], "parent": "May mặc"},
+    {"label": "Chăn ga gối đệm", "value": "1.1.21.6.1",
+        "valueArr": [1, 1, 21, 6, 1], "parent": "May mặc"},
+    {"label": "Sản xuất ghế ngồi ô tô", "value": "1.1.21.6.2",
+        "valueArr": [1, 1, 21, 6, 2], "parent": "May mặc"},
+    {"label": "Dệt may", "value": "1.1.21.7.1",
+        "valueArr": [1, 1, 21, 7, 1], "parent": "May mặc"},
+    {"label": "May mặc", "value": "1.1.21.7.2",
+        "valueArr": [1, 1, 21, 7, 2], "parent": "May mặc"},
+    {"label": "Nuôi sò điệp", "value": "1.2.1.1.1",
+        "valueArr": [1, 2, 1, 1, 1], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới sào", "value": "1.2.1.2.1",
+        "valueArr": [1, 2, 1, 2, 1], "parent": "Ngư nghiệp"},
+    {"label": "Đặt lưới đánh cá", "value": "1.2.1.2.2",
+        "valueArr": [1, 2, 1, 2, 2], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới rê", "value": "1.2.1.2.3",
+        "valueArr": [1, 2, 1, 2, 3], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới kéo", "value": "1.2.1.2.4",
+        "valueArr": [1, 2, 1, 2, 4], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá lưới thả", "value": "1.2.1.2.5",
+        "valueArr": [1, 2, 1, 2, 5], "parent": "Ngư nghiệp"},
+    {"label": "Câu tôm, cua bằng lồng", "value": "1.2.1.3.1",
+        "valueArr": [1, 2, 1, 3, 1], "parent": "Ngư nghiệp"},
+    {"label": "Câu mực", "value": "1.2.1.3.2", "valueArr": [
+        1, 2, 1, 3, 2], "parent": "Ngư nghiệp"},
+    {"label": "Câu cá ngừ cần và dây", "value": "1.2.1.3.3",
+        "valueArr": [1, 2, 1, 3, 3], "parent": "Ngư nghiệp"},
+    {"label": "Đánh cá dây câu dài", "value": "1.2.1.3.4",
+        "valueArr": [1, 2, 1, 3, 4], "parent": "Ngư nghiệp"},
+    {"label": "Nông nghiệp chăn nuôi", "value": "1.2.2.4.0",
+        "valueArr": [1, 2, 2, 4, 0], "parent": "Nông nghiệp"},
+    {"label": "Chăn nuôi bò", "value": "1.2.2.4.1",
+        "valueArr": [1, 2, 2, 4, 1], "parent": "Nông nghiệp"},
+    {"label": "Chăn nuôi bò sữa", "value": "1.2.2.4.2",
+        "valueArr": [1, 2, 2, 4, 2], "parent": "Nông nghiệp"},
+    {"label": "Nhặt trứng gà", "value": "1.2.2.4.3",
+        "valueArr": [1, 2, 2, 4, 3], "parent": "Nông nghiệp"},
+    {"label": "Chăn nuôi gà", "value": "1.2.2.4.4",
+        "valueArr": [1, 2, 2, 4, 4], "parent": "Nông nghiệp"},
+    {"label": "Chăn nuôi lợn", "value": "1.2.2.4.5",
+        "valueArr": [1, 2, 2, 4, 5], "parent": "Nông nghiệp"},
+    {"label": "Trồng nấm công nghệ cao", "value": "1.2.2.5.1",
+        "valueArr": [1, 2, 2, 5, 1], "parent": "Nông nghiệp"},
+    {"label": "Trồng nấm", "value": "1.2.2.5.2", "valueArr": [
+        1, 2, 2, 5, 2], "parent": "Nông nghiệp"},
+    {"label": "Thu hoạch hoa", "value": "1.2.2.5.3",
+        "valueArr": [1, 2, 2, 5, 3], "parent": "Nông nghiệp"},
+    {"label": "Thu hoạch hoa quả", "value": "1.2.2.5.4",
+        "valueArr": [1, 2, 2, 5, 4], "parent": "Nông nghiệp"},
+    {"label": "Thu hoạch dâu tây", "value": "1.2.2.5.5",
+        "valueArr": [1, 2, 2, 5, 5], "parent": "Nông nghiệp"},
+    {"label": "Thu hoạch bắp cải", "value": "1.2.2.5.6",
+        "valueArr": [1, 2, 2, 5, 6], "parent": "Nông nghiệp"},
+    {"label": "Thu hoạch rau củ", "value": "1.2.2.5.7",
+        "valueArr": [1, 2, 2, 5, 7], "parent": "Nông nghiệp"},
+    {"label": "Thu hoạch cà chua", "value": "1.2.2.5.8",
+        "valueArr": [1, 2, 2, 5, 8], "parent": "Nông nghiệp"},
+    {"label": "Trồng rau củ", "value": "1.2.2.5.9",
+        "valueArr": [1, 2, 2, 5, 9], "parent": "Nông nghiệp"},
+    {"label": "Nông nghiệp trồng trọt", "value": "1.2.2.5.12",
+        "valueArr": [1, 2, 2, 5, 12], "parent": "Nông nghiệp"},
+    {"label": "Trồng cây ăn quả", "value": "1.2.2.5.13",
+        "valueArr": [1, 2, 2, 5, 13], "parent": "Nông nghiệp"},
+    {"label": "Trồng trọt nhà kính", "value": "1.2.2.5.14",
+        "valueArr": [1, 2, 2, 5, 14], "parent": "Nông nghiệp"},
+    {"label": "Nấu bếp", "value": "1.2.3.1.1",
+        "valueArr": [1, 2, 3, 1, 1], "parent": "Nhà hàng"},
+    {"label": "Phụ bếp", "value": "1.2.3.1.2",
+        "valueArr": [1, 2, 3, 1, 2], "parent": "Nhà hàng"},
+    {"label": "Rửa bát", "value": "1.2.3.1.3",
+        "valueArr": [1, 2, 3, 1, 3], "parent": "Nhà hàng"},
+    {"label": "Mua hàng", "value": "1.2.3.2.1",
+        "valueArr": [1, 2, 3, 2, 1], "parent": "Nhà hàng"},
+    {"label": "Quản lý", "value": "1.2.3.2.2",
+        "valueArr": [1, 2, 3, 2, 2], "parent": "Nhà hàng"},
+    {"label": "Thu ngân", "value": "1.2.3.2.3",
+        "valueArr": [1, 2, 3, 2, 3], "parent": "Nhà hàng"},
+    {"label": "Chạy bàn", "value": "1.2.3.2.4",
+        "valueArr": [1, 2, 3, 2, 4], "parent": "Nhà hàng"},
+    {"label": "Nhà hàng", "value": "1.2.3.2.5",
+        "valueArr": [1, 2, 3, 2, 5], "parent": "Nhà hàng"},
+    {"label": "Bếp viện", "value": "1.2.4.1.1",
+        "valueArr": [1, 2, 4, 1, 1], "parent": "Thực phẩm"},
+    {"label": "Thức ăn cơ sở y tế", "value": "1.2.4.1.2",
+        "valueArr": [1, 2, 4, 1, 2], "parent": "Thực phẩm"},
+    {"label": "Giăm bông, xúc xích...", "value": "1.2.4.2.1",
+        "valueArr": [1, 2, 4, 2, 1], "parent": "Thực phẩm"},
+    {"label": "Chế biến thịt bò, lợn", "value": "1.2.4.2.2",
+        "valueArr": [1, 2, 4, 2, 2], "parent": "Thực phẩm"},
+    {"label": "Chế biến gia cầm", "value": "1.2.4.2.3",
+        "valueArr": [1, 2, 4, 2, 3], "parent": "Thực phẩm"},
+    {"label": "Thịt lợn", "value": "1.2.4.2.4",
+        "valueArr": [1, 2, 4, 2, 4], "parent": "Thực phẩm"},
+    {"label": "Thịt bò", "value": "1.2.4.2.5", "valueArr": [
+        1, 2, 4, 2, 5], "parent": "Thực phẩm"},
+    {"label": "Thịt gà", "value": "1.2.4.2.6", "valueArr": [
+        1, 2, 4, 2, 6], "parent": "Thực phẩm"},
+    {"label": "Thái cá sashimi", "value": "1.2.4.3.1",
+        "valueArr": [1, 2, 4, 3, 1], "parent": "Thực phẩm"},
+    {"label": "Chế biến cá", "value": "1.2.4.3.2",
+        "valueArr": [1, 2, 4, 3, 2], "parent": "Thực phẩm"},
+    {"label": "Chế biến thuỷ sản sống", "value": "1.2.4.3.3",
+        "valueArr": [1, 2, 4, 3, 3], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản gia công chế biến", "value": "1.2.4.3.4",
+        "valueArr": [1, 2, 4, 3, 4], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản khô", "value": "1.2.4.3.5",
+        "valueArr": [1, 2, 4, 3, 5], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản sấy khô", "value": "1.2.4.3.6",
+        "valueArr": [1, 2, 4, 3, 6], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản ủ muối", "value": "1.2.4.3.7",
+        "valueArr": [1, 2, 4, 3, 7], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản xông khói", "value": "1.2.4.3.8",
+        "valueArr": [1, 2, 4, 3, 8], "parent": "Thực phẩm"},
+    {"label": "Thuỷ sản lên men", "value": "1.2.4.3.9",
+        "valueArr": [1, 2, 4, 3, 9], "parent": "Thực phẩm"},
+    {"label": "Chiết xuất thuỷ sản", "value": "1.2.4.3.10",
+        "valueArr": [1, 2, 4, 3, 10], "parent": "Thực phẩm"},
+    {"label": "Tẩm ướp thuỷ sản", "value": "1.2.4.3.11",
+        "valueArr": [1, 2, 4, 3, 11], "parent": "Thực phẩm"},
+    {"label": "Sản xuất mắm cá", "value": "1.2.4.3.12",
+        "valueArr": [1, 2, 4, 3, 12], "parent": "Thực phẩm"},
+    {"label": "Đóng hộp thực phẩm", "value": "1.2.4.4.1",
+        "valueArr": [1, 2, 4, 4, 1], "parent": "Thực phẩm"},
+    {"label": "Gia công đồ ăn liền", "value": "1.2.4.4.2",
+        "valueArr": [1, 2, 4, 4, 2], "parent": "Thực phẩm"},
+    {"label": "Chế biến đồ ăn sẵn", "value": "1.2.4.4.3",
+        "valueArr": [1, 2, 4, 4, 3], "parent": "Thực phẩm"},
+    {"label": "Chế biến sushi", "value": "1.2.4.4.4",
+        "valueArr": [1, 2, 4, 4, 4], "parent": "Thực phẩm"},
+    {"label": "Cửa hàng siêu thị", "value": "1.2.4.5.1",
+        "valueArr": [1, 2, 4, 5, 1], "parent": "Thực phẩm"},
+    {"label": "Siêu thị", "value": "1.2.4.5.2",
+        "valueArr": [1, 2, 4, 5, 2], "parent": "Thực phẩm"},
+    {"label": "Đồ konbini", "value": "1.2.4.6.1",
+        "valueArr": [1, 2, 4, 6, 1], "parent": "Thực phẩm"},
+    {"label": "Salad", "value": "1.2.4.6.2", "valueArr": [
+        1, 2, 4, 6, 2], "parent": "Thực phẩm"},
+    {"label": "Sản xuất dưa muối", "value": "1.2.4.6.3",
+        "valueArr": [1, 2, 4, 6, 3], "parent": "Thực phẩm"},
+    {"label": "Đồ ăn kèm", "value": "1.2.4.6.4",
+        "valueArr": [1, 2, 4, 6, 4], "parent": "Thực phẩm"},
+    {"label": "Mỳ tôm", "value": "1.2.4.6.5", "valueArr": [
+        1, 2, 4, 6, 5], "parent": "Thực phẩm"},
+    {"label": "Sản xuất mỳ", "value": "1.2.4.6.6",
+        "valueArr": [1, 2, 4, 6, 6], "parent": "Thực phẩm"},
+    {"label": "Cơm hộp", "value": "1.2.4.6.7", "valueArr": [
+        1, 2, 4, 6, 7], "parent": "Thực phẩm"},
+    {"label": "Cơm nắm", "value": "1.2.4.6.8", "valueArr": [
+        1, 2, 4, 6, 8], "parent": "Thực phẩm"},
+    {"label": "Há cảo", "value": "1.2.4.6.9", "valueArr": [
+        1, 2, 4, 6, 9], "parent": "Thực phẩm"},
+    {"label": "Đậu hũ", "value": "1.2.4.6.10", "valueArr": [
+        1, 2, 4, 6, 10], "parent": "Thực phẩm"},
+    {"label": "Thực phẩm", "value": "1.2.4.6.14",
+        "valueArr": [1, 2, 4, 6, 14], "parent": "Thực phẩm"},
+    {"label": "Thực phẩm trứng", "value": "1.2.4.6.15",
+        "valueArr": [1, 2, 4, 6, 15], "parent": "Thực phẩm"},
+    {"label": "Thực phẩm sữa", "value": "1.2.4.6.16",
+        "valueArr": [1, 2, 4, 6, 16], "parent": "Thực phẩm"},
+    {"label": "Sản xuất bánh mì", "value": "1.2.4.7.1",
+        "valueArr": [1, 2, 4, 7, 1], "parent": "Thực phẩm"},
+    {"label": "Bánh gạo", "value": "1.2.4.7.2",
+        "valueArr": [1, 2, 4, 7, 2], "parent": "Thực phẩm"},
+    {"label": "Bánh ngọt", "value": "1.2.4.7.3",
+        "valueArr": [1, 2, 4, 7, 3], "parent": "Thực phẩm"},
+    {"label": "Làm bánh kẹo", "value": "1.2.4.7.4",
+        "valueArr": [1, 2, 4, 7, 4], "parent": "Thực phẩm"},
+    {"label": "Bánh kẹo", "value": "1.2.4.7.5",
+        "valueArr": [1, 2, 4, 7, 5], "parent": "Thực phẩm"},
+    {"label": "Đóng gói bánh kẹo", "value": "1.2.4.8.1",
+        "valueArr": [1, 2, 4, 8, 1], "parent": "Thực phẩm"},
+    {"label": "Đóng gói rau", "value": "1.2.4.8.2",
+        "valueArr": [1, 2, 4, 8, 2], "parent": "Thực phẩm"},
+    {"label": "Đóng gói rau củ", "value": "1.2.4.8.3",
+        "valueArr": [1, 2, 4, 8, 3], "parent": "Thực phẩm"},
+    {"label": "Đóng gói rong biển", "value": "1.2.4.8.4",
+        "valueArr": [1, 2, 4, 8, 4], "parent": "Thực phẩm"},
+    {"label": "Đóng gói thanh cua", "value": "1.2.4.8.5",
+        "valueArr": [1, 2, 4, 8, 5], "parent": "Thực phẩm"},
+    {"label": "Đóng gói cafe", "value": "1.2.4.8.6",
+        "valueArr": [1, 2, 4, 8, 6], "parent": "Thực phẩm"},
+    {"label": "Đóng gói gạo", "value": "1.2.4.8.7",
+        "valueArr": [1, 2, 4, 8, 7], "parent": "Thực phẩm"},
+    {
+        "label": "Đóng gói mỹ phẩm",
+        "value": "1.2.6.1.1",
+        "valueArr": [1, 2, 6, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đóng gói công nghiệp",
+        "value": "1.2.6.1.2",
+        "valueArr": [1, 2, 6, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Đóng gói", "value": "1.2.6.1.3", "valueArr": [
+        1, 2, 6, 1, 3], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {"label": "Đóng sách", "value": "1.2.6.1.4", "valueArr": [
+        1, 2, 6, 1, 4], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "In vỏ bánh kẹo",
+        "value": "1.2.7.1.1",
+        "valueArr": [1, 2, 7, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "In ống đồng", "value": "1.2.7.1.2", "valueArr": [
+        1, 2, 7, 1, 2], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {"label": "In offset", "value": "1.2.7.1.3", "valueArr": [
+        1, 2, 7, 1, 3], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Sản xuất hộp in",
+        "value": "1.2.7.2.1",
+        "valueArr": [1, 2, 7, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đục lỗ hộp in",
+        "value": "1.2.7.2.2",
+        "valueArr": [1, 2, 7, 2, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất hộp bìa cứng",
+        "value": "1.2.7.2.3",
+        "valueArr": [1, 2, 7, 2, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất hộp nhãn dán",
+        "value": "1.2.7.2.4",
+        "valueArr": [1, 2, 7, 2, 4],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất vải lanh",
+        "value": "1.2.8.1.1",
+        "valueArr": [1, 2, 8, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất pin năng lượng",
+        "value": "1.2.8.1.2",
+        "valueArr": [1, 2, 8, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Sản xuất linh kiện",
+        "value": "1.2.8.1.3",
+        "valueArr": [1, 2, 8, 1, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Công việc cưa gỗ",
+        "value": "1.2.8.2.1",
+        "valueArr": [1, 2, 8, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Gỗ ép", "value": "1.2.8.2.2", "valueArr": [
+        1, 2, 8, 2, 2], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Gia công sản phẩm gỗ",
+        "value": "1.2.8.2.3",
+        "valueArr": [1, 2, 8, 2, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Gia công đồ gia dụng",
+        "value": "1.2.8.3.1",
+        "valueArr": [1, 2, 8, 3, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Sửa chữa tủ điện", "value": "1.2.9.1.1",
+        "valueArr": [1, 2, 9, 1, 1], "parent": "Điện, điện tử"},
+    {"label": "Sửa chữa dụng cụ", "value": "1.2.9.1.2",
+        "valueArr": [1, 2, 9, 1, 2], "parent": "Điện, điện tử"},
+    {"label": "Thiết kế bảng mạch in", "value": "1.2.9.3.1",
+        "valueArr": [1, 2, 9, 3, 1], "parent": "Điện, điện tử"},
+    {"label": "Sản xuất bảng mạch in", "value": "1.2.9.3.2",
+        "valueArr": [1, 2, 9, 3, 2], "parent": "Điện, điện tử"},
+    {"label": "Bản mạch in", "value": "1.2.9.3.3", "valueArr": [
+        1, 2, 9, 3, 3], "parent": "Điện, điện tử"},
+    {
+        "label": "Lắp ráp linh kiện bán dẫn",
+        "value": "1.2.9.4.1",
+        "valueArr": [1, 2, 9, 4, 1],
+        "parent": "Điện, điện tử"
+    },
+    {"label": "Lắp ráp thiết bị điện tử", "value": "1.2.9.5.1",
+        "valueArr": [1, 2, 9, 5, 1], "parent": "Điện, điện tử"},
+    {"label": "Lắp ráp điện tử", "value": "1.2.9.5.2",
+        "valueArr": [1, 2, 9, 5, 2], "parent": "Điện, điện tử"},
+    {"label": "Điện tử", "value": "1.2.9.5.3", "valueArr": [
+        1, 2, 9, 5, 3], "parent": "Điện, điện tử"},
+    {"label": "Điện", "value": "1.2.9.10.1", "valueArr": [
+        1, 2, 9, 10, 1], "parent": "Điện, điện tử"},
+    {
+        "label": "Lắp tủ điện, tủ điều khiển",
+        "value": "1.2.9.11.1",
+        "valueArr": [1, 2, 9, 11, 1],
+        "parent": "Điện, điện tử"
+    },
+    {"label": "Lắp thiết bị đóng, mở", "value": "1.2.9.11.2",
+        "valueArr": [1, 2, 9, 11, 2], "parent": "Điện, điện tử"},
+    {
+        "label": "Lắp ráp thiết bị điện khí",
+        "value": "1.2.9.11.3",
+        "valueArr": [1, 2, 9, 11, 3],
+        "parent": "Điện, điện tử"
+    },
+    {"label": "Lắp ráp máy biến áp", "value": "1.2.9.11.4",
+        "valueArr": [1, 2, 9, 11, 4], "parent": "Điện, điện tử"},
+    {
+        "label": "Lắp ráp thiết bị điện quay",
+        "value": "1.2.9.11.5",
+        "valueArr": [1, 2, 9, 11, 5],
+        "parent": "Điện, điện tử"
+    },
+    {"label": "Cuộn dây máy điện quay", "value": "1.2.9.11.6",
+        "valueArr": [1, 2, 9, 11, 6], "parent": "Điện, điện tử"},
+    {"label": "Lắp ráp điện", "value": "1.2.9.11.7",
+        "valueArr": [1, 2, 9, 11, 7], "parent": "Điện, điện tử"},
+    {"label": "Thi công điện", "value": "1.2.9.12.1",
+        "valueArr": [1, 2, 9, 12, 1], "parent": "Điện, điện tử"},
+    {
+        "label": "Xử lý nhiệt tổng thể",
+        "value": "1.2.9.13.1",
+        "valueArr": [1, 2, 9, 13, 1],
+        "parent": "Chế tạo Vật liệu"
+    },
+    {
+        "label": "Xử lý nhiệt một phần",
+        "value": "1.2.9.13.2",
+        "valueArr": [1, 2, 9, 13, 2],
+        "parent": "Chế tạo Vật liệu"
+    },
+    {"label": "Xử lý nhiệt bề mặt", "value": "1.2.9.13.3",
+        "valueArr": [1, 2, 9, 13, 3], "parent": "Chế tạo Vật liệu"},
+    {"label": "Chế tạo máy", "value": "1.2.9.14.2", "valueArr": [
+        1, 2, 9, 14, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Lắp đặt tủ lạnh", "value": "1.2.9.14.3", "valueArr": [
+        1, 2, 9, 14, 3], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Lắp đặt điều hoà", "value": "1.2.9.14.4", "valueArr": [
+        1, 2, 9, 14, 4], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Lắp đặt máy móc", "value": "1.2.9.14.5", "valueArr": [
+        1, 2, 9, 14, 5], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Lắp ráp máy móc", "value": "1.2.9.14.6", "valueArr": [
+        1, 2, 9, 14, 6], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Kiểm tra máy móc", "value": "1.2.9.14.7", "valueArr": [
+        1, 2, 9, 14, 7], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Bảo trì máy móc", "value": "1.2.9.14.8", "valueArr": [
+        1, 2, 9, 14, 8], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Sử dụng máy tiện thường",
+        "value": "1.2.9.15.1",
+        "valueArr": [1, 2, 9, 15, 1],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {
+        "label": "Sử dụng máy tiện số",
+        "value": "1.2.9.15.2",
+        "valueArr": [1, 2, 9, 15, 2],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Sử dụng máy phay", "value": "1.2.9.15.3", "valueArr": [
+        1, 2, 9, 15, 3], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Máy sản xuất tấm kim loại",
+        "value": "1.2.9.16.1",
+        "valueArr": [1, 2, 9, 16, 1],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Ép dập kim loại", "value": "1.2.9.16.2", "valueArr": [
+        1, 2, 9, 16, 2], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Thi công kết cấu thép",
+        "value": "1.2.9.16.3",
+        "valueArr": [1, 2, 9, 16, 3],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Vận hành máy", "value": "1.2.9.17.1", "valueArr": [
+        1, 2, 9, 17, 1], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Vận hành máy gia công",
+        "value": "1.2.9.17.2",
+        "valueArr": [1, 2, 9, 17, 2],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Vận hành máy CNC", "value": "1.2.9.17.3", "valueArr": [
+        1, 2, 9, 17, 3], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Vận hành máy ép", "value": "1.2.9.17.4", "valueArr": [
+        1, 2, 9, 17, 4], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Vận hành máy ép nhựa",
+        "value": "1.2.9.17.5",
+        "valueArr": [1, 2, 9, 17, 5],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Cơ khí", "value": "1.2.9.19.1", "valueArr": [
+        1, 2, 9, 19, 1], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Gia công cơ khí", "value": "1.2.9.19.2", "valueArr": [
+        1, 2, 9, 19, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Gia công tinh", "value": "1.2.9.19.4", "valueArr": [
+        1, 2, 9, 19, 4], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Gia công kim loại - Tekko",
+        "value": "1.2.9.19.5",
+        "valueArr": [1, 2, 9, 19, 5],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Đúc", "value": "1.2.9.20.1", "valueArr": [
+        1, 2, 9, 20, 1], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Đúc gang", "value": "1.2.9.20.2", "valueArr": [
+        1, 2, 9, 20, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Đúc kim loại màu", "value": "1.2.9.20.3", "valueArr": [
+        1, 2, 9, 20, 3], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Đúc khuôn", "value": "1.2.9.20.4", "valueArr": [
+        1, 2, 9, 20, 4], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Đúc khuôn buồng nóng",
+        "value": "1.2.9.21.5",
+        "valueArr": [1, 2, 9, 21, 5],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {
+        "label": "Đúc khuôn buồng lạnh",
+        "value": "1.2.9.21.6",
+        "valueArr": [1, 2, 9, 21, 6],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {
+        "label": "Dập khuôn kim loại",
+        "value": "1.2.9.22.1",
+        "valueArr": [1, 2, 9, 22, 1],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Gia công ép đùn", "value": "1.2.9.22.2", "valueArr": [
+        1, 2, 9, 22, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Rèn", "value": "1.2.9.22.3", "valueArr": [
+        1, 2, 9, 22, 3], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Rèn bằng búa", "value": "1.2.9.22.4", "valueArr": [
+        1, 2, 9, 22, 4], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Hoàn thiện dụng cụ nung chảy",
+        "value": "1.2.9.23.1",
+        "valueArr": [1, 2, 9, 23, 1],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Hoàn thiện khuôn", "value": "1.2.9.23.2", "valueArr": [
+        1, 2, 9, 23, 2], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Hoàn thiện sản phẩm ép đùn",
+        "value": "1.2.9.23.3",
+        "valueArr": [1, 2, 9, 23, 3],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Mạ điện", "value": "1.2.9.23.4", "valueArr": [
+        1, 2, 9, 23, 4], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Mạ kẽm nhúng nóng",
+        "value": "1.2.9.23.5",
+        "valueArr": [1, 2, 9, 23, 5],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {
+        "label": "Xử lý điện hóa nhôm",
+        "value": "1.2.9.23.6",
+        "valueArr": [1, 2, 9, 23, 6],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {
+        "label": "Chế tạo kim loại tấm",
+        "value": "1.2.9.24.1",
+        "valueArr": [1, 2, 9, 24, 1],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Hàn", "value": "1.2.9.25.1", "valueArr": [
+        1, 2, 9, 25, 1], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn thủ công", "value": "1.2.9.25.2", "valueArr": [
+        1, 2, 9, 25, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn xì", "value": "1.2.9.25.3", "valueArr": [
+        1, 2, 9, 25, 3], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn khí", "value": "1.2.9.25.4", "valueArr": [
+        1, 2, 9, 25, 4], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn bán tự động", "value": "1.2.9.26.1", "valueArr": [
+        1, 2, 9, 26, 1], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn kết cấu", "value": "1.2.9.27.1", "valueArr": [
+        1, 2, 9, 27, 1], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn khung thép", "value": "1.2.9.27.2", "valueArr": [
+        1, 2, 9, 27, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn tủ điện", "value": "1.2.9.27.3", "valueArr": [
+        1, 2, 9, 27, 3], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Hàn tàu", "value": "1.2.9.28.2", "valueArr": [
+        1, 2, 9, 28, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Đóng tàu", "value": "1.2.9.28.3", "valueArr": [
+        1, 2, 9, 28, 3], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Sơn", "value": "1.2.9.29.1", "valueArr": [
+        1, 2, 9, 29, 1], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Sơn phun", "value": "1.2.9.29.2", "valueArr": [
+        1, 2, 9, 29, 2], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Sơn kim loại", "value": "1.2.9.30.1", "valueArr": [
+        1, 2, 9, 30, 1], "parent": "Cơ khí, chế tạo máy"},
+    {"label": "Sơn cầu thép", "value": "1.2.9.30.2", "valueArr": [
+        1, 2, 9, 30, 2], "parent": "Cơ khí, chế tạo máy"},
+    {
+        "label": "Sơn công trình xây dựng",
+        "value": "1.2.9.30.3",
+        "valueArr": [1, 2, 9, 30, 3],
+        "parent": "Cơ khí, chế tạo máy"
+    },
+    {"label": "Lắp ráp linh kiện ô tô", "value": "1.2.10.2.2",
+        "valueArr": [1, 2, 10, 2, 2], "parent": "Ô tô"},
+    {"label": "Linh kiện ô tô", "value": "1.2.10.2.3",
+        "valueArr": [1, 2, 10, 2, 3], "parent": "Ô tô"},
+    {"label": "Kiểm tra linh kiện ô tô", "value": "1.2.10.3.1",
+        "valueArr": [1, 2, 10, 3, 1], "parent": "Ô tô"},
+    {"label": "Bảo dưỡng ô tô", "value": "1.2.10.4.1",
+        "valueArr": [1, 2, 10, 4, 1], "parent": "Ô tô"},
+    {"label": "Sửa chữa ô tô", "value": "1.2.10.4.2",
+        "valueArr": [1, 2, 10, 4, 2], "parent": "Ô tô"},
+    {"label": "Đúc nhựa", "value": "1.2.11.1.1", "valueArr": [
+        1, 2, 11, 1, 1], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Đúc nhựa nén",
+        "value": "1.2.11.1.2",
+        "valueArr": [1, 2, 11, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc nhựa thổi phồng",
+        "value": "1.2.11.1.3",
+        "valueArr": [1, 2, 11, 1, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc nhựa thổi định hình",
+        "value": "1.2.11.1.4",
+        "valueArr": [1, 2, 11, 1, 4],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc nhựa cán xếp chồng",
+        "value": "1.2.11.1.5",
+        "valueArr": [1, 2, 11, 1, 5],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đục nhựa ép phun",
+        "value": "1.2.11.1.6",
+        "valueArr": [1, 2, 11, 1, 6],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Kiểm tra sản phẩm nhựa",
+        "value": "1.2.11.2.1",
+        "valueArr": [1, 2, 11, 2, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Đúc khuôn cao su",
+        "value": "1.2.11.3.1",
+        "valueArr": [1, 2, 11, 3, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Trộn và cán cao su",
+        "value": "1.2.11.3.2",
+        "valueArr": [1, 2, 11, 3, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Gia công ép đùn cao su",
+        "value": "1.2.11.3.3",
+        "valueArr": [1, 2, 11, 3, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Vật liệu composite nhiều lớp",
+        "value": "1.2.11.4.1",
+        "valueArr": [1, 2, 11, 4, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "In gốm", "value": "1.2.12.2.1", "valueArr": [
+        1, 2, 12, 2, 1], "parent": "Sản xuất, dịch vụ tổng hợp"},
+    {
+        "label": "Đúc gốm bằng áp lực",
+        "value": "1.2.12.2.2",
+        "valueArr": [1, 2, 12, 2, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Nặn gốm bằng bánh xoay",
+        "value": "1.2.12.2.3",
+        "valueArr": [1, 2, 12, 2, 3],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Nhiên liệu rắn từ rác",
+        "value": "1.2.13.1.1",
+        "valueArr": [1, 2, 13, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Hàng hóa hàng không", "value": "1.2.14.1.1",
+        "valueArr": [1, 2, 14, 1, 1], "parent": "Hàng không"},
+    {"label": "Hỗ trợ mặt đất máy bay", "value": "1.2.14.2.1",
+        "valueArr": [1, 2, 14, 2, 1], "parent": "Hàng không"},
+    {"label": "Dọn dẹp khoang hành khách", "value": "1.2.14.3.1",
+        "valueArr": [1, 2, 14, 3, 1], "parent": "Hàng không"},
+    {
+        "label": "Thiết bị khí nén đường sắt",
+        "value": "1.2.15.1.1",
+        "valueArr": [1, 2, 15, 1, 1],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {
+        "label": "Bảo trì đường sắt",
+        "value": "1.2.15.1.2",
+        "valueArr": [1, 2, 15, 1, 2],
+        "parent": "Sản xuất, dịch vụ tổng hợp"
+    },
+    {"label": "Quản lý kho vận tải", "value": "1.2.17.1.1",
+        "valueArr": [1, 2, 17, 1, 1], "parent": "Vận tải"},
+    {"label": "Hậu cần vận tải", "value": "1.2.17.1.2",
+        "valueArr": [1, 2, 17, 1, 2], "parent": "Vận tải"},
+    {"label": "Lái xe nâng", "value": "1.2.17.1.3",
+        "valueArr": [1, 2, 17, 1, 3], "parent": "Vận tải"},
+    {"label": "Thực tập lái xe", "value": "1.2.17.1.4",
+        "valueArr": [1, 2, 17, 1, 4], "parent": "Vận tải"},
+    {"label": "Phụ xe", "value": "1.2.17.1.5",
+        "valueArr": [1, 2, 17, 1, 5], "parent": "Vận tải"},
+    {"label": "Lái xe", "value": "1.2.17.2.1",
+        "valueArr": [1, 2, 17, 2, 1], "parent": "Vận tải"},
+    {"label": "Lái xe taxi", "value": "1.2.17.2.2",
+        "valueArr": [1, 2, 17, 2, 2], "parent": "Vận tải"},
+    {"label": "Lái xe buýt cỡ trung", "value": "1.2.17.2.3",
+        "valueArr": [1, 2, 17, 2, 3], "parent": "Vận tải"},
+    {"label": "Lái xe buýt cỡ lớn", "value": "1.2.17.2.4",
+        "valueArr": [1, 2, 17, 2, 4], "parent": "Vận tải"},
+    {"label": "Lái xe tải cỡ nhỏ", "value": "1.2.17.3.1",
+        "valueArr": [1, 2, 17, 3, 1], "parent": "Vận tải"},
+    {"label": "Lái xe tải cỡ trung", "value": "1.2.17.3.2",
+        "valueArr": [1, 2, 17, 3, 2], "parent": "Vận tải"},
+    {"label": "Lái xe tải cỡ lớn", "value": "1.2.17.3.3",
+        "valueArr": [1, 2, 17, 3, 3], "parent": "Vận tải"},
+    {"label": "Lái máy xây dựng", "value": "1.2.18.4.1",
+        "valueArr": [1, 2, 18, 4, 1], "parent": "Xây dựng"},
+    {"label": "Lái máy xúc", "value": "1.2.18.4.2",
+        "valueArr": [1, 2, 18, 4, 2], "parent": "Xây dựng"},
+    {"label": "Lái máy xúc lật", "value": "1.2.18.4.3",
+        "valueArr": [1, 2, 18, 4, 3], "parent": "Xây dựng"},
+    {"label": "Lái máy ủi", "value": "1.2.18.4.4",
+        "valueArr": [1, 2, 18, 4, 4], "parent": "Xây dựng"},
+    {"label": "Lái xe lu", "value": "1.2.18.4.5",
+        "valueArr": [1, 2, 18, 4, 5], "parent": "Xây dựng"},
+    {"label": "Phá dỡ", "value": "1.2.18.5.1", "valueArr": [
+        1, 2, 18, 5, 1], "parent": "Xây dựng"},
+    {"label": "San lấp mặt bằng", "value": "1.2.18.5.2",
+        "valueArr": [1, 2, 18, 5, 2], "parent": "Xây dựng"},
+    {"label": "Hút nước ngầm công trình", "value": "1.2.18.6.1",
+        "valueArr": [1, 2, 18, 6, 1], "parent": "Xây dựng"},
+    {"label": "Làm nền, móng", "value": "1.2.18.6.2",
+        "valueArr": [1, 2, 18, 6, 2], "parent": "Xây dựng"},
+    {"label": "Thi công móng thép", "value": "1.2.18.6.3",
+        "valueArr": [1, 2, 18, 6, 3], "parent": "Xây dựng"},
+    {"label": "Đổ nhựa đường", "value": "1.2.18.9.1",
+        "valueArr": [1, 2, 18, 9, 1], "parent": "Xây dựng"},
+    {"label": "Dựng giàn giáo", "value": "1.2.18.9.2",
+        "valueArr": [1, 2, 18, 9, 2], "parent": "Xây dựng"},
+    {"label": "Gia công sắt trong xưởng", "value": "1.2.18.10.1",
+        "valueArr": [1, 2, 18, 10, 1], "parent": "Xây dựng"},
+    {
+        "label": "Gia công khung thép trong xưởng",
+        "value": "1.2.18.10.2",
+        "valueArr": [1, 2, 18, 10, 2],
+        "parent": "Xây dựng"
+    },
+    {"label": "Gia công khung thép", "value": "1.2.18.10.3",
+        "valueArr": [1, 2, 18, 10, 3], "parent": "Xây dựng"},
+    {"label": "Hàn khung thép trên cao", "value": "1.2.18.10.4",
+        "valueArr": [1, 2, 18, 10, 4], "parent": "Xây dựng"},
+    {"label": "Lắp ghép cốt thép", "value": "1.2.18.10.5",
+        "valueArr": [1, 2, 18, 10, 5], "parent": "Xây dựng"},
+    {"label": "Buộc thép", "value": "1.2.18.10.6",
+        "valueArr": [1, 2, 18, 10, 6], "parent": "Xây dựng"},
+    {"label": "Cốp pha công trình", "value": "1.2.18.11.1",
+        "valueArr": [1, 2, 18, 11, 1], "parent": "Xây dựng"},
+    {"label": "Mộc cốp pha", "value": "1.2.18.11.2",
+        "valueArr": [1, 2, 18, 11, 2], "parent": "Xây dựng"},
+    {"label": "Bê tông", "value": "1.2.18.11.3",
+        "valueArr": [1, 2, 18, 11, 3], "parent": "Xây dựng"},
+    {"label": "Sản xuất bê tông", "value": "1.2.18.11.4",
+        "valueArr": [1, 2, 18, 11, 4], "parent": "Xây dựng"},
+    {"label": "Đổ bê tông áp lực", "value": "1.2.18.11.5",
+        "valueArr": [1, 2, 18, 11, 5], "parent": "Xây dựng"},
+    {"label": "Trát vữa", "value": "1.2.18.11.6",
+        "valueArr": [1, 2, 18, 11, 6], "parent": "Xây dựng"},
+    {"label": "Xây dựng tổng hợp", "value": "1.2.18.11.7",
+        "valueArr": [1, 2, 18, 11, 7], "parent": "Xây dựng"},
+    {"label": "Gia công vật liệu đá", "value": "1.2.18.15.1",
+        "valueArr": [1, 2, 18, 15, 1], "parent": "Xây dựng"},
+    {"label": "Lát đá", "value": "1.2.18.15.2", "valueArr": [
+        1, 2, 18, 15, 2], "parent": "Xây dựng"},
+    {"label": "Ốp lát gạch", "value": "1.2.18.15.3",
+        "valueArr": [1, 2, 18, 15, 3], "parent": "Xây dựng"},
+    {"label": "Lắp bồn tắm", "value": "1.2.18.15.4",
+        "valueArr": [1, 2, 18, 15, 4], "parent": "Xây dựng"},
+    {"label": "Lợp mái nhà", "value": "1.2.18.16.1",
+        "valueArr": [1, 2, 18, 16, 1], "parent": "Xây dựng"},
+    {"label": "Lợp ngói", "value": "1.2.18.16.2",
+        "valueArr": [1, 2, 18, 16, 2], "parent": "Xây dựng"},
+    {"label": "Chống thấm", "value": "1.2.18.17.1",
+        "valueArr": [1, 2, 18, 17, 1], "parent": "Xây dựng"},
+    {"label": "Chống thấm trần nhà", "value": "1.2.18.17.2",
+        "valueArr": [1, 2, 18, 17, 2], "parent": "Xây dựng"},
+    {
+        "label": "Công trình chống nóng, lạnh",
+        "value": "1.2.18.17.3",
+        "valueArr": [1, 2, 18, 17, 3],
+        "parent": "Xây dựng"
+    },
+    {"label": "Thợ mộc xây dựng", "value": "1.2.18.18.1",
+        "valueArr": [1, 2, 18, 18, 1], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện sàn nhựa", "value": "1.2.18.19.1",
+        "valueArr": [1, 2, 18, 19, 1], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện sàn thảm", "value": "1.2.18.19.2",
+        "valueArr": [1, 2, 18, 19, 2], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện ván", "value": "1.2.18.19.3",
+        "valueArr": [1, 2, 18, 19, 3], "parent": "Xây dựng"},
+    {"label": "Dán tường", "value": "1.2.18.19.4",
+        "valueArr": [1, 2, 18, 19, 4], "parent": "Xây dựng"},
+    {"label": "Thi công dán tường", "value": "1.2.18.19.5",
+        "valueArr": [1, 2, 18, 19, 5], "parent": "Xây dựng"},
+    {"label": "Sơn xây dựng", "value": "1.2.18.19.6",
+        "valueArr": [1, 2, 18, 19, 6], "parent": "Xây dựng"},
+    {"label": "Nội thất gỗ-xây dựng", "value": "1.2.18.19.7",
+        "valueArr": [1, 2, 18, 19, 7], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện nội thất", "value": "1.2.18.19.9",
+        "valueArr": [1, 2, 18, 19, 9], "parent": "Xây dựng"},
+    {"label": "Thi công lắp rèm", "value": "1.2.18.19.10",
+        "valueArr": [1, 2, 18, 19, 10], "parent": "Xây dựng"},
+    {"label": "Gia công đường ống", "value": "1.2.18.20.1",
+        "valueArr": [1, 2, 18, 20, 1], "parent": "Xây dựng"},
+    {"label": "Đường ống", "value": "1.2.18.20.2",
+        "valueArr": [1, 2, 18, 20, 2], "parent": "Xây dựng"},
+    {"label": "Đường ống nước", "value": "1.2.18.20.3",
+        "valueArr": [1, 2, 18, 20, 3], "parent": "Xây dựng"},
+    {"label": "Đường ống xây dựng", "value": "1.2.18.20.4",
+        "valueArr": [1, 2, 18, 20, 4], "parent": "Xây dựng"},
+    {"label": "Lắp đặt đường ống", "value": "1.2.18.20.5",
+        "valueArr": [1, 2, 18, 20, 5], "parent": "Xây dựng"},
+    {"label": "Đường ống điều hoà", "value": "1.2.18.20.6",
+        "valueArr": [1, 2, 18, 20, 6], "parent": "Xây dựng"},
+    {"label": "Lắp điện lạnh, điều hòa", "value": "1.2.18.20.7",
+        "valueArr": [1, 2, 18, 20, 7], "parent": "Xây dựng"},
+    {"label": "Đường ống nhà máy", "value": "1.2.18.20.8",
+        "valueArr": [1, 2, 18, 20, 8], "parent": "Xây dựng"},
+    {"label": "Khoan giếng máy dập", "value": "1.2.18.21.1",
+        "valueArr": [1, 2, 18, 21, 1], "parent": "Xây dựng"},
+    {"label": "Khoan giếng máy khoan", "value": "1.2.18.21.2",
+        "valueArr": [1, 2, 18, 21, 2], "parent": "Xây dựng"},
+    {"label": "Lắp đặt pin năng lượng", "value": "1.2.18.21.3",
+        "valueArr": [1, 2, 18, 21, 3], "parent": "Xây dựng"},
+    {"label": "Lắp đặt lò nung-xây dựng", "value": "1.2.18.21.4",
+        "valueArr": [1, 2, 18, 21, 4], "parent": "Xây dựng"},
+    {"label": "Khung chắn toà nhà", "value": "1.2.18.22.1",
+        "valueArr": [1, 2, 18, 22, 1], "parent": "Xây dựng"},
+    {"label": "Tấm kim loại ống gió", "value": "1.2.18.22.2",
+        "valueArr": [1, 2, 18, 22, 2], "parent": "Xây dựng"},
+    {"label": "Tấm kim loại kiến trúc", "value": "1.2.18.22.3",
+        "valueArr": [1, 2, 18, 22, 3], "parent": "Xây dựng"},
+    {"label": "Vệ sinh toà nhà", "value": "1.2.19.1.1",
+        "valueArr": [1, 2, 19, 1, 1], "parent": "Vệ sinh toà nhà"},
+    {
+        "label": "Buồng phòng khách sạn",
+        "value": "1.2.19.2.1",
+        "valueArr": [1, 2, 19, 2, 1],
+        "parent": "Vệ sinh toà nhà"
+    },
+    {
+        "label": "(Khách sạn) Tiếp khách, quản lý vệ sinh",
+        "value": "1.2.19.3.1",
+        "valueArr": [1, 2, 19, 3, 1],
+        "parent": "Lưu trú, khách sạn"
+    },
+    {"label": "Lễ tân khách sạn", "value": "1.2.19.3.2", "valueArr": [
+        1, 2, 19, 3, 2], "parent": "Lưu trú, khách sạn"},
+    {"label": "Quản lý khách sạn", "value": "1.2.19.3.3",
+        "valueArr": [1, 2, 19, 3, 3], "parent": "Lưu trú, khách sạn"},
+    {"label": "Hành lý khách sạn", "value": "1.2.19.3.4",
+        "valueArr": [1, 2, 19, 3, 4], "parent": "Lưu trú, khách sạn"},
+    {"label": "Lưu trú khách sạn", "value": "1.2.19.3.5",
+        "valueArr": [1, 2, 19, 3, 5], "parent": "Lưu trú, khách sạn"},
+    {"label": "Điều dưỡng, hộ lý", "value": "1.2.20.1.1",
+        "valueArr": [1, 2, 20, 1, 1], "parent": "Điều dưỡng"},
+    {"label": "Chăn nuôi", "value": "1.3.2.4.6", "valueArr": [
+        1, 3, 2, 4, 6], "parent": "Nông lâm ngư nghiệp"},
+    {
+        "label": "Công nhân chăn nuôi đặc khu",
+        "value": "1.3.2.4.7",
+        "valueArr": [1, 3, 2, 4, 7],
+        "parent": "Nông lâm ngư nghiệp"
+    },
+    {
+        "label": "Công nghệ nông, lâm, ngư nghiệp",
+        "value": "1.3.2.4.8",
+        "valueArr": [1, 3, 2, 4, 8],
+        "parent": "Nông lâm ngư nghiệp"
+    },
+    {
+        "label": "Công nhân trồng trọt đặc khu",
+        "value": "1.3.2.5.10",
+        "valueArr": [1, 3, 2, 5, 10],
+        "parent": "Nông lâm ngư nghiệp"
+    },
+    {
+        "label": "Công nhân Nông, Lâm, Ngư nghiệp",
+        "value": "1.3.2.5.11",
+        "valueArr": [1, 3, 2, 5, 11],
+        "parent": "Nông lâm ngư nghiệp"
+    },
+    {"label": "Công nghệ sinh học", "value": "1.3.4.6.11",
+        "valueArr": [1, 3, 4, 6, 11], "parent": "Thực phẩm"},
+    {"label": "Quản lý sản xuất thực phẩm", "value": "1.3.4.6.12",
+        "valueArr": [1, 3, 4, 6, 12], "parent": "Thực phẩm"},
+    {"label": "Công nghệ thực phẩm", "value": "1.3.4.6.13",
+        "valueArr": [1, 3, 4, 6, 13], "parent": "Thực phẩm"},
+    {"label": "Thực phẩm", "value": "1.3.4.6.14",
+        "valueArr": [1, 3, 4, 6, 14], "parent": "Thực phẩm"},
+    {"label": "Đóng gói rau", "value": "1.3.4.8.2",
+        "valueArr": [1, 3, 4, 8, 2], "parent": "Thực phẩm"},
+    {
+        "label": "Kinh tế làm xưởng",
+        "value": "1.3.5.1.1",
+        "valueArr": [1, 3, 5, 1, 1],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "IT làm xưởng",
+        "value": "1.3.5.1.2",
+        "valueArr": [1, 3, 5, 1, 2],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Hoá học làm xưởng",
+        "value": "1.3.5.1.3",
+        "valueArr": [1, 3, 5, 1, 3],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Môi trường làm xưởng",
+        "value": "1.3.5.1.4",
+        "valueArr": [1, 3, 5, 1, 4],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Lao động nước ngoài lĩnh vực sản xuất",
+        "value": "1.3.5.1.5",
+        "valueArr": [1, 3, 5, 1, 5],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Sản xuất sản phẩm cho nước ngoài",
+        "value": "1.3.5.1.6",
+        "valueArr": [1, 3, 5, 1, 6],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Sản xuất sản phẩm",
+        "value": "1.3.5.1.7",
+        "valueArr": [1, 3, 5, 1, 7],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Công nghệ sản xuất",
+        "value": "1.3.5.2.1",
+        "valueArr": [1, 3, 5, 2, 1],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Quản lý sản xuất tổng hợp",
+        "value": "1.3.5.2.2",
+        "valueArr": [1, 3, 5, 2, 2],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {"label": "In ấn", "value": "1.3.7.1.4", "valueArr": [
+        1, 3, 7, 1, 4], "parent": "Sản xuất, chế tạo, công nghệ"},
+    {"label": "Thiết kế cơ khí", "value": "1.3.9.2.1",
+        "valueArr": [1, 3, 9, 2, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Thiết kế Auto CAD", "value": "1.3.9.2.2",
+        "valueArr": [1, 3, 9, 2, 2], "parent": "Cơ khí, máy móc"},
+    {"label": "Phân tích CAE", "value": "1.3.9.2.3", "valueArr": [
+        1, 3, 9, 2, 3], "parent": "Cơ khí, máy móc"},
+    {"label": "Thiết kế điện", "value": "1.3.9.6.1", "valueArr": [
+        1, 3, 9, 6, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Điện nội thất", "value": "1.3.9.7.1", "valueArr": [
+        1, 3, 9, 7, 1], "parent": "Cơ khí, máy móc"},
+    {
+        "label": "Điện cơ khí hỗ trợ chuyển nhà",
+        "value": "1.3.9.7.2",
+        "valueArr": [1, 3, 9, 7, 2],
+        "parent": "Cơ khí, máy móc"
+    },
+    {"label": "Bảo trì hệ thống điện", "value": "1.3.9.8.1",
+        "valueArr": [1, 3, 9, 8, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Điện, kỹ thuật điện", "value": "1.3.9.8.2",
+        "valueArr": [1, 3, 9, 8, 2], "parent": "Cơ khí, máy móc"},
+    {"label": "Viễn thông", "value": "1.3.9.9.1", "valueArr": [
+        1, 3, 9, 9, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Quản lý sản xuất máy", "value": "1.3.9.14.1",
+        "valueArr": [1, 3, 9, 14, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Chế tạo máy", "value": "1.3.9.14.2", "valueArr": [
+        1, 3, 9, 14, 2], "parent": "Cơ khí, máy móc"},
+    {"label": "Lắp đặt tủ lạnh", "value": "1.3.9.14.3",
+        "valueArr": [1, 3, 9, 14, 3], "parent": "Cơ khí, máy móc"},
+    {"label": "Lắp đặt điều hoà", "value": "1.3.9.14.4",
+        "valueArr": [1, 3, 9, 14, 4], "parent": "Cơ khí, máy móc"},
+    {"label": "Lắp đặt máy móc", "value": "1.3.9.14.5",
+        "valueArr": [1, 3, 9, 14, 5], "parent": "Cơ khí, máy móc"},
+    {"label": "Lắp ráp máy móc", "value": "1.3.9.14.6",
+        "valueArr": [1, 3, 9, 14, 6], "parent": "Cơ khí, máy móc"},
+    {"label": "Kiểm tra máy móc", "value": "1.3.9.14.7",
+        "valueArr": [1, 3, 9, 14, 7], "parent": "Cơ khí, máy móc"},
+    {"label": "Bảo trì máy móc", "value": "1.3.9.14.8",
+        "valueArr": [1, 3, 9, 14, 8], "parent": "Cơ khí, máy móc"},
+    {"label": "Vận hành máy", "value": "1.3.9.17.1", "valueArr": [
+        1, 3, 9, 17, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Vận hành máy CNC", "value": "1.3.9.17.3",
+        "valueArr": [1, 3, 9, 17, 3], "parent": "Cơ khí, máy móc"},
+    {"label": "Vận hành máy ép", "value": "1.3.9.17.4",
+        "valueArr": [1, 3, 9, 17, 4], "parent": "Cơ khí, máy móc"},
+    {"label": "Vận hành máy ép nhựa", "value": "1.3.9.17.5",
+        "valueArr": [1, 3, 9, 17, 5], "parent": "Cơ khí, máy móc"},
+    {"label": "Tự động hoá", "value": "1.3.9.18.1", "valueArr": [
+        1, 3, 9, 18, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Vận hành robot", "value": "1.3.9.18.2",
+        "valueArr": [1, 3, 9, 18, 2], "parent": "Cơ khí, máy móc"},
+    {"label": "Cơ khí", "value": "1.3.9.19.1", "valueArr": [
+        1, 3, 9, 19, 1], "parent": "Cơ khí, máy móc"},
+    {"label": "Gia công cơ khí", "value": "1.3.9.19.2",
+        "valueArr": [1, 3, 9, 19, 2], "parent": "Cơ khí, máy móc"},
+    {"label": "Công nghệ cơ khí", "value": "1.3.9.19.3",
+        "valueArr": [1, 3, 9, 19, 3], "parent": "Cơ khí, máy móc"},
+    {
+        "label": "Công nhân sản xuất, gia công kim loại",
+        "value": "1.3.9.19.6",
+        "valueArr": [1, 3, 9, 19, 6],
+        "parent": "Cơ khí, máy móc"
+    },
+    {
+        "label": "Công nhân đóng tàu nước ngoài",
+        "value": "1.3.9.28.1",
+        "valueArr": [1, 3, 9, 28, 1],
+        "parent": "Cơ khí, máy móc"
+    },
+    {"label": "Thiết kế ô tô", "value": "1.3.10.1.1",
+        "valueArr": [1, 3, 10, 1, 1], "parent": "Công nghệ ô tô"},
+    {"label": "Ô tô", "value": "1.3.10.2.1", "valueArr": [
+        1, 3, 10, 2, 1], "parent": "Công nghệ ô tô"},
+    {
+        "label": "Công nhân sản xuất, gia công sản phẩm (trừ kim loại)",
+        "value": "1.3.11.5.1",
+        "valueArr": [1, 3, 11, 5, 1],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Gia công đồ xa xỉ",
+        "value": "1.3.12.1.1",
+        "valueArr": [1, 3, 12, 1, 1],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Rác thải, phế liệu, tái chế",
+        "value": "1.3.13.1.2",
+        "valueArr": [1, 3, 13, 1, 2],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Công nghệ môi trường",
+        "value": "1.3.13.1.3",
+        "valueArr": [1, 3, 13, 1, 3],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Khoan khảo sát dầu mỏ, năng lượng",
+        "value": "1.3.13.2.1",
+        "valueArr": [1, 3, 13, 2, 1],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Nhân viên sân bay",
+        "value": "1.3.14.2.2",
+        "valueArr": [1, 3, 14, 2, 2],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {"label": "Quản lý đóng gói", "value": "1.3.16.1.1", "valueArr": [
+        1, 3, 16, 1, 1], "parent": "Vận chuyển hàng hoá"},
+    {"label": "Quản lý dọn dẹp", "value": "1.3.16.1.2", "valueArr": [
+        1, 3, 16, 1, 2], "parent": "Vận chuyển hàng hoá"},
+    {
+        "label": "Quản lý vận chuyển, dọn dẹp, đóng gói",
+        "value": "1.3.16.1.3",
+        "valueArr": [1, 3, 16, 1, 3],
+        "parent": "Vận chuyển hàng hoá"
+    },
+    {
+        "label": "Quản lý vận chuyển",
+        "value": "1.3.16.2.1",
+        "valueArr": [1, 3, 16, 2, 1],
+        "parent": "Vận chuyển hàng hoá"
+    },
+    {
+        "label": "Đại lý thủ tục hàng hải",
+        "value": "1.3.16.3.1",
+        "valueArr": [1, 3, 16, 3, 1],
+        "parent": "Vận chuyển hàng hoá"
+    },
+    {"label": "Trắc địa, khảo sát", "value": "1.3.18.1.1",
+        "valueArr": [1, 3, 18, 1, 1], "parent": "Xây dựng"},
+    {"label": "Khảo sát", "value": "1.3.18.1.2",
+        "valueArr": [1, 3, 18, 1, 2], "parent": "Xây dựng"},
+    {"label": "Kỹ thuật Khảo sát", "value": "1.3.18.1.3",
+        "valueArr": [1, 3, 18, 1, 3], "parent": "Xây dựng"},
+    {
+        "label": "Kỹ thuật Kiến trúc, Xây dựng, Khảo sát",
+        "value": "1.3.18.2.1",
+        "valueArr": [1, 3, 18, 2, 1],
+        "parent": "Xây dựng"
+    },
+    {"label": "Kỹ thuật Kiến trúc", "value": "1.3.18.2.2",
+        "valueArr": [1, 3, 18, 2, 2], "parent": "Xây dựng"},
+    {"label": "Kiến trúc sư", "value": "1.3.18.3.1",
+        "valueArr": [1, 3, 18, 3, 1], "parent": "Xây dựng"},
+    {
+        "label": "Quản lý, giám sát thi công công trình",
+        "value": "1.3.18.7.1",
+        "valueArr": [1, 3, 18, 7, 1],
+        "parent": "Xây dựng"
+    },
+    {"label": "Giám sát thi công", "value": "1.3.18.7.2",
+        "valueArr": [1, 3, 18, 7, 2], "parent": "Xây dựng"},
+    {"label": "Cầu đường", "value": "1.3.18.8.1",
+        "valueArr": [1, 3, 18, 8, 1], "parent": "Xây dựng"},
+    {"label": "Kỹ thuật Xây dựng", "value": "1.3.18.12.1",
+        "valueArr": [1, 3, 18, 12, 1], "parent": "Xây dựng"},
+    {"label": "Xây dựng dân dụng", "value": "1.3.18.12.2",
+        "valueArr": [1, 3, 18, 12, 2], "parent": "Xây dựng"},
+    {
+        "label": "Công nhân kết cấu xây dựng",
+        "value": "1.3.18.13.1",
+        "valueArr": [1, 3, 18, 13, 1],
+        "parent": "Xây dựng"
+    },
+    {
+        "label": "Công nhân xây dựng (trừ khung công trình)",
+        "value": "1.3.18.13.2",
+        "valueArr": [1, 3, 18, 13, 2],
+        "parent": "Xây dựng"
+    },
+    {
+        "label": "Công nghệ xây dựng của nước ngoài",
+        "value": "1.3.18.14.1",
+        "valueArr": [1, 3, 18, 14, 1],
+        "parent": "Xây dựng"
+    },
+    {
+        "label": "Công nhân xây dựng nước ngoài",
+        "value": "1.3.18.14.2",
+        "valueArr": [1, 3, 18, 14, 2],
+        "parent": "Xây dựng"
+    },
+    {
+        "label": "Công nhân xây dựng mỏ tổng hợp",
+        "value": "1.3.18.14.3",
+        "valueArr": [1, 3, 18, 14, 3],
+        "parent": "Xây dựng"
+    },
+    {"label": "Nội thất gỗ", "value": "1.3.18.19.8",
+        "valueArr": [1, 3, 18, 19, 8], "parent": "Xây dựng"},
+    {"label": "Hoàn thiện nội thất", "value": "1.3.18.19.9",
+        "valueArr": [1, 3, 18, 19, 9], "parent": "Xây dựng"},
+    {"label": "Đường ống", "value": "1.3.18.20.2",
+        "valueArr": [1, 3, 18, 20, 2], "parent": "Xây dựng"},
+    {"label": "Lễ tân khách sạn", "value": "1.3.19.3.2", "valueArr": [
+        1, 3, 19, 3, 2], "parent": "Khách sạn, lưu trú"},
+    {"label": "Khu nghỉ dưỡng", "value": "1.3.19.3.6", "valueArr": [
+        1, 3, 19, 3, 6], "parent": "Khách sạn, lưu trú"},
+    {"label": "Dịch vụ khách sạn", "value": "1.3.19.3.7",
+        "valueArr": [1, 3, 19, 3, 7], "parent": "Khách sạn, lưu trú"},
+    {
+        "label": "Điều dưỡng dự bị học EPA",
+        "value": "1.3.20.2.1",
+        "valueArr": [1, 3, 20, 2, 1],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {"label": "Y tá EPA dự bị", "value": "1.3.20.2.2", "valueArr": [
+        1, 3, 20, 2, 2], "parent": "Y tế, điều dưỡng"},
+    {
+        "label": "Điều dưỡng, hộ lý EPA dự bị",
+        "value": "1.3.20.2.3",
+        "valueArr": [1, 3, 20, 2, 3],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {
+        "label": "Điều dưỡng có chứng chỉ",
+        "value": "1.3.20.3.1",
+        "valueArr": [1, 3, 20, 3, 1],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {"label": "Y tá", "value": "1.3.20.3.2", "valueArr": [
+        1, 3, 20, 3, 2], "parent": "Y tế, điều dưỡng"},
+    {
+        "label": "Y tá sức khoẻ cộng đồng",
+        "value": "1.3.20.3.3",
+        "valueArr": [1, 3, 20, 3, 3],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {"label": "Nữ hộ sinh", "value": "1.3.20.3.4", "valueArr": [
+        1, 3, 20, 3, 4], "parent": "Y tế, điều dưỡng"},
+    {
+        "label": "Điều dưỡng, hộ lý EPA",
+        "value": "1.3.20.3.5",
+        "valueArr": [1, 3, 20, 3, 5],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {"label": "Y tá EPA", "value": "1.3.20.3.6", "valueArr": [
+        1, 3, 20, 3, 6], "parent": "Y tế, điều dưỡng"},
+    {"label": "Trợ lý y tá", "value": "1.3.20.3.7", "valueArr": [
+        1, 3, 20, 3, 7], "parent": "Y tế, điều dưỡng"},
+    {"label": "Bác sĩ", "value": "1.3.20.4.1", "valueArr": [
+        1, 3, 20, 4, 1], "parent": "Y tế, điều dưỡng"},
+    {"label": "Nha sĩ", "value": "1.3.20.4.2", "valueArr": [
+        1, 3, 20, 4, 2], "parent": "Y tế, điều dưỡng"},
+    {"label": "Dược sĩ", "value": "1.3.20.4.3", "valueArr": [
+        1, 3, 20, 4, 3], "parent": "Y tế, điều dưỡng"},
+    {"label": "Vệ sinh răng miệng", "value": "1.3.20.5.1",
+        "valueArr": [1, 3, 20, 5, 1], "parent": "Y tế, điều dưỡng"},
+    {
+        "label": "Kỹ thuật viên X quang",
+        "value": "1.3.20.5.2",
+        "valueArr": [1, 3, 20, 5, 2],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {"label": "Vật lý trị liệu", "value": "1.3.20.5.3",
+        "valueArr": [1, 3, 20, 5, 3], "parent": "Y tế, điều dưỡng"},
+    {
+        "label": "Nhà trị liệu nghề nghiệp",
+        "value": "1.3.20.5.4",
+        "valueArr": [1, 3, 20, 5, 4],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {
+        "label": "Bác sĩ chỉnh thị lực",
+        "value": "1.3.20.5.5",
+        "valueArr": [1, 3, 20, 5, 5],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {"label": "Y tế lâm sàng", "value": "1.3.20.6.1", "valueArr": [
+        1, 3, 20, 6, 1], "parent": "Y tế, điều dưỡng"},
+    {
+        "label": "Chuyên viên phục hình",
+        "value": "1.3.20.6.2",
+        "valueArr": [1, 3, 20, 6, 2],
+        "parent": "Y tế, điều dưỡng"
+    },
+    {"label": "May mặc", "value": "1.3.21.7.2", "valueArr": [
+        1, 3, 21, 7, 2], "parent": "Sản xuất, chế tạo, công nghệ"},
+    {
+        "label": "Thiết kế thời trang",
+        "value": "1.3.21.8.1",
+        "valueArr": [1, 3, 21, 8, 1],
+        "parent": "Sản xuất, chế tạo, công nghệ"
+    },
+    {
+        "label": "Nghiên cứu thị trường, marketing",
+        "value": "1.3.22.1.1",
+        "valueArr": [1, 3, 22, 1, 1],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {
+        "label": "Quản lý kế hoạch quảng cáo, truyền thông",
+        "value": "1.3.22.1.2",
+        "valueArr": [1, 3, 22, 1, 2],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {
+        "label": "Hoạt động khởi nghiệp",
+        "value": "1.3.22.1.3",
+        "valueArr": [1, 3, 22, 1, 3],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {"label": "Kinh tế", "value": "1.3.22.1.4", "valueArr": [
+        1, 3, 22, 1, 4], "parent": "Kinh doanh, kinh tế"},
+    {"label": "Điều hành", "value": "1.3.22.2.1", "valueArr": [
+        1, 3, 22, 2, 1], "parent": "Kinh doanh, kinh tế"},
+    {"label": "Quản lý", "value": "1.3.22.2.2", "valueArr": [
+        1, 3, 22, 2, 2], "parent": "Kinh doanh, kinh tế"},
+    {
+        "label": "Thương mại nước ngoài",
+        "value": "1.3.22.2.3",
+        "valueArr": [1, 3, 22, 2, 3],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {
+        "label": "Kinh doanh kế toán",
+        "value": "1.3.22.2.4",
+        "valueArr": [1, 3, 22, 2, 4],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {
+        "label": "Tiếp thị (sales) doanh nghiệp",
+        "value": "1.3.22.3.1",
+        "valueArr": [1, 3, 22, 3, 1],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {"label": "Dịch vụ bán hàng", "value": "1.3.22.3.2", "valueArr": [
+        1, 3, 22, 3, 2], "parent": "Kinh doanh, kinh tế"},
+    {
+        "label": "Dịch vụ khách hàng tổng hợp",
+        "value": "1.3.22.3.3",
+        "valueArr": [1, 3, 22, 3, 3],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {"label": "Dịch vụ nhà hàng", "value": "1.3.22.4.1", "valueArr": [
+        1, 3, 22, 4, 1], "parent": "Kinh doanh, kinh tế"},
+    {
+        "label": "Bán hàng miễn thuế",
+        "value": "1.3.22.4.2",
+        "valueArr": [1, 3, 22, 4, 2],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {
+        "label": "Nhân viên dịch vụ khác (không phân loại nơi khác)",
+        "value": "1.3.22.4.3",
+        "valueArr": [1, 3, 22, 4, 3],
+        "parent": "Kinh doanh, kinh tế"
+    },
+    {
+        "label": "Kế toán công chứng",
+        "value": "1.3.23.1.1",
+        "valueArr": [1, 3, 23, 1, 1],
+        "parent": "Tài chính, kế toán, bảo hiểm"
+    },
+    {
+        "label": "Kế toán công chứng nước ngoài",
+        "value": "1.3.23.1.2",
+        "valueArr": [1, 3, 23, 1, 2],
+        "parent": "Tài chính, kế toán, bảo hiểm"
+    },
+    {
+        "label": "Kế toán thuế",
+        "value": "1.3.23.1.3",
+        "valueArr": [1, 3, 23, 1, 3],
+        "parent": "Tài chính, kế toán, bảo hiểm"
+    },
+    {
+        "label": "Tư vấn bảo hiểm xã hội",
+        "value": "1.3.23.2.1",
+        "valueArr": [1, 3, 23, 2, 1],
+        "parent": "Tài chính, kế toán, bảo hiểm"
+    },
+    {
+        "label": "Tài chính, bảo hiểm",
+        "value": "1.3.23.3.1",
+        "valueArr": [1, 3, 23, 3, 1],
+        "parent": "Tài chính, kế toán, bảo hiểm"
+    },
+    {
+        "label": "Marketing",
+        "value": "1.3.24.1.1",
+        "valueArr": [1, 3, 24, 1, 1],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Digital Marketing",
+        "value": "1.3.24.1.2",
+        "valueArr": [1, 3, 24, 1, 2],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Thiết kế Marketing",
+        "value": "1.3.24.1.3",
+        "valueArr": [1, 3, 24, 1, 3],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Truyền thông",
+        "value": "1.3.24.1.4",
+        "valueArr": [1, 3, 24, 1, 4],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Viết quảng cáo",
+        "value": "1.3.24.1.5",
+        "valueArr": [1, 3, 24, 1, 5],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Biên tập",
+        "value": "1.3.24.2.1",
+        "valueArr": [1, 3, 24, 2, 1],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Báo chí",
+        "value": "1.3.24.2.2",
+        "valueArr": [1, 3, 24, 2, 2],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Nhà báo",
+        "value": "1.3.24.2.3",
+        "valueArr": [1, 3, 24, 2, 3],
+        "parent": "Báo chí, truyền thông, marketing"
+    },
+    {
+        "label": "Business Analyst (BA)",
+        "value": "1.3.25.1.1",
+        "valueArr": [1, 3, 25, 1, 1],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "Product Manager (PM)",
+        "value": "1.3.25.1.2",
+        "valueArr": [1, 3, 25, 1, 2],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "Product Owner (PO)",
+        "value": "1.3.25.1.3",
+        "valueArr": [1, 3, 25, 1, 3],
+        "parent": "Công nghệ thông tin"
+    },
+    {"label": "Thiết kế UI, UX", "value": "1.3.25.2.1", "valueArr": [
+        1, 3, 25, 2, 1], "parent": "Công nghệ thông tin"},
+    {"label": "Thiết kế", "value": "1.3.25.2.2", "valueArr": [
+        1, 3, 25, 2, 2], "parent": "Công nghệ thông tin"},
+    {"label": "Lập trình viên", "value": "1.3.25.3.1", "valueArr": [
+        1, 3, 25, 3, 1], "parent": "Công nghệ thông tin"},
+    {"label": "Lập trình nhúng", "value": "1.3.25.3.2", "valueArr": [
+        1, 3, 25, 3, 2], "parent": "Công nghệ thông tin"},
+    {"label": "Trí tuệ nhân tạo", "value": "1.3.25.3.3", "valueArr": [
+        1, 3, 25, 3, 3], "parent": "Công nghệ thông tin"},
+    {"label": "Blockchain", "value": "1.3.25.3.4", "valueArr": [
+        1, 3, 25, 3, 4], "parent": "Công nghệ thông tin"},
+    {
+        "label": "BrSE (Bridge System Engineer)",
+        "value": "1.3.25.4.1",
+        "valueArr": [1, 3, 25, 4, 1],
+        "parent": "Công nghệ thông tin"
+    },
+    {"label": "Tester", "value": "1.3.25.4.2", "valueArr": [
+        1, 3, 25, 4, 2], "parent": "Công nghệ thông tin"},
+    {
+        "label": "PM (Product Manager)",
+        "value": "1.3.25.5.1",
+        "valueArr": [1, 3, 25, 5, 1],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "PO (Product Owner)",
+        "value": "1.3.25.5.2",
+        "valueArr": [1, 3, 25, 5, 2],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "ITM (Information Technical Manager)",
+        "value": "1.3.25.5.3",
+        "valueArr": [1, 3, 25, 5, 3],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "CTO (Chief Technology Officer)",
+        "value": "1.3.25.5.4",
+        "valueArr": [1, 3, 25, 5, 4],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "COO (Chief Operation Officer)",
+        "value": "1.3.25.5.5",
+        "valueArr": [1, 3, 25, 5, 5],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "Vận hành web thương mại điện tử",
+        "value": "1.3.25.5.6",
+        "valueArr": [1, 3, 25, 5, 6],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "Công nghệ thông tin",
+        "value": "1.3.25.5.7",
+        "valueArr": [1, 3, 25, 5, 7],
+        "parent": "Công nghệ thông tin"
+    },
+    {
+        "label": "Nghiên cứu thị trường",
+        "value": "1.3.26.1.1",
+        "valueArr": [1, 3, 26, 1, 1],
+        "parent": "Nghiên cứu, phân tích"
+    },
+    {
+        "label": "Khảo sát đất đai, nhà ở",
+        "value": "1.3.26.1.2",
+        "valueArr": [1, 3, 26, 1, 2],
+        "parent": "Nghiên cứu, phân tích"
+    },
+    {"label": "Nghiên cứu", "value": "1.3.26.1.1", "valueArr": [
+        1, 3, 26, 1, 1], "parent": "Nghiên cứu, phân tích"},
+    {
+        "label": "Giảng dạy có chứng chỉ",
+        "value": "1.3.27.1.1",
+        "valueArr": [1, 3, 27, 1, 1],
+        "parent": "Giáo dục, đào tạo"
+    },
+    {
+        "label": "Giảng dạy ngôn ngữ tại Tiểu học, THCS, PTTH",
+        "value": "1.3.27.2.1",
+        "valueArr": [1, 3, 27, 2, 1],
+        "parent": "Giáo dục, đào tạo"
+    },
+    {
+        "label": "Giảng dạy trường học các loại",
+        "value": "1.3.27.2.2",
+        "valueArr": [1, 3, 27, 2, 2],
+        "parent": "Giáo dục, đào tạo"
+    },
+    {
+        "label": "Giảng dạy trường quốc tế",
+        "value": "1.3.27.2.3",
+        "valueArr": [1, 3, 27, 2, 3],
+        "parent": "Giáo dục, đào tạo"
+    },
+    {
+        "label": "Giảng dạy trường dạy nghề (Senmon)",
+        "value": "1.3.27.2.4",
+        "valueArr": [1, 3, 27, 2, 4],
+        "parent": "Giáo dục, đào tạo"
+    },
+    {"label": "Giảng dạy đại học", "value": "1.3.27.3.1",
+        "valueArr": [1, 3, 27, 3, 1], "parent": "Giáo dục, đào tạo"},
+    {
+        "label": "Hướng dẫn nghiên cứu",
+        "value": "1.3.27.3.2",
+        "valueArr": [1, 3, 27, 3, 2],
+        "parent": "Giáo dục, đào tạo"
+    },
+    {
+        "label": "Giảng dạy ngoài cơ sở giáo dục",
+        "value": "1.3.27.4.1",
+        "valueArr": [1, 3, 27, 4, 1],
+        "parent": "Giáo dục, đào tạo"
+    },
+    {"label": "Hướng dẫn thể thao", "value": "1.3.27.5.1",
+        "valueArr": [1, 3, 27, 5, 1], "parent": "Giáo dục, đào tạo"},
+    {
+        "label": "Biên dịch, phiên dịch",
+        "value": "1.3.28.1.1",
+        "valueArr": [1, 3, 28, 1, 1],
+        "parent": "Hành chính, văn phòng"
+    },
+    {
+        "label": "Nhân viên văn phòng",
+        "value": "1.3.28.2.1",
+        "valueArr": [1, 3, 28, 2, 1],
+        "parent": "Hành chính, văn phòng"
+    },
+    {"label": "Dịch vụ pháp lý", "value": "1.3.29.1.1",
+        "valueArr": [1, 3, 29, 1, 1], "parent": "Pháp lý"},
+    {
+        "label": "Chuyên viên pháp lý hành chính",
+        "value": "1.3.29.1.2",
+        "valueArr": [1, 3, 29, 1, 2],
+        "parent": "Pháp lý"
+    },
+    {"label": "Lập văn bản tư pháp", "value": "1.3.29.2.1",
+        "valueArr": [1, 3, 29, 2, 1], "parent": "Pháp lý"},
+    {"label": "Luật sư", "value": "1.3.29.3.1",
+        "valueArr": [1, 3, 29, 3, 1], "parent": "Pháp lý"},
+    {"label": "Luật sư sở hữu trí tuệ", "value": "1.3.29.3.2",
+        "valueArr": [1, 3, 29, 3, 2], "parent": "Pháp lý"},
+    {"label": "Luật sư luật nước ngoài", "value": "1.3.29.3.3",
+        "valueArr": [1, 3, 29, 3, 3], "parent": "Pháp lý"},
+    {"label": "Luật sư nước ngoài", "value": "1.3.29.3.4",
+        "valueArr": [1, 3, 29, 3, 4], "parent": "Pháp lý"},
+    {"label": "Nhà văn", "value": "1.3.30.1.1", "valueArr": [
+        1, 3, 30, 1, 1], "parent": "Nghệ thuật, nghệ sĩ"},
+    {
+        "label": "Mỹ thuật gia, nhiếp ảnh gia",
+        "value": "1.3.30.1.2",
+        "valueArr": [1, 3, 30, 1, 2],
+        "parent": "Nghệ thuật, nghệ sĩ"
+    },
+    {
+        "label": "Nhạc sĩ, nghệ sĩ sân khấu",
+        "value": "1.3.30.2.1",
+        "valueArr": [1, 3, 30, 2, 1],
+        "parent": "Nghệ thuật, nghệ sĩ"
+    },
+    {
+        "label": "Vận động viên chuyên nghiệp",
+        "value": "1.3.31.1.1",
+        "valueArr": [1, 3, 31, 1, 1],
+        "parent": "Thể dục thể thao"
+    },
+    {
+        "label": "Vận động viên nghiệp dư",
+        "value": "1.3.31.1.2",
+        "valueArr": [1, 3, 31, 1, 2],
+        "parent": "Thể dục thể thao"
+    },
+    {
+        "label": "Người pha chế rượu",
+        "value": "1.3.32.1.1",
+        "valueArr": [1, 3, 32, 1, 1],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Huấn luyện động vật",
+        "value": "1.3.32.1.2",
+        "valueArr": [1, 3, 32, 1, 2],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Nấu nướng",
+        "value": "1.3.32.2.1",
+        "valueArr": [1, 3, 32, 2, 1],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Người quản gia",
+        "value": "1.3.32.2.2",
+        "valueArr": [1, 3, 32, 2, 2],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Giúp việc gia đình đặc khu",
+        "value": "1.3.32.2.3",
+        "valueArr": [1, 3, 32, 2, 3],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Công chức",
+        "value": "1.3.32.3.1",
+        "valueArr": [1, 3, 32, 3, 1],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Phi công",
+        "value": "1.3.32.3.2",
+        "valueArr": [1, 3, 32, 3, 2],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Nhà ngoại giao",
+        "value": "1.3.32.4.1",
+        "valueArr": [1, 3, 32, 4, 1],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Nhân viên tôn giáo",
+        "value": "1.3.32.4.2",
+        "valueArr": [1, 3, 32, 4, 2],
+        "parent": "Nghề có kỹ năng chuyên nghiệp"
+    },
+    {
+        "label": "Trao đổi văn hóa quốc tế",
+        "value": "1.3.33.1.1",
+        "valueArr": [1, 3, 33, 1, 1],
+        "parent": "Việc làm bán chuyên nghiệp"
+    },
+    {
+        "label": "Sinh viên thực tập",
+        "value": "1.3.33.1.2",
+        "valueArr": [1, 3, 33, 1, 2],
+        "parent": "Việc làm bán chuyên nghiệp"
+    },
+    {
+        "label": "Lao động kỳ nghỉ",
+        "value": "1.3.33.2.1",
+        "valueArr": [1, 3, 33, 2, 1],
+        "parent": "Việc làm bán chuyên nghiệp"
+    },
+    {
+        "label": "Công việc mùa hè",
+        "value": "1.3.33.2.1",
+        "valueArr": [1, 3, 33, 2, 1],
+        "parent": "Việc làm bán chuyên nghiệp"
+    }
+]
