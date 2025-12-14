@@ -41,14 +41,18 @@ META_JOB_SCHEMA = {
             "type": "object",
             "description": "Return raw JSON only, without adding ``` or any other formatting or any other AI content",
             "properties": {
-                # "postType": {
-                #     "type": "string",
-                #     "description": """Phân loại nội dung tin đầu vào chỉ lấy dữ liệu thực tập sinh.
-                #     - Nếu nội dung không liên quan đến công việc, ngành nghề xuất khẩu lao động. Địa điểm làm việc thuộc các tỉnh (Đài trung, đài bắc, chương hóa.. ) hoặc đất nước (Đài Loan, Đức, Hy Lạp...) không thuộc Nhật bản => ' TIN RÁC'.
-                #     - Nếu không phân loại được trả về 'VIỆC LÀM NHẬT'.
-                #     """,
-                #     "enum": ["VIỆC LÀM NHẬT", "Tin rác"]
-                # },
+                "postType": {
+                    "type": "string",
+                    "description": """Phân loại nội dung phù hợp theo mẫu:
+                    "VIỆC LÀM": nếu trong nội dung có từ khóa liên quan đến công việc, lương, ngày phỏng vấn. Một số ví dụ của việc làm "CBTP, TOTTORI 1050y/h Kaiwa n4",
+                            hoặc "TKT CBTP - CHIBA, IBARAKI(NAM/N.U). LCB 1166-1226y. Tca 30-40h. Vtay 18-24M. 1ng/p, BONASU 20-30M.Htro gino 2"
+                    "ỨNG VIÊN: nếu trong nội dung có từ khóa liên quan đến tìm đơn , ứng viên . Một số ví dụ của ứng viên "Em tìm đơn cbtp Mie Aichi Có cc,N4 ạ"
+                            hoặc "Em tìm đơn thực phẩm cho nam & nữ .có hỗ trợ nhà ạ"
+                    "TIN RÁC:  các trường hợp không thuộc hai loại trên, ví dụ như "Yếu tiếng, sợ Kanji, chưa biết bắt đầu học Ginou2? Nhắn em ngay! Có lộ trình học, tài liệu chuẩn, APP ôn tập, mẹo bám sát đề thật giúp anh/chị đậu dễ dàng!"
+                            hoặc "Vận chuyển Việt - Nhật Nhận tất cả loại hàng hoá" hoặc "Ôn luyện Ginou 2 mà chưa có tài liệu, bộ đề . Chưa có app ôn luyện. Sợ kanji. Cần hỗ trợ nhắn mình"
+                    """,
+                    "enum": ["VIỆC LÀM NHẬT", "ỨNG VIÊN", "TIN RÁC"],
+                    },
                 "visa": {
                     "type": "string",
                     "description": f"""- Dưới đây là danh sách tiêu đề và từ khóa liên quan:\n
@@ -77,6 +81,7 @@ META_JOB_SCHEMA = {
                 "languageLevel": {
                     "type": "string",
                     "description": "Trình độ ngoại ngữ trong đơn nếu có nhiều N4,N3,N2 thì chọn N thấp nhất. Có các từ khóa như 'ko yc tiếng', 'không tiếng' => 'Không yêu cầu tiếng' ."
+                    "Nếu trong đơn có nhắc trình độ ngôn ngữ hoặc giao tiếp tương đương kaiwa N4 trả về 'Kaiwa N4'. Nếu trong đơn nói có chứng chỉ JLPT N4 thì trả về 'JLPT N4'."
                     "nếu không có trình độ ngôn ngữ nào thì trả về 'Không cung cấp'.",
                     "enum": ["Không yêu cầu tiếng","JLPT N5", "JLPT N4", "JLPT N3", "JLPT N2", "JLPT N1", "Kaiwa N5", "Kaiwa N4", "Kaiwa N3", "Kaiwa N2", "Kaiwa N1", "Kaiwa N1", "Kaiwa N1", "Không cung cấp"]
 
@@ -94,8 +99,8 @@ META_JOB_SCHEMA = {
 
                 "basicSalary": {
                     "type": "number",
-                    "description": """Mức lương cơ bản của đơn hàng.
-                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
+                    "description": """Mức lương cơ bản (lcb) của đơn hàng.
+                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ. Ví dụ lcb: 205.440 chỉ ghi 20
                      - nếu trong đơn có 20tr/f, 20tr/form, '1400-15-5300', 25-35%/1h  => không phải lương.
                      - nếu đơn hàng ghi như 'lcb:26 Man', 'lương cơ bản', '18m', 'lương 18', 'lg 21-25m', 'thu nhập 25m' ... => đó là lương cơ bản (man/tháng).
                      - nếu lương có khoảng như '20-25 man', thì lấy số đứng trước dấu '-'
@@ -107,9 +112,9 @@ META_JOB_SCHEMA = {
                 "realSalary": {
                     "type": "number",
                     "description": """Mức lương thực lĩnh (lương về tay) của đơn hàng.
-                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
-                     - nếu trong đơn có '20tr/f', '20tr/form', '1400-15-5300', '25-35%/1h', 'TC 30-40h'  => không phải lương.
                      - nếu đơn hàng ghi như 'ltl 26', 'lương thực lĩnh', 'về tay'... => đó là lương thực lĩnh (man/tháng).
+                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ. Ví dụ lương thực lĩnh 205.440 chỉ ghi 20
+                     - nếu trong đơn có '20tr/f', '20tr/form', '1400-15-5300', '25-35%/1h', 'TC 30-40h'  => không phải lương.
                      - nếu không có nhắc tới lương thực lĩnh => 'Empty'
                      """,
                 
@@ -131,7 +136,7 @@ META_JOB_SCHEMA = {
                     "description": """ngày phỏng vấn trong đơn hàng nếu có ví dụ '24/02' hoặc 'ngày 24 tháng 2' => "24-02-2025". Nếu không có nhắc tới ngày phỏng vấn => 'Empty'""",
                 },
 
-                "phi": {
+                "fee": {
                     "type": "number",
                     "description": """đơn hàng có ghi 'Phí: 5600-1200-3tr', '5600-1000-17', '56-14', 'Phí 5,6k' => '5600' hoặc Nếu chỉ ghi 'phí 5000' => '5000',
                     có nhắc tới phí Net ví dụ 'phí NET: 500$' , 'Net 500$' => '500'. Nếu không có phí => 'Empty'
@@ -142,7 +147,7 @@ META_JOB_SCHEMA = {
                     "description": "đơn hàng có ghi 'Phí: 5600-1200-3tr', '5000-1200-10', '40-12' => '1200'. Nếu chỉ ghi '5400-2000' => '2000'. Nếu không có phí => 'Empty'"
                 },
 
-                "coche": {
+                "policy": {
                     "type": "number",
                     "description":  "đơn hàng có ghi 'Phí: 5600-1200-3tr', '5000-1000-3 triệu', '5000-1000-3'=> '3.0000.000', các đơn có ghi 15tr/form , 15 triệu/form, 15tr/f, ghi 15tr ở đầu nội dung => 15000000. Nếu chỉ ghi '5400-2000' => 'Empty'. Nếu không có phí => 'Empty'"
                 },
@@ -187,8 +192,9 @@ META_JOB_SCHEMA = {
                         "enum": ["Bao đỗ", "Tăng ca", "Lương tốt", "Vợ chồng", "Hỗ trợ chỗ ở", "không yêu cầu kinh nghiệm", "Thưởng"]
                     },
                 },
+
                "makeAI": {
-                     "type": "string",
+                    "type": "string",
                     "description": """Mô tả đơn hàng chuẩn hóa bằng tiếng Việt, giữ nguyên nội dung chính, theo mẫu:  
                     'Nông nghiệp - Chiba: Tuyển nam (20-33 tuổi). Công việc: trồng trọt. Lương về tay 20 man/tháng. Phỏng vấn 24/02. Nhận xăm nhỏ kín.'  
 
@@ -197,9 +203,14 @@ META_JOB_SCHEMA = {
                     - **Không được trả về 'không cung cấp'.** Nếu một trường thông tin không có, **bỏ qua**, không ghi gì thay thế.  \n
                     - **Định dạng đúng theo mẫu**, không tự động thêm thông tin không có trong dữ liệu. """, 
                 },
+
+                "benefits" : {
+                    "type": "string",
+                    "description": "Gạch đầu dòng ra trong thông tin việc làm này có những quyền lợi, chế độ nào dành cho người lao động (trừ lương)"
+                }
             },
         "required": [
-                # "postType",
+                "postType",
                 "visa",
                 "languageLevel",
                 "gender",
@@ -215,9 +226,10 @@ META_JOB_SCHEMA = {
                 "max_age",
                 "date",
                 "phone",
-                "phi",
+                "fee",
                 "back",
-                "coche",
+                "policy",
+                "benefits"
             ],
         "additionalProperties": False
     }
