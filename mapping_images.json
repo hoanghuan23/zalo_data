@@ -148,28 +148,26 @@
     {
         "oldJob": "Chăn nuôi gà",
         "newJobs": [
-            "Chăn nuôi gà"
+            "Chăn nuôi gà",
+            "Nông nghiệp chăn nuôi"
         ],
         "images": [
             "https://cdn.hellojob.jp/upload/hellojobv5/1725439942306.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725889130073.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726721037406.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726721037482.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725890401956.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1727162893736.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1727162893848.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726218687993.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731471160276.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730955349298.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729433130395.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1729157836613.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1737019096191.jpg"
         ]
     },
     {
         "oldJob": "Chăn nuôi bò sữa",
         "newJobs": [
-            "Chăn nuôi bò sữa"
+            "Chăn nuôi bò sữa",
+            "Nông nghiệp chăn nuôi"
         ],
         "images": [
             "https://cdn.hellojob.jp/upload/hellojobv5/1722063968415.jpg",
@@ -358,7 +356,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1729155598423.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729155070323.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729154605037.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1734425383084.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734407914925.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733990441139.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733908303495.jpg",
@@ -491,7 +488,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1733902939965.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733561505652.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732770000833.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1732769726106.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732075112144.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731576969184.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731576402344.jpg"
@@ -674,7 +670,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724902568345.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722333526378.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726106984216.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726106588114.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726191788982.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726191269960.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728530500306.jpg",
@@ -783,7 +778,8 @@
     {
         "oldJob": "Lái xe lu",
         "newJobs": [
-            "Lái xe lu"
+            "Lái xe lu",
+            "Lái xe tải cỡ nhỏ"
         ],
         "images": [
             "https://cdn.hellojob.jp/upload/hellojobv5/1730780124156.jpg",
@@ -800,6 +796,15 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1733373779562.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733288711511.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732784325550.jpg"
+        ]
+    },
+    {
+        "newJobs": [
+            "Lái xe"
+        ],
+        "images": [
+            "https://cdn.hellojob.jp/upload/hellojobv5/job-crawled/images/1766377373141864.jpg",
+            "https://cdn.hellojob.jp/upload/hellojobv5/job-crawled/images/1766377437425755.jpg"
         ]
     },
     {
@@ -1186,7 +1191,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1722419246098.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722419246184.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722411840506.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1721976093090.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1721976093163.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1721976093215.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722314692570.jpg",
@@ -1199,7 +1203,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724840431950.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724914568828.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724907257385.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1724907257472.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724905031680.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724903074485.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724902042908.jpg",
@@ -1211,9 +1214,7 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1725936648544.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725892469232.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725892469378.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725892469491.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725892469629.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725892469748.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725891749011.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725890259321.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725890084858.jpg",
@@ -1256,7 +1257,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1728465746553.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728465746633.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728465746685.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728465746745.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726036159170.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728874050533.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728877858035.jpg",
@@ -1310,7 +1310,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1734423597225.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734423337005.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734422976723.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1734422093598.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734420665834.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734411366751.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734410038118.jpg",
@@ -1318,7 +1317,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1734341488539.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734341191845.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734340563018.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1733902353953.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733801211629.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733800906262.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733741579426.png",
@@ -1467,7 +1465,8 @@
         "oldJob": "Dệt kim máy sợi dọc",
         "newJobs": [
             "Dệt kim máy sợi dọc",
-            "Dệt may"
+            "Dệt may",
+            "May mặc"
         ],
         "images": [
             "https://cdn.hellojob.jp/upload/hellojobv5/1733300630577.jpg"
@@ -1674,7 +1673,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724927739177.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724916433344.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725439942820.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725439942971.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725524706396.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725522153695.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725531684576.jpg",
@@ -1724,20 +1722,15 @@
         "oldJob": "Thi công kết cấu thép",
         "newJobs": [
             "Thi công kết cấu thép",
-            "Gia công kim loại - Tekko"
+            "Gia công kim loại - Tekko",
+            "Gia công cơ khí"
         ],
         "images": [
             "https://cdn.hellojob.jp/upload/hellojobv5/1722323005608.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722419643193.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724000295189.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726196431796.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726196217471.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728974854082.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731317194324.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1730714774588.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1730369021789.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1730107620678.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1729676156521.jpg"
+            "https://cdn.hellojob.jp/upload/hellojobv5/1730714774588.jpg"
         ]
     },
     {
@@ -1789,7 +1782,6 @@
             "Cơ khí"
         ],
         "images": [
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728049906090.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1737562837232.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731991651134.jpg"
         ]
@@ -1807,7 +1799,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1725437424594.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725437424672.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725437424744.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725437424800.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725855135203.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725855135259.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726477673516.jpg",
@@ -1827,14 +1818,12 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1726475794350.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965804516.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965761190.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728964888032.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731386915256.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730350051855.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729487077614.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729485450441.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1736962835027.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1735571882203.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1732871071326.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732864035549.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731662908845.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731569963101.jpg",
@@ -1980,10 +1969,13 @@
     {
         "oldJob": "Xử lý nhiệt bề mặt",
         "newJobs": [
-            "Xử lý nhiệt bề mặt"
+            "Xử lý nhiệt bề mặt",
+            "Xử lý nhiệt tổng thể"
         ],
         "images": [
-            "https://cdn.hellojob.jp/upload/hellojobv5/1724993562726.jpg"
+            "https://cdn.hellojob.jp/upload/hellojobv5/job-crawled/images/1766376257142430.jpg",
+            "https://cdn.hellojob.jp/upload/hellojobv5/job-crawled/images/1766376319550169.jpg",
+            "https://cdn.hellojob.jp/upload/hellojobv5/job-crawled/images/1766376349151340.png"
         ]
     },
     {
@@ -2160,27 +2152,18 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1722228181901.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726047125039.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726047125172.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726047125265.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726046672369.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726046672466.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726045873212.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726045873311.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726039345462.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726039345546.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726038603972.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726038604079.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726038604313.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726038604427.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726038634083.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726037844975.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726037845061.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722852045872.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722852045954.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724898886975.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726216257586.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726220343645.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726569633584.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726478397342.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728964266684.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1737357487031.jpg"
         ]
@@ -2278,7 +2261,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1731256313680.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730954551066.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730710159359.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1730709782238.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730263334087.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730171847853.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730171427190.jpg",
@@ -2491,7 +2473,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1733299887013.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732472037197.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731660462809.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1731655431672.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1737693019058.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1738053321760.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1738053802670.jpg",
@@ -2513,10 +2494,11 @@
     {
         "oldJob": "(Khách sạn) Tiếp khách, quản lý vệ sinh",
         "newJobs": [
-            "(Khách sạn) Tiếp khách, quản lý vệ sinh"
+            "(Khách sạn) Tiếp khách, quản lý vệ sinh",
+            "Dịch vụ khách sạn",
+            "Lễ tân khách sạn"
         ],
         "images": [
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722488114966.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722487991023.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722321818776.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724925082058.jpg",
@@ -2524,7 +2506,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724925082176.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726635057726.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725527386378.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722223191011.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725890458813.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726643664468.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726641769483.jpg",
@@ -2654,11 +2635,8 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1722928351425.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1721917674627.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1721917674746.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1721917674886.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1721917675023.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1721917675134.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722564868839.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722312065569.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722929284133.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722929218376.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722699747989.jpg",
@@ -2672,8 +2650,7 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1735031992514.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732872854824.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731648175698.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1731648175791.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1731647944678.jpg"
+            "https://cdn.hellojob.jp/upload/hellojobv5/1731648175791.jpg"
         ]
     },
     {
@@ -2699,7 +2676,6 @@
         ],
         "images": [
             "https://cdn.hellojob.jp/upload/hellojobv5/1722915994392.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722915994489.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722915994574.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722939246051.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722916507247.png",
@@ -2839,7 +2815,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1728093034614.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724042221765.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724150238885.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1724140005760.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724139669450.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724141536852.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724147682836.jpg",
@@ -3219,8 +3194,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1722927845437.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722334678950.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1723005838232.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722788300213.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722844760723.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722845126738.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722902972201.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722646419877.jpg",
@@ -3299,7 +3272,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724596384106.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724599854548.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724573516468.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722637876009.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722782505799.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722646809404.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722783071445.jpg",
@@ -3505,7 +3477,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724134556230.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1723878574655.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724074865007.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1723969946652.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1723997112068.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1723997287787.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1723979081044.jpg",
@@ -3857,7 +3828,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1729785734223.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1735802936947.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1735802621850.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1731040787486.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731040787593.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731040787695.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1731040787774.png",
@@ -4218,8 +4188,7 @@
         ],
         "images": [
             "https://cdn.hellojob.jp/upload/hellojobv5/1726213862715.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726213136698.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726648906836.jpg"
+            "https://cdn.hellojob.jp/upload/hellojobv5/1726213136698.jpg"
         ]
     },
     {
@@ -4467,16 +4436,13 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724833380647.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724830977017.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722588477555.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722323005608.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726477673516.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726477161881.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726472805916.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728049906090.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734083598521.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728463145693.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728103373297.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722419643193.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1722409234950.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722069227199.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1722412791295.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724000295189.jpg",
@@ -4501,7 +4467,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724927739177.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724916433344.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725439942820.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725439942971.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725518539896.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725527740651.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725527740720.jpg",
@@ -4529,7 +4494,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1726126951509.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726126509463.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726196431796.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726196217471.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726633653482.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726633284017.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726632394360.jpg",
@@ -4540,7 +4504,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1728887868799.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965804516.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965761190.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728964888032.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728890242179.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728974854082.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729066232931.jpg",
@@ -4562,7 +4525,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1730708438544.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730632870934.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730632460064.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1730369021789.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730350051855.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730345901786.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730345518141.jpg",
@@ -4574,7 +4536,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1729832005253.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729830914685.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729676480284.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1729676156521.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729568762907.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729500065349.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729494838304.jpg",
@@ -4609,7 +4570,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1733249130638.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733241292123.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733240747377.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1732871071326.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732864806652.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732864035549.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732856053313.jpg",
@@ -4666,7 +4626,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1726477673516.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726477161881.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726472805916.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728049906090.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734083598521.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728463145693.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728103373297.jpg",
@@ -4696,7 +4655,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724927739177.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724916433344.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725439942820.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725439942971.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725518539896.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725527740651.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725527740720.jpg",
@@ -4724,7 +4682,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1726126951509.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726126509463.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726196431796.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726196217471.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726633653482.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726633284017.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726632394360.jpg",
@@ -4735,7 +4692,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1728887868799.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965804516.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965761190.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728964888032.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728890242179.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728974854082.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729066232931.jpg",
@@ -4757,7 +4713,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1730708438544.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730632870934.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730632460064.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1730369021789.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730350051855.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730345901786.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730345518141.jpg",
@@ -4769,7 +4724,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1729832005253.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729830914685.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729676480284.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1729676156521.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729568762907.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729500065349.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729494838304.jpg",
@@ -4804,7 +4758,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1733249130638.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733241292123.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733240747377.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1732871071326.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732864806652.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732864035549.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732856053313.jpg",
@@ -4861,7 +4814,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1726477673516.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726477161881.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726472805916.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728049906090.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734083598521.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728463145693.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728103373297.jpg",
@@ -4891,7 +4843,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724927739177.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724916433344.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725439942820.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725439942971.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725518539896.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725527740651.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725527740720.jpg",
@@ -4919,7 +4870,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1726126951509.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726126509463.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726196431796.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726196217471.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726633653482.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726633284017.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726632394360.jpg",
@@ -4930,7 +4880,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1728887868799.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965804516.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728965761190.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728964888032.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728890242179.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728974854082.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729066232931.jpg",
@@ -4952,7 +4901,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1730708438544.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730632870934.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730632460064.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1730369021789.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730350051855.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730345901786.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1730345518141.jpg",
@@ -4964,7 +4912,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1729832005253.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729830914685.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729676480284.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1729676156521.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729568762907.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729500065349.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1729494838304.jpg",
@@ -4999,7 +4946,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1733249130638.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733241292123.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733240747377.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1732871071326.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732864806652.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732864035549.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732856053313.jpg",
@@ -5067,7 +5013,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1724840431950.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724914568828.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724907257385.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1724907257472.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724905031680.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724904693385.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1724903074485.jpg",
@@ -5100,9 +5045,7 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1725936648544.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725892469232.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725892469378.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725892469491.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725892469629.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1725892469748.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725891749011.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725890259321.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1725890084858.jpg",
@@ -5209,7 +5152,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1728465746553.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728465746633.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728465746685.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1728465746745.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728464997735.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1728464997823.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726036159170.jpg",
@@ -5376,7 +5318,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1734422976723.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734422704266.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734422410085.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1734422093598.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734421012079.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734420665834.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734411366751.jpg",
@@ -5392,7 +5333,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1734340563018.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734340341752.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734339998844.png",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1733902353953.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733803169195.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733801211629.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1733800906262.jpg",
@@ -5687,7 +5627,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1734578201332.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734516680898.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734425782941.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1734425383084.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734409133126.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734407914925.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1734407669102.png",
@@ -5744,7 +5683,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1732770622309.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732770386639.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732770000833.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1732769726106.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732768293746.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732767783456.png",
             "https://cdn.hellojob.jp/upload/hellojobv5/1732764347056.jpg",
@@ -5849,7 +5787,6 @@
             "https://cdn.hellojob.jp/upload/hellojobv5/1726222210804.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726220343645.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726569633584.jpg",
-            "https://cdn.hellojob.jp/upload/hellojobv5/1726478397342.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1726473720370.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1727777697915.jpg",
             "https://cdn.hellojob.jp/upload/hellojobv5/1727775387966.jpg",

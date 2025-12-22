@@ -2,7 +2,7 @@
   {
     "value": "TKT#Thực phẩm",
     "contains_e": ["tokutei"],
-    "contains_i": ["thực phẩm", "chế biến", "bánh mì"]
+    "contains_i": ["thực phẩm", "chế biến", "bánh mì", "sơ chế"]
   },
 
   {
@@ -312,7 +312,7 @@
   {
     "value": "KS#Ô tô",
     "contains_e": ["kỹ sư"],
-    "contains_i": ["ô tô"]
+    "contains_i": ["ô tô", "lốp ô tô"]
   },
   {
     "value": "KS#Quản lý",
