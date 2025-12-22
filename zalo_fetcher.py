@@ -12,7 +12,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 import time
-from PIL import Image   
+import subprocess
+from PIL import Image
 import imagehash        
 from datetime import datetime
 import sqlite3
@@ -24,26 +25,25 @@ from googleapiclient.discovery import build
 from upload_image import upload_to_s3
 from analyze_job import authenticate_google_sheets, formatJob
 from openaitool import analyzeAndSplitJobContent, analyzeJobInformation, analysisPostType
-from util import columnIndex
+from detail_job import update_job_row_by_row
 from test_push_job_elasticsearch import read_data_from_sheet
-
 
 unique_messages = set()
 processed_images = set()
 db_path = os.path.abspath("zalo_messages.db")
 group_link = ""
 
-# chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-# debug_port = "--remote-debugging-port=9222"
-# user_data_dir = r'--user-data-dir=C:/Chrome_dev'
-# subprocess.Popen([chrome_path, debug_port, user_data_dir])
-# chrome_options = Options()
-# chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-# browser = webdriver.Chrome(options=chrome_options)
+chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+debug_port = "--remote-debugging-port=9222"
+user_data_dir = r'--user-data-dir=C:/Chrome_dev'
+subprocess.Popen([chrome_path, debug_port, user_data_dir])
 
-browser = webdriver.Chrome()
-browser.get('https://chat.zalo.me/')
-time.sleep(3)
+chrome_options = Options()
+chrome_options.add_experimental_option("debuggerAddress","127.0.0.1:9222")
+browser = webdriver.Chrome(options=chrome_options)
+# browser = webdriver.Chrome()
+browser.get('https://chat.zalo.me')
+time.sleep(15)
 
 # ham click avatar nhom lay link nhom
 def fetch_group_link():
@@ -78,9 +78,9 @@ def scroll_and_click_groups(browser, interval=20):
             fetch_group_link()
             fetch_message_zalo()
 
-            time.sleep(10)
+            time.sleep(5)
     except Exception as e:
-        print(f"loi")
+        print(f"loi" + {e})
 
 # chống trùng lặp ảnh
 def get_image_hash(filename):
@@ -334,117 +334,176 @@ def get_column_letter(col_index):
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# hàm phân tích nội dung trước khi phân tích chi tiết
 def analyPostType():
     service = authenticate_google_sheets()
     spreadsheet_id = '1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI'
     sheet_name = 'ĐƠN HÀNG PHÂN TÍCH'
-    range_name = f"{sheet_name}!D2:K"
-    result = service.spreadsheets().values().get(
-        spreadsheetId=spreadsheet_id, range=range_name).execute()
-    values = result.get('values', [])
-    if not values:
-        print("Không tìm thấy dữ liệu.")
-        return
+    read_range = f"{sheet_name}!D2:K"
 
-    for idx, row in enumerate(values, start=2):
-        if not row or not row[0]:
-            continue
-        raw_text = row[0]
+    try:
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=read_range
+        ).execute()
 
-        if len(row) > 7 and row[7]:
-            continue
-        
-        col_h_value = row[4] if len(row) > 4 else ""
-        
-        try:
-            analysis = analysisPostType(raw_text)
-            post_type_raw = analysis.choices[0].message.content.strip()
-            post_type_data = rapidjson.loads(post_type_raw)
+        values = result.get('values', [])
+        if not values:
+            print("Không tìm thấy dữ liệu.")
+            return
 
-            write_range = f"'{sheet_name}'!K{idx}"
-            body = {'values': [[post_type_data['postType']]]}
-            service.spreadsheets().values().update(
-                spreadsheetId=spreadsheet_id,
-                range=write_range,
-                valueInputOption='RAW',
-                body=body
-            ).execute()
+        for idx, row in enumerate(values, start=2):
+            if not row or not row[0]:
+                continue
 
-            print(f"Dòng {idx}: Đã ghi phân loại: {post_type_data['postType']}")
+            raw_text = row[0]
+            
+            if len(row) > 7 and row[7]:
+                continue
 
-            if post_type_data['postType'] == 'VIỆC LÀM NHẬT' and col_h_value:
-                analyze_and_update_sheet(spreadsheet_id, sheet_name, idx)
-        except Exception as e:
-            print(f"Lỗi khi phân tích loại bài đăng ở dòng {idx}: {e}")
+            try:
+                analysis = analysisPostType(raw_text)
+                post_type_raw = analysis.choices[0].message.content
+                post_type_data = rapidjson.loads(post_type_raw)
+
+                write_range = f"'{sheet_name}'!K{idx}"
+                body = {'values': [[post_type_data['postType']]]}
+                service.spreadsheets().values().update(
+                    spreadsheetId=spreadsheet_id,
+                    range=write_range,
+                    valueInputOption='RAW',
+                    body=body
+                ).execute()
+
+                col_h_value = row[4] if len(row) > 4 else ""
+ 
+                print(f"Dòng {idx}: Đã ghi phân loại: {post_type_data['postType']}")
+
+                if post_type_data['postType'] == 'TIN RÁC' or not col_h_value:
+                    nopush = f"{sheet_name}!A{idx}"
+                    a_body = {
+                        'values': [["INVALIDS"]]
+                    }
+                    service.spreadsheets().values().update(
+                        spreadsheetId=spreadsheet_id,
+                        range=nopush,
+                        valueInputOption='RAW',
+                        body=a_body
+                    ).execute()
+
+                if post_type_data['postType'] == 'VIỆC LÀM NHẬT' and col_h_value:
+                    analyze_and_update_sheet(spreadsheet_id, sheet_name, idx)
+                    read_data_from_sheet()
+
+            except Exception as e:
+                print(f"Lỗi phân tích dòng {idx}: {e}")
+
+    except Exception as e:
+        print(f"Lỗi khi truy cập Google Sheet: {e}")
 
 # hàm phân tích và cập nhật dữ liệu vào Google Sheets
 def analyze_and_update_sheet(spreadsheet_id, sheet_name, row_index):
     service = authenticate_google_sheets()
 
     # đọc dữ liệu cột nội dung D và trạng thái AE
-    range_name = f"{sheet_name}!A{row_index}:AE{row_index}"
+    range_name = f"{sheet_name}!D{row_index}:AE{row_index}"
     result = service.spreadsheets().values().get(
         spreadsheetId=spreadsheet_id, range=range_name).execute()
     values = result.get('values', [])
-    if not values or not values[0]:
+    if not values:
         print("Khong tim thay du lieu.")
         return
     
-    row = values[0]
-    message = row[columnIndex('D')] if len(row) > 0 else ""
-    
-    if not message: 
-        print("Khong co noi dung de phan tich.")
-        return
-    
+    for row_index, row in enumerate(values, start=row_index):
+        if not row:
+            continue
+        message = row[0]
         
-    try:
-        analyze_result = analyzeAndSplitJobContent(message)
-        content = analyze_result.choices[0].message.content
-        job_info = analyzeJobInformation(content)
-        job_info_content = job_info.choices[0].message.content
+        processed_status = row[-1]
 
+        if not message or processed_status == "ZALO":
+            continue
+        print(f"Đang phân tích tin nhắn: {row_index}")
+        
         try:
-            job_data = rapidjson.loads(job_info_content)
-            formatted_job = formatJob(job_data)            
-            columnI = [f"=image(h{row_index})"] # cột hiển thị hình ảnh
-            update_values = [content]
+            analyze_result = analyzeAndSplitJobContent(message)
+            content = analyze_result.choices[0].message.content
 
-            for field in formatted_job:
-                update_values.append(field if field is not None else "")
+            job_info = analyzeJobInformation(content)
+            job_info_content = job_info.choices[0].message.content
 
-            update_values = update_values[:5] + [""] + update_values[5:]
+            # print(f"job_info_content: {job_info_content}")
+            try:
+                job_data = rapidjson.loads(job_info_content)
+                # print(job_data)
+                formatted_job = formatJob(job_data)
+                print(f"Đã phân tích {formatted_job}")
 
-            
-            start_col_index = ord('J') - 64
-            last_col_index = start_col_index + len(update_values) - 1
-            last_col = get_column_letter(last_col_index)
-            update_ranger = f"{sheet_name}!J{row_index}:{last_col}{row_index}"
-            body = {
-                'values': [update_values]
-            }
-            update_result = service.spreadsheets().values().update(
-                spreadsheetId=spreadsheet_id,
-                range=update_ranger,
-                valueInputOption='RAW',
-                body=body
-            ).execute()
+                columnI = [f"=image(h{row_index})"]
+                update_values = [content]
 
-            updated_cells = update_result.get('updatedCells', 0)
-            print(f"Đã cập nhật thành công dòng {row_index} với {updated_cells} ô.")
+                for field in formatted_job:
+                    update_values.append(field if field is not None else "")
+
+                update_values = columnI + update_values[:5] + [""] + update_values[5:]
+
+                start_col_index = ord('I') - 64
+                last_col_index = start_col_index + len(update_values) - 1
+                last_col = get_column_letter(last_col_index)
+                update_ranger = f"{sheet_name}!I{row_index}:{last_col}{row_index}"
+                body = {
+                    'values': [update_values]
+                }
+                update_result = service.spreadsheets().values().update(
+                    spreadsheetId=spreadsheet_id,
+                    range=update_ranger,
+                    valueInputOption='USER_ENTERED',
+                    body=body
+                ).execute()
+
+                zalo_status = f"{sheet_name}!AF{row_index}"
+                zalo_body = {
+                    'values': [["ZALO"]]
+                }
+                service.spreadsheets().values().update(
+                    spreadsheetId=spreadsheet_id,
+                    range=zalo_status,
+                    valueInputOption='RAW',
+                    body=zalo_body
+                ).execute()
+                
+                # matching giữa visa và việc làm AI để cho ra việc làm phân tích
+                job = update_job_row_by_row(row_index)
+                job_status = f"{sheet_name}!O{row_index}"
+                job_body = {
+                    'values': [[job]]
+                }
+                service.spreadsheets().values().update(
+                    spreadsheetId=spreadsheet_id,
+                    range=job_status,
+                    valueInputOption='RAW',
+                    body=job_body
+                ).execute()
+
+                updated_cells = update_result.get('updatedCells', 0)
+                print(f"Đã cập nhật thành công dòng {row_index} với {updated_cells} ô.")
+            except Exception as e:
+                print(f"Lỗi khi phân tích JSON: {e}")
         except Exception as e:
-            print(f"Lỗi khi phân tích JSON: {e}")
-    except Exception as e:
-        print(f"Lỗi khi phân tích dòng {row_index}: {e}")
+            print(f"Lỗi khi phân tích dòng {row_index}: {e}")
 
         time.sleep(1)
 
 def start_crawling():
-    refresh_interval = 10 * 60  # 10 phút
+    refresh_interval = 120 * 60  # 10 phút
     last_refresh = time.time()
     while True:
         try:
+            current_time = time.time()
+            if current_time - last_refresh > refresh_interval:
+                print("Đang làm mới trình duyệt...")
+                browser.refresh()
+                time.sleep(5)
+                last_refresh = current_time
             scroll_and_click_groups(browser)
             time.sleep(5)
         except Exception as e:
@@ -452,5 +511,4 @@ def start_crawling():
             
 if __name__ == "__main__":
     print("Bat dau thu thap du lieu...")
-    # start_crawling()
-    # read_data_from_sheet() # hàm đẩy đơn hàng
+    start_crawling()
