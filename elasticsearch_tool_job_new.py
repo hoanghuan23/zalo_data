@@ -348,9 +348,6 @@ def formatNumberValue(value, defaultValue):
 with open('mapping_images.json', 'r', encoding='utf-8') as f:
     mapping_images = json.load(f)
 
-with open('mapping_exclude_images.json', 'r', encoding='utf-8') as f:
-    MAPPING_EXCLUDE_IMAGES = json.load(f)
-
 def get_job_image(job: str, career: str) -> str:
     mapping_image = next((item for item in mapping_images if job in item["newJobs"]), None)
 
@@ -366,10 +363,7 @@ def get_job_image(job: str, career: str) -> str:
     if len(images) == 1:
         return images[0]
 
-    while True:
-        selected_image = random.choice(images)
-        if selected_image not in MAPPING_EXCLUDE_IMAGES:
-            return selected_image
+    return random.choice(images)
 
 
 def remove_non_digits(input_str):
