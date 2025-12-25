@@ -16,12 +16,13 @@ parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 from util import columnIndex, formatVisa, process_japan_regions, get_lowest_language_level, formatGender
 # from openaitool import generateEmbedding
-DOMAIN = 'http://localhost:80'
 DOMAIN = 'https://sync.hellojob.jp'
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
 es = Elasticsearch(
     hosts=[DOMAIN],
     # Thêm xác thực username và password
-    http_auth=('hellojob', 'hellojob2022')
+    http_auth=(USERNAME, PASSWORD)
 )
 template = "{gender}; country: {country}; visa: {visa}; career: {career}; workLocation: {workLocation}; language: {language}; qualifications: {requiredQualifications}, haveTattoo: {haveTattoo}, vgb: {vgb}, specialConditions: {specialConditions}"
 
