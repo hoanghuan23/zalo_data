@@ -18,7 +18,6 @@ def analyzeAndSplitJobContent(rawText):
                     "- Chỉ thực hiện chuẩn hóa các từ viết tắt, lỗi chính tả, ký tự đặc biệt, hoặc cách ngắt chữ không tự nhiên.\n" +
                     "- lưu ý các từ viết tắt tham khảo ở" + CAREER_NOTE + "\n" +
                     "- ví dụ '$CBTP kanto ợ n.h.a.n n.a.m/n.u @ kai.wa.n2 / s A n..h.ậ..n  đ.unn.g n.gà..nh' → 'chế biến thực phẩm kanto, nhận nam nữ kaiwa n2, nhận đúng ngành'.\n" +
-                    "- Giữ nguyên cấu trúc nội dung gốc, không thay đổi ý nghĩa hay thêm suy diễn.\n" +
                     "- Kết quả trả về dưới dạng chuỗi văn bản rõ ràng, không chứa ký tự đặc biệt, lỗi định dạng hoặc JSON.\n" +
                     "- Nếu tin nhắn chứa nội dung quảng cáo, giới thiệu nhóm, hoặc thông tin không liên quan đến tuyển dụng thì loại bỏ chúng.\n" +
                     "- Nếu có thông tin liên hệ (số điện thoại, email, link), hãy giữ nguyên và đặt ở cuối tin nhắn.\n" +
