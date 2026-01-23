@@ -43,7 +43,7 @@ def scroll_to_element(element):
         "arguments[0].scrollIntoView({block: 'center', inline: 'center'});", element)
     time.sleep(1)
 
-creds = service_account.Credentials.from_service_account_file('v.json')
+creds = service_account.Credentials.from_service_account_file('hellojobv5-8406e0a8eed7.json')
 service = build('sheets', 'v4', credentials=creds)
 spreadsheet_id = '10SL6WCt6YPrHUtxzVmsNI1futs-SOi9ebYIn_C641vc'
 sheet_name = 'Nhóm kỹ sư mới'
@@ -103,7 +103,6 @@ existing_urls = get_existing_urls()
 
 while count < so_nhom:
     div_elements = driver.find_elements(By.CSS_SELECTOR, 'div.x1obq294.x5a5i1n.xde0f50.x15x8krk.x1lliihq')
-    # div_elements = driver.find_elements(By.CSS_SELECTOR, 'div.x193iq5w.x1xwk8fm')
     if not div_elements:
         print("Không tìm thấy thẻ div cần cuộn.")
         break
