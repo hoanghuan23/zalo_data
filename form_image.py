@@ -4,13 +4,12 @@ from PIL import Image
 import io
 import json
 from openai import OpenAI
-import fitz  # PyMuPDF
-import base64
+from dotenv import load_dotenv
 
+load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Schema JSON như cũ
 JOB_POSTING_SCHEMA = {
     "type": "object",
     "properties": {
@@ -27,11 +26,13 @@ JOB_POSTING_SCHEMA = {
                     "hangMuc": {"type": "string", "description": "Tên của hạng mục (ví dụ: 'Địa điểm làm việc', 'Ngành nghề')."},
                     "noiDung": {"type": "string", "description": "Nội dung chi tiết của hạng mục. Giữ nguyên định dạng gốc như in đậm, in nghiêng bằng cú pháp Markdown."}
                 },
-                "required": ["stt", "hangMuc", "noiDung"]
+                "required": ["stt", "hangMuc", "noiDung"],
+                "additionalProperties": False
             }
         }
     },
-    "required": ["isValid"]
+    "required": ["isValid", "details"],
+    "additionalProperties": False
 }
 
 def generate_job_posting_data(image_url):
@@ -60,6 +61,7 @@ def generate_job_posting_data(image_url):
     =====================================================
     If valid table:
     - Extract all rows into JSON based on provided schema.
+    - FLATTENING RULE: If a cell contains sub-lists, bullet points, or multiple sections (e.g., "a. Text", "b. Text"), DO NOT create new JSON keys. Combine all text into the single "noiDung" string, using "\n" for line breaks.
     - Preserve original data EXACTLY including:
     • **bold**, *italic*, UPPERCASE
     • formatting symbols, line breaks, units, spacing
@@ -125,7 +127,7 @@ def generate_job_posting_data(image_url):
 
 
 if __name__ == "__main__":
-    test_image_url = "https://cdn.hellojob.jp/upload/hellojobv5/job-crawled/images/1765161461959291.pdf"
+    test_image_url = "https://cdn.hellojob.jp/upload/hellojobv5/job-crawled/images/1769416419419110.jpg"
     result = generate_job_posting_data(test_image_url)
     with open("job_posting_result.json", "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=4)
