@@ -1,10 +1,8 @@
 import time
-import json as gson
 import re
-from elasticsearch import Elasticsearch
-from elasticsearch import Elasticsearch
 import sys
 import os
+from opensearchpy import OpenSearch
 import json
 import random
 import string
@@ -19,7 +17,7 @@ from util import columnIndex, formatVisa, process_japan_regions, get_lowest_lang
 DOMAIN = 'https://sync.hellojob.jp'
 USERNAME = os.getenv('USERNAME')
 PASSWORD = os.getenv('PASSWORD')
-es = Elasticsearch(
+es = OpenSearch(
     hosts=[DOMAIN],
     # Thêm xác thực username và password
     http_auth=(USERNAME, PASSWORD)
