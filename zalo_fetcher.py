@@ -41,7 +41,7 @@ subprocess.Popen([chrome_path, debug_port, user_data_dir])
 chrome_options = Options()
 chrome_options.add_experimental_option("debuggerAddress","127.0.0.1:9222")
 browser = webdriver.Chrome(options=chrome_options)
-# browser = webdriver.Chrome()
+browser = webdriver.Chrome()
 browser.get('https://chat.zalo.me')
 time.sleep(15)
 
@@ -78,7 +78,7 @@ def scroll_and_click_groups(browser, interval=20):
             fetch_group_link()
             fetch_message_zalo()
 
-            time.sleep(5)
+            time.sleep(10)
     except Exception as e:
         print(f"loi" + {e})
 
@@ -102,7 +102,7 @@ def extract_text_from_image(image_path):
         base64_image = encode_image(image_path)
 
         response = client.chat.completions.create(
-            model="gpt-4.1-nano-2025-04-14",
+            model="gpt-4o-mini",
             messages=[
                 {
                     "role": "user",
@@ -194,8 +194,14 @@ def fetch_message_zalo():
 
         for chat_item in chat_items:
             try:
-                sender_name = chat_item.find_element(By.XPATH, '//div[@class="message-sender-name-content clickable"]/div[@class="truncate"]')
-                user_name = sender_name.text.replace("&nbsp", ' ')
+                # sender_name = chat_item.find_element(By.XPATH, '//div[@class="message-sender-name-content clickable"]/div[@class="truncate"]')
+                sender_name_element = chat_item.find_element(By.CSS_SELECTOR, ".message-sender-name-content .truncate")
+                
+                if sender_name_element:
+                    user_name = sender_name_element[0].text.replace("&nbsp", ' ')
+                    last_user_name = user_name
+                else:
+                    user_name = last_user_name
             except:
                 user_name = "khong ro"
 
@@ -203,6 +209,21 @@ def fetch_message_zalo():
             messages = chat_item.find_elements(By.CSS_SELECTOR, '[data-component="message-text-content"]')
             if messages:
                 message_text = messages[0].text
+            
+            now = datetime.now()
+            last_time_push = None
+
+            time_element = chat_item.find_elements(By.CSS_SELECTOR, '.card-send-time__sendTime')
+            if time_element:
+                last_time_push = time_element[0].text
+                print(f"Thoi gian tin nhan: {last_time_push}")
+            
+            if not last_time_push:
+                continue
+
+            h, m = map(int, last_time_push.split(':'))
+            created_at = int(now.replace(hour=h, minute=m, second=0, microsecond=0).timestamp())
+            ngay_thang_nam = now.strftime("Ngày %d Tháng %m Năm %Y")
 
             # Kiểm tra tin nhắn trùng lặp
             if message_text:
@@ -211,7 +232,8 @@ def fetch_message_zalo():
                     continue
 
             image_urls = []
-            images = chat_item.find_elements(By.XPATH, "//div[contains(@class, 'img-center-box')]//img")
+            # images = chat_item.find_elements(By.XPATH, "//div[contains(@class, 'img-center-box')]//img")
+            images = chat_item.find_elements(By.CSS_SELECTOR, ".img-center-box img")
             if images:
                 for img in images:
                     try:
@@ -232,22 +254,12 @@ def fetch_message_zalo():
             if message_text or image_urls:
                 if message_text:
                     unique_messages.add(message_text)
-                    
-                today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                today_parse = datetime.strptime(today, "%Y-%m-%d %H:%M:%S")
-                created_at = int(today_parse.timestamp())
-                ngay_thang_nam = datetime.now().strftime("Ngày %d Tháng %m Năm %Y")
 
                 if image_urls:
-                    for idx, (s3_url, img_hash, extracted_text) in enumerate(image_urls):
-                        # Kết hợp văn bản tin nhắn và văn bản trích xuất từ ảnh
-                        combined_text = message_text if idx == 0 else ""
-                        if extracted_text:
-                            combined_text = combined_text + "\n" + extracted_text if combined_text else extracted_text
-                        
-                        new_row = [group_name, user_name, combined_text, group_link, created_at, ngay_thang_nam, s3_url, img_hash]
+                    for idx, (s3_url, img_hash, extracted_text) in enumerate(image_urls):                        
+                        new_row = [group_name, user_name, extracted_text, group_link, created_at, ngay_thang_nam, s3_url, img_hash]
                         append_row_to_sqlite_and_sheet(new_row)
-                        print(f"Da luu anh {idx+1}: {s3_url} (text: {'co' if combined_text else 'trong'})")
+                        print(f"Da luu anh {idx+1}: {s3_url} (text: {'co' if extracted_text else 'trong'})")
                 else:
                     new_row = [group_name, user_name, message_text, group_link, created_at, ngay_thang_nam, None, None]
                     append_row_to_sqlite_and_sheet(new_row)
@@ -337,7 +349,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def analyPostType():
     service = authenticate_google_sheets()
     spreadsheet_id = '1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI'
-    sheet_name = 'ĐƠN HÀNG PHÂN TÍCH'
+    sheet_name = 'Sunrise'
     read_range = f"{sheet_name}!D2:K"
 
     try:
@@ -392,7 +404,7 @@ def analyPostType():
 
                 if post_type_data['postType'] == 'VIỆC LÀM NHẬT' and col_h_value:
                     analyze_and_update_sheet(spreadsheet_id, sheet_name, idx)
-                    read_data_from_sheet()
+                    # read_data_from_sheet()
 
             except Exception as e:
                 print(f"Lỗi phân tích dòng {idx}: {e}")
@@ -511,4 +523,5 @@ def start_crawling():
             
 if __name__ == "__main__":
     print("Bat dau thu thap du lieu...")
-    start_crawling()
+    # start_crawling()
+    analyPostType()
