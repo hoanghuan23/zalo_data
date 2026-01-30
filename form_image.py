@@ -73,57 +73,89 @@ def generate_job_posting_data(image_url):
         print("Không tải được ảnh:", e)
         return None
 
-    prompt = """ You are an expert recruitment director specializing in Japan labor export with 20 years of experience. Your task is to analyze the uploaded image and extract job posting data from a TABLE only.
+    prompt = """ You are an expert recruitment director specializing in Japan labor export with 20 years of experience.
 
-    =====================================================
-    STEP 1 — IMAGE VALIDATION (CRITICAL & STRICT)
-    =====================================================
-    Determine whether the image is a REAL JOB POSTING TABLE.
-    Requirements:
-    - Must contain a visible table/grid layout with ≥ 2 columns and ≥ 3 rows.
-    - Text blocks/flyers/posters không chia hàng rõ ràng = NOT a table.
-    - If the image is NOT a valid table → return ONLY:
-    { "isValid": false }
-    STOP and do not proceed further.
+Your task is to analyze the uploaded image and extract job posting data from a TABLE only.
 
-    =====================================================
-    STEP 2 — DATA EXTRACTION RULES (STRICT FORMAT KEEPING)
-    =====================================================
-    If valid table:
-    - Extract all rows into JSON based on provided schema.
-    - FLATTENING RULE: If a cell contains sub-lists, bullet points, or multiple section (e.g., "a. Text", "b. Text"), DO NOT create new JSON keys. Combine all text into the single "noiDung" string, using "\n" for line breaks.
-    - Preserve original data EXACTLY including:
-    • **bold**, *italic*, UPPERCASE
-    • formatting symbols, line breaks, units, spacing
-    - Highlighted/emphasized salary or fields = treat as **bold**
-    - You MUST NOT rewrite, paraphrase, summarize, or normalize meaning.
-    - You MUST NOT invent information not visible in the image.
-    If unclear → return "" or "Không rõ".
+=====================================================
+STEP 1 — IMAGE VALIDATION (CRITICAL & STRICT)
+=====================================================
+Determine whether the image is a REAL JOB POSTING TABLE.
 
-    =====================================================
-    STEP 3 — JAPAN LOCATION AUTOCORRECT RULE
-    =====================================================
-    If a row represents workplace information (detect keywords):
-    [ "Địa điểm", "Địa điểm làm việc", "Địa chỉ", "Nơi làm việc", "Làm việc tại", "Location", "Workplace", "勤務先" ]
-    → If content contains a Japanese prefecture/city and spelling appears incorrect,
-    Correct ONLY prefecture/city spelling to the nearest valid name.
-    Examples:
-    "Tokoy" → "Tokyo", "Hokaido" → "Hokkaido", "Gifu ken" → "Gifu"
-    Keep all other text + formatting unchanged.
-    If unsure → do not assume → return original.
+Requirements:
+- Must contain a visible table/grid layout with ≥ 2 columns and ≥ 3 rows.
+- Text blocks / flyers / posters không chia hàng rõ ràng = NOT a table.
 
-    =====================================================
-    OUTPUT REQUIREMENT (IMPORTANT)
-    =====================================================
-    Return ONLY a valid JSON following schema below.
-    No explanation, no extra texts, no markdown block formatting.
-    If valid table → return full object.
-    If invalid → return only { "isValid": false }.
-    """
+If the image is NOT a valid table → return ONLY:
+{ "isValid": false }
+
+STOP and do not proceed further.
+
+=====================================================
+STEP 2 — DATA EXTRACTION RULES (STRICT FORMAT KEEPING)
+=====================================================
+If valid table:
+
+- Extract ALL rows into JSON based on the provided schema.
+- DO NOT extract or infer STT from the image.
+- Each row corresponds to exactly ONE object in "details".
+
+FLATTENING RULE:
+- If a cell contains sub-lists, bullet points, or multiple sections
+  (e.g. "a. Text", "b. Text"),
+  DO NOT create new JSON keys.
+- Combine all content into ONE "noiDung" string.
+- Use "\n" for line breaks.
+
+FORMAT PRESERVATION:
+- Preserve original data EXACTLY, including:
+  • **bold**, *italic*, UPPERCASE
+  • symbols, units, spacing
+- Highlighted or emphasized salary/important fields = treat as **bold**.
+
+STRICT RULES:
+- You MUST NOT rewrite, paraphrase, summarize, or normalize meaning.
+- You MUST NOT invent or infer any information not visible in the image.
+- If content is unclear → return "" or "Không rõ".
+
+=====================================================
+STEP 3 — JAPAN LOCATION AUTOCORRECT RULE
+=====================================================
+If a row represents workplace information (detect keywords):
+[ "Địa điểm", "Địa điểm làm việc", "Địa chỉ", "Nơi làm việc",
+  "Làm việc tại", "Location", "Workplace", "勤務先" ]
+
+If the content contains a Japanese prefecture/city
+AND spelling is clearly incorrect:
+
+- Correct ONLY the prefecture/city name.
+- Keep all other text and formatting unchanged.
+
+Examples:
+"Tokoy" → "Tokyo"
+"Hokaido" → "Hokkaido"
+"Gifu ken" → "Gifu"
+
+If unsure → do NOT assume → keep original text.
+
+=====================================================
+OUTPUT REQUIREMENT (ABSOLUTE)
+=====================================================
+- Return ONLY valid JSON following the provided schema.
+- NO explanation.
+- NO markdown.
+- NO text outside JSON.
+- NO invisible characters.
+- NO additional keys.
+
+If valid table → return full object.
+If invalid → return ONLY:
+{ "isValid": false }"""
 
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",  # hoặc "gpt-4.1" nếu muốn mạnh hơn
+            temperature=0,
             messages=[
                 {"role": "user", "content": prompt},
                 {
