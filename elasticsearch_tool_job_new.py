@@ -1,8 +1,10 @@
 import time
+import json as gson
 import re
 import sys
-import os
+# from elasticsearch import Elasticsearch
 from opensearchpy import OpenSearch
+import os
 import json
 import random
 import string
@@ -13,15 +15,12 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 from util import columnIndex, formatVisa, process_japan_regions, get_lowest_language_level, formatGender
-# from openaitool import generateEmbedding
-DOMAIN = 'https://sync.hellojob.jp'
-USERNAME = os.getenv('USERNAME')
-PASSWORD = os.getenv('PASSWORD')
-es = OpenSearch(
-    hosts=[DOMAIN],
-    # Thêm xác thực username và password
-    http_auth=(USERNAME, PASSWORD)
-)
+
+DOMAIN = 'https://os.hellojob.jp'
+admin = os.getenv("ADMIN")
+password = os.getenv("PASSWORD")
+
+
 template = "{gender}; country: {country}; visa: {visa}; career: {career}; workLocation: {workLocation}; language: {language}; qualifications: {requiredQualifications}, haveTattoo: {haveTattoo}, vgb: {vgb}, specialConditions: {specialConditions}"
 
 
@@ -134,6 +133,7 @@ def createCrawledJob(json, newID, flagDate):
     workLocation = json[columnIndex('R')]
     if workLocation:
         workLocation = process_japan_regions(workLocation)
+    
     language = None
     languageLevel = json[columnIndex('M')]
     if languageLevel == 'KHÔNG TIẾNG':
@@ -193,18 +193,24 @@ def createCrawledJob(json, newID, flagDate):
     # if interviewDay:
     #     interviewDay = interviewDay+'/2025'
     formImage = json[columnIndex('H')]
-    
-    if formImage:
-        markdown_details = generate_job_posting_data(formImage)
-        if markdown_details and markdown_details.get('isValid'):
-            markdown_details = markdown_details.get('details')
+    markdown_details=json[columnIndex('AJ')]
+    if markdown_details:
+        markdown_details=gson.loads(markdown_details)
+    else:
+        if formImage:
+            markdown_details = generate_job_posting_data(formImage)
+            if markdown_details and markdown_details.get('isValid'):
+                markdown_details = markdown_details.get('details')
+            else:
+                markdown_details = None
         else:
             markdown_details = None
-    else:
-        markdown_details = None
 
-    if not markdown_details:
-        return ['INVALID']
+        if not markdown_details:
+            return ['INVALID']
+    formImageHJ=json[columnIndex('AI')]
+    
+
 
     fee = formatNumberValue(json[columnIndex('AB')], None)
     back = formatNumberValue(json[columnIndex('AC')], None)
@@ -212,6 +218,7 @@ def createCrawledJob(json, newID, flagDate):
     # salerID = json[columnIndex('AW')]
     code = generate_jp_code()
     phoneNumber = json[columnIndex('AA')]
+    benefits = json[columnIndex('AE')]
     avatar=None
     try:
         avatar=get_job_image(job, career)
@@ -265,12 +272,18 @@ def createCrawledJob(json, newID, flagDate):
             "phoneVN": phoneNumber
         },
         "expiredDate": expiredDate,
-        "formMarkdownArray": markdown_details
+        "formMarkdownArray": markdown_details,
+        "benefits": benefits,
+        "formImageHJ":formImageHJ
     }
     # print(document)
     ids = []
     if not markdown_details:
         return None
+    es = OpenSearch(
+        hosts=[DOMAIN],
+        http_auth=(admin, password)
+    )   
     for visaItem in visas:  
         id = f'DH{newID}'
         # id = json[columnIndex('A')]
@@ -287,25 +300,25 @@ def createCrawledJob(json, newID, flagDate):
     return ids
 
 def findLastID():
-    try:
-        search_body = {
-            "size": 1,
-            "sort": [
-                {
-                    "id.keyword": {
-                        "order": "desc"
-                    }
+    search_body = {
+        "size": 1,
+        "sort": [
+            {
+                "id.keyword": {
+                    "order": "desc"
                 }
-            ]
-        }
-        response = es.search(index='hellojobv5-job-crawled', body=search_body)
-        if len(response['hits']['hits']):
-            maxIdDoc = response['hits']['hits'][0]
-            return maxIdDoc['_id']
-        else:
-            return None
-    except Exception as e:
-        print(f"Error retrieving last ID: {e}")
+            }
+        ]
+    }
+    es = OpenSearch(
+    hosts=[DOMAIN],
+    http_auth=(admin, password)
+    )
+    response = es.search(index='hellojobv5-job-crawled', body=search_body)
+    if len(response['hits']['hits']):
+        maxIdDoc = response['hits']['hits'][0]
+        return maxIdDoc['_id']
+    else:
         return None
 
 
@@ -347,6 +360,7 @@ def formatNumberValue(value, defaultValue):
 with open('mapping_images.json', 'r', encoding='utf-8') as f:
     mapping_images = json.load(f)
 
+
 def get_job_image(job: str, career: str) -> str:
     mapping_image = next((item for item in mapping_images if job in item["newJobs"]), None)
 
@@ -362,7 +376,9 @@ def get_job_image(job: str, career: str) -> str:
     if len(images) == 1:
         return images[0]
 
-    return random.choice(images)
+    while True:
+        selected_image = random.choice(images)
+        return selected_image
 
 
 def remove_non_digits(input_str):
