@@ -66,7 +66,12 @@ META_JOB_SCHEMA = {
                     Đối chiếu các từ khóa có trong input với danh sách từ khóa của từng tiêu đề và kết hợp với lưu ý, ưu tiên các trường hợp đặc biệt có trong lưu ý.\n
                     Xác định tiêu đề nào chứa nhiều từ khóa phù hợp hoặc liên quan nhất với input.\n
                     - Output: Bắt buộc phải chọn ra 1 tiêu đề phù hợp nhất từ danh sách đã đưa và trả về. không bao gồm câu từ AI. nếu không có từ khóa rõ ràng trả về 'Thực tập sinh 3 năm' """,
-                    },
+                    "enum": [
+                        "Thực tập sinh 3 năm", "Thực tập sinh 1 năm", "Thực tập sinh 3 go",
+                        "Tokutei đầu Việt", "Tokutei đầu Nhật", "Kỹ sư đầu Nhật", "Kỹ sư đầu Việt"
+                    ],
+                },
+
                 "job": {
                     "type": "string",
                     "description": "bất cứ ngành nghề , công việc nào được nhắc đến trong nội dung tin nhắn ví dụ (chế biến thực phẩm, đóng gói, hàn xì, bảo dưỡng ô tô, khách sạn...) , tham khảo nếu xuất hiện từ khóa viết tắt trong {CAREER_NOTE}. Nếu không có công việc nào thì trả về 'Không cung cấp'."
