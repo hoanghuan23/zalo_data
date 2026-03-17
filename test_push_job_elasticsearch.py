@@ -60,10 +60,9 @@ def read_data_from_sheet():
     sequential_values=[]
     startRow=None
     count = 2
-    print("chạy tới đây")
     for row in filtered_data:
         # if row[0] or len(row[0]) > 0:
-        if not row[0]:
+        if len(row) == 0 or not row[0]:
             if startRow is None:
                 startRow = count
             updatedIds = createCrawledJob(row, nextID, formatted_date)

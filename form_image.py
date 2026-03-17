@@ -25,10 +25,6 @@ JOB_POSTING_SCHEMA = {
             "items": {
                 "type": "object",
                 "properties": {
-                    "stt": {
-                        "type": "string",
-                        "description": "Số thứ tự của hàng trong bảng.",
-                    },
                     "hangMuc": {
                         "type": "string",
                         "description": "Tên của hạng mục (ví dụ: 'Địa điểm làm việc', 'Ngành nghề').",
@@ -38,7 +34,7 @@ JOB_POSTING_SCHEMA = {
                         "description": "Nội dung chi tiết của hạng mục. Giữ nguyên định dạng gốc như in đậm, in nghiêng bằng cú pháp Markdown.",
                     },
                 },
-                "required": ["stt", "hangMuc", "noiDung"],
+                "required": ["hangMuc", "noiDung"],
                 "additionalProperties": False,
             },
         },
@@ -46,40 +42,14 @@ JOB_POSTING_SCHEMA = {
     "required": ["isValid", "details"],
     "additionalProperties": False,
 }
-
-
-def image_url_to_data_uri(image_url, timeout=10):
-    resp = requests.get(image_url, timeout=timeout)
-    resp.raise_for_status()
-
-    mime = resp.headers.get("Content-Type")
-    if not mime:
-        mime = "image/jpeg"
-
-    b64 = base64.b64encode(resp.content).decode("utf-8")
-    return f"data:{mime};base64,{b64}"
-
-
-def image_url_to_base64(image_url, timeout=10):
-    resp = requests.get(image_url, timeout=timeout)
-    resp.raise_for_status()
-    return base64.b64encode(resp.content).decode("utf-8")
-
+    
 
 def generate_job_posting_data(image_url):
-    try:
-        data_uri = image_url_to_data_uri(image_url)
-    except Exception as e:
-        print("Không tải được ảnh:", e)
-        return None
-
     prompt = """ You are an expert recruitment director specializing in Japan labor export with 20 years of experience.
 
 Your task is to analyze the uploaded image and extract job posting data from a TABLE only.
 
-=====================================================
 STEP 1 — IMAGE VALIDATION (CRITICAL & STRICT)
-=====================================================
 Determine whether the image is a REAL JOB POSTING TABLE.
 
 Requirements:
@@ -91,9 +61,7 @@ If the image is NOT a valid table → return ONLY:
 
 STOP and do not proceed further.
 
-=====================================================
 STEP 2 — DATA EXTRACTION RULES (STRICT FORMAT KEEPING)
-=====================================================
 If valid table:
 
 - Extract ALL rows into JSON based on the provided schema.
@@ -118,9 +86,7 @@ STRICT RULES:
 - You MUST NOT invent or infer any information not visible in the image.
 - If content is unclear → return "" or "Không rõ".
 
-=====================================================
-STEP 3 — JAPAN LOCATION AUTOCORRECT RULE
-=====================================================
+10STEP 3 — JAPAN LOCATION AUTOCORRECT RULE
 If a row represents workplace information (detect keywords):
 [ "Địa điểm", "Địa điểm làm việc", "Địa chỉ", "Nơi làm việc",
   "Làm việc tại", "Location", "Workplace", "勤務先" ]
@@ -138,9 +104,7 @@ Examples:
 
 If unsure → do NOT assume → keep original text.
 
-=====================================================
 OUTPUT REQUIREMENT (ABSOLUTE)
-=====================================================
 - Return ONLY valid JSON following the provided schema.
 - NO explanation.
 - NO markdown.
@@ -154,16 +118,16 @@ If invalid → return ONLY:
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",  # hoặc "gpt-4.1" nếu muốn mạnh hơn
+            model="gpt-4.1-mini",
             temperature=0,
             messages=[
-                {"role": "user", "content": prompt},
+                {"role": "system", "content": prompt},
                 {
                     "role": "user",
                     "content": [
                         {
                             "type": "image_url",
-                            "image_url": {"url": data_uri},  # 👈 base64 nằm ở đây
+                            "image_url": {"url": image_url}, 
                         }
                     ],
                 },
@@ -176,6 +140,14 @@ If invalid → return ONLY:
                 },
             },
         )
+        
+        # usage = response.usage
+        # print("=" * 10)
+        # print("Function: Phân tích Markdown Array")
+        # print("Input token", usage.prompt_tokens)
+        # print("Output token", usage.completion_tokens)
+        # print("Total token", usage.total_tokens)
+        # print("=" * 10)
 
         raw = response.choices[0].message.content
         data = json.loads(raw)

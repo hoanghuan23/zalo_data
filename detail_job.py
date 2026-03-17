@@ -48,7 +48,7 @@ def update_job_row_by_row(row_index):
 
     # Áp rule
     value = apply_rules(rawE, rawI, rules)
-    print(value)
+    # print(value)
     return value
 
         # Update vào cột O của dòng đó

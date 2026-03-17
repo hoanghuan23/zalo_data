@@ -2,18 +2,24 @@
   {
     "value": "TKT#Thực phẩm",
     "contains_e": ["tokutei"],
-    "contains_i": ["thực phẩm", "chế biến", "bánh mì", "sơ chế"]
+    "contains_i": ["thực phẩm", "bánh mì", "làm bánh"]
+  },
+
+  {
+    "value": "TKT#Mạ kẽm nhúng nóng",
+    "contains_e": ["tokutei"],
+    "contains_i": ["mạ", "mạ kẽm nhúng nóng"]
   },
 
   {
     "value": "TKT#Thực phẩm",
     "contains_e": ["tokutei"],
-    "contains_i": ["thực phẩm", "chế biến", "bánh mì"]
+    "contains_i": ["thực phẩm", "chế biến", "bánh mì", "nước giải khát", "soup miso"]
   },
   {
     "value": "TKT#Nông nghiệp trồng trọt",
     "contains_e": ["tokutei"],
-    "contains_i": ["nông nghiệp trồng trọt", "nông nghiệp"]
+    "contains_i": ["nông nghiệp trồng trọt", "trồng cây", "trồng nấm"]
   },
   {
     "value": "TKT#Nông nghiệp chăn nuôi",
@@ -31,6 +37,11 @@
     "contains_i": ["xây dựng", "xây trát"]
   },
   {
+    "value": "TKT#Ốp lát gạch",
+    "contains_e": ["tokutei"],
+    "contains_i": ["ốp lát", "ốp lát gạch"]
+  },
+  {
     "value": "TKT#Phá dỡ",
     "contains_e": ["tokutei"],
     "contains_i": ["phá dỡ"]
@@ -40,10 +51,15 @@
     "contains_e": ["tokutei"],
     "contains_i": ["điện"]
   },
+   {
+    "value": "TKT#May",
+    "contains_e": ["tokutei"],
+    "contains_i": ["may mặc", "may"]
+  },
   {
     "value": "TKT#Cốp pha công trình",
     "contains_e": ["tokutei"],
-    "contains_i": ["cốt pha"]
+    "contains_i": ["cốt pha", "cốp pha", "thi công cốp pha"]
   },
   {
     "value": "TKT#Bảo dưỡng ô tô",
@@ -53,7 +69,17 @@
   {
     "value": "TKT#Nhà hàng",
     "contains_e": ["tokutei"],
-    "contains_i": ["nhà hàng", "nhân viên quán ăn"]
+    "contains_i": ["nhà hàng", "nhân viên quán ăn", "phục vụ ăn uống", "quản lý nhà hàng"]
+  },
+  {
+    "value": "TKT#Giàn giáo",
+    "contains_e": ["tokutei"],
+    "contains_i": ["giàn giáo"]
+  },
+  {
+    "value": "TKT#Chế biến thịt bò, lợn",
+    "contains_e": ["tokutei"],
+    "contains_i": ["thịt lợn"]
   },
   {
     "value": "TKT#Hàn xì",
@@ -63,7 +89,7 @@
   {
     "value": "TKT#Gia công cơ khí",
     "contains_e": ["tokutei"],
-    "contains_i": ["gia công cơ khí"]
+    "contains_i": ["gia công cơ khí", "cơ khí", "cơ khí gia công", "sản xuất công nghiệp"]
   },
   {
     "value": "TKT#Cơ khí",
@@ -81,9 +107,24 @@
     "contains_i": ["đóng gói", "đóng gói nấm"]
   },
   {
+  "value": "TKT#Lắp ráp linh kiện bán dẫn",
+  "contains_e": ["tokutei"],
+  "contains_i": ["lắp ráp linh kiện"]
+  },
+  {
+    "value": "TKT#Nấu bếp",
+    "contains_e": ["tokutei"],
+    "contains_i": ["phụ bếp", "nấu ăn"]
+  },
+  {
     "value": "TKT#Chống thấm",
     "contains_e": ["tokutei"],
     "contains_i": ["chống thấm"]
+  },
+   {
+    "value": "TKT#Xử lý nhiệt tổng thể",
+    "contains_e": ["tokutei"],
+    "contains_i": ["thi công", "lắp đặt", "thiết bị cách nhiệt"]
   },
   {
     "value": "TKT#Điều dưỡng, hộ lý",
@@ -100,6 +141,11 @@
     "contains_e": ["tokutei"],
     "contains_i": ["đúc"]
   },
+   {
+    "value": "TKT#(Khách sạn) Tiếp khách, quản lý vệ sinh",
+    "contains_e": ["tokutei"],
+    "contains_i": ["khách sạn"]
+  },
   {
     "value": "TKT#Dán tường",
     "contains_e": ["tokutei"],
@@ -113,7 +159,12 @@
   {
     "value": "TKT#Lái xe",
     "contains_e": ["tokutei"],
-    "contains_i": ["lái xe"]
+    "contains_i": ["lái xe", "vận tải"]
+  },
+  {
+    "value": "TKT#Hậu cần vận tải",
+    "contains_e": ["tokutei"],
+    "contains_i": ["vận tải", "chuyển nhà", "giao hàng"]
   },
   {
     "value": "TKT#Vệ sinh tòa nhà",
@@ -138,7 +189,7 @@
   {
     "value": "TKT#Vận hành máy",
     "contains_e": ["tokutei"],
-    "contains_i": ["vận hành máy"]
+    "contains_i": ["vận hành máy", "vận hành kho"]
   },
   {
     "value": "TKT#Buộc thép",
@@ -158,14 +209,14 @@
   {
     "value": "TKT#Bảo trì máy móc",
     "contains_e": ["tokutei"],
-    "contains_i": ["bảo trì"]
+    "contains_i": ["bảo trì", "sửa chữa"]
   },
 
 
   {
     "value": "TTS#May mặc",
     "contains_e": ["thực tập sinh"],
-    "contains_i": ["may mặc", "dệt may", "may rèm cửa"]
+    "contains_i": ["may mặc", "dệt may", "may rèm cửa", "may"]
   },
   {
     "value": "TTS#Nông nghiệp trồng trọt",
@@ -185,12 +236,12 @@
   {
     "value": "TTS#Cốp pha công trình",
     "contains_e": ["thực tập sinh"],
-    "contains_i": ["cốp pha"]
+    "contains_i": ["cốp pha", "cốt pha", "thi công cốp pha"]
   },
   {
     "value": "TTS#Thực phẩm",
     "contains_e": ["thực tập sinh"],
-    "contains_i": ["thực phẩm", "chế biến", "bánh mì"]
+    "contains_i": ["thực phẩm", "chế biến", "bánh mì", "nước giải khát", "sơ chế", "phục vụ ăn uống"]
   },
   {
     "value": "TTS#Vận hành máy",
@@ -215,7 +266,7 @@
   {
     "value": "TTS#Bảo trì máy móc",
     "contains_e": ["thực tập sinh"],
-    "contains_i": ["bảo dưỡng hệ thống"]
+    "contains_i": ["bảo dưỡng hệ thống", "bảo trì", "sửa chữa máy móc"]
   },
   {
     "value": "TTS#Giặt là",
@@ -225,7 +276,12 @@
   {
     "value": "TTS#Đường ống",
     "contains_e": ["thực tập sinh"],
-    "contains_i": ["đường ống"]
+    "contains_i": ["đường ống", "lắp đường ống", "lắp đặt đường ống"]
+  },
+   {
+    "value": "TTS#Ốp lát gạch",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["ốp lát", "ốp lát gạch"]
   },
   {
     "value": "TTS#Lắp ghép cốt thép",
@@ -253,6 +309,21 @@
     "contains_i": ["đóng gói công nghiệp"]
   },
   {
+    "value": "TTS#Chống thấm",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["chống thấm"]
+  },
+  {
+    "value": "TTS#Nông nghiệp chăn nuôi",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["nông nghiệp chăn nuôi", "chăn nuôi"]
+  },
+   {
+    "value": "TTS#Đóng gói",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["đóng gói"]
+  },
+  {
     "value": "TTS#In ấn",
     "contains_e": ["thực tập sinh"],
     "contains_i": ["in ấn"]
@@ -266,6 +337,11 @@
     "value": "TTS#Sơn",
     "contains_e": ["thực tập sinh"],
     "contains_i": ["sơn"]
+  },
+  {
+    "value": "TTS#Mạ kẽm nhúng nóng",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["mạ", "mạ kẽm nhúng nóng"]
   },
   {
     "value": "TTS#Bê tông",
@@ -307,12 +383,26 @@
     "contains_e": ["thực tập sinh"],
     "contains_i": ["sản xuất linh kiện", "sản xuất phụ tùng"]
   },
-
+  {
+    "value": "TTS#Xử lý nhiệt tổng thể",
+    "contains_e": ["thực tập sinh"],
+    "contains_i": ["thi công", "lắp đặt", "thiết bị cách nhiệt"]
+  },
 
   {
     "value": "KS#Ô tô",
     "contains_e": ["kỹ sư"],
-    "contains_i": ["ô tô", "lốp ô tô"]
+    "contains_i": ["ô tô"]
+  },
+  {
+    "value": "KS#Thiết kế",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["thiết kế"]
+  },
+    {
+    "value": "KS#Vận hành máy",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["điều phối máy móc", "vận hành máy"]
   },
   {
     "value": "KS#Quản lý",
@@ -350,6 +440,11 @@
     "contains_i": ["sản phẩm"]
   },
   {
+    "value": "KS#Bán hàng miễn thuế",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["nhân viên bán hàng"]
+  },
+  {
     "value": "KS#Dịch vụ khách sạn",
     "contains_e": ["kỹ sư"],
     "contains_i": ["khách sạn"]
@@ -368,5 +463,20 @@
     "value": "KS#Biên dịch, phiên dịch",
     "contains_e": ["kỹ sư"],
     "contains_i": ["biên dịch", "phiên dịch"]
+  },
+  {
+    "value": "KS#Chăn nuôi",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["chăn nuôi"]
+  },
+  {
+    "value": "KS#Bảo trì máy móc",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["bảo trì"]
+  },
+  {
+    "value": "KS#Dịch vụ nhà hàng",
+    "contains_e": ["kỹ sư"],
+    "contains_i": ["nhà hàng"]
   }
 ]

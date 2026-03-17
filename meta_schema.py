@@ -1,8 +1,8 @@
 VISA_JOB_KEYWORDS = {
     "Thực tập sinh 3 năm": [
-        'tr/F', 'tr/f', 'triệu/form', 'tr/form', 'mua form', 'mua ...tr', 'cc', 'mg', 'bay gấp', 'phí tổng', 'gửi form',
-        'cơ chế', 'xăm', 'nhận xăm kín', 'xăm nhỏ', 'xăm lớn', 'xăm to', 'nhận xăm', 'NHẬN XĂM HỞ', 'vgb', 'viêm gan B', 'trực tiếp',
-        'bảng lương', 'ra tết học', 'học ngoài', 'học ngoại', 'x lấy y', 'thi'
+        'tr/F', 'tr/f', 'triệu/form', 'tr/form', 'mua form', 'phí tổng', 'gửi form',
+        'cơ chế', 'xăm', 'nhận xăm kín', 'xăm nhỏ', 'xăm lớn', 'xăm to', 'nhận xăm', 'NHẬN XĂM HỞ', 'vgb', 'viêm gan B',
+        'lương dưới 18 man'
     ],
     "Thực tập sinh 1 năm": [
         "1 năm", "1n"
@@ -12,13 +12,13 @@ VISA_JOB_KEYWORDS = {
     ],
 
     "Tokutei đầu Việt": [
-        "tkt đầu Việt", "phí NET", "VN", "net", "phí Net", "tokutei đầu Việt", "đầu Việt", "đ.Việt", "đ v", "đ.v", "đầu v", "quay lại", "nhận đi mới", "nhận cả đi mới", "đi mới", "có vé", "chưa vé",'bao đỗ', 'bao đậu', 'bay gấp', 'tiếng yếu', 'bảng lương'
+        "tkt đầu Việt", "phí NET", "VN", "net", "tokutei đầu Việt", "đầu Việt", "đ.Việt", "quay lại", "đi mới", "có vé", "chưa vé",'bao đỗ', 'bao đậu', 'bay gấp', 'tiếng yếu', 'bảng lương'
     ],
     "Tokutei đầu Nhật": [
-        "tkt đầu Nhật", "tokutei đầu Nhật", "đầu Nhật", "đ.nhật", "đ n", "đ.n", "đầu n", 'chuyển việc', 'c.việc', 'gino còn x năm', 'bonasu', "nhận x ngành", 'back x man', 'nhận nhóm ngành trên', 'nhận nhóm ngành dưới', 'ngành trên', 'ngành dưới', 'sắp hết hạn', 'thực tập sinh sắp hết hạn', 'sắp kết thúc'
+        "tkt đầu Nhật", "tokutei đầu Nhật", "đầu Nhật", "phí Back", "đ.nhật", "đầu n", 'chuyển việc', 'gino còn x năm', "nhận x ngành", 'back x man', 'sắp hết hạn', 'thực tập sinh sắp hết hạn', 'sắp kết thúc'
     ],
-    "Kỹ sư đầu Nhật": ["Kỹ sư", "kĩ sư", "ks", "ksu", "đầu Nhật", "đ.Nhật", "đ n", "đ.n", "đầu n", "đi làm ngay", "chuyển việc", "cv lại", "xác nhận công việc", "xncv", 'nvct', 'nhân viên chính thức'],
-    "Kỹ sư đầu Việt": ["Kỹ sư","kĩ sư", "ks", "ksu", "đầu Việt", "đ.Việt", "đ v", "đ.v", "đầu v", "bảng điểm", "xác nhận công việc", "bằng", "trình sớm", 'bay gấp', 'quay lại', 'q.lại', 'có vé', 'nvct', 'nhân viên chính thức']
+    "Kỹ sư đầu Nhật": ["Kỹ sư đầu Nhật", "ks đ.Nhật",  "đi làm ngay", "chuyển việc", "cv lại",  "xncv", 'nvct', 'nhân viên chính thức'],
+    "Kỹ sư đầu Việt": ["Kỹ sư đầu Việt", "ks đ.Việt", "bảng điểm", "bằng", "trình sớm", 'bay gấp', 'quay lại', 'q.lại', 'có vé', 'nvct', 'nhân viên chính thức']
 }
 
 CAREER_NOTE = """Nông nghiệp'; 'Thực phẩm'; 'In ấn'; 'Sơn'; 'Đồ gia dụng'; 'Đóng sách'; 'Đúc'; 'Hàn xì'; 'Đóng gói'; 'Sản xuất hộp'; 'Gốm'; 'Bê tông'; 'Rác thải'; 'Đường sắt'; 'Cao su, nhựa'; 'Vật liệu composite'; 'Nghề Mộc'; 'Ngư nghiệp'; 'Dệt may'; 'Xây dựng'; 'Cơ khí, kim loại'; 'Sân bay'; 'Nồi hơi'; 'Logistic'; 'Vận chuyển'; 'Điều dưỡng'; 'Chế tạo vật liệu'; 'Đóng tàu'; 'Nhà hàng'; 'Vệ sinh toà nhà'; 'Buồng phòng khách sạn'; 'Chế tạo máy'; 'Ô tô'; 'Lưu trú', 'Khách sạn'; 'Vận tải', 'Lái xe'; 'Điện, điện tử'; 'Kiến trúc'; 'Tài chính', 'Bảo hiểm'; 'Thiết kế'; 'Công nghệ thông tin'; 'Bảo trì, sửa chữa máy móc'; 'Quản lý sản xuất'; 'Giải trí', 'Du lịch'; 'Kế toán'; 'Kinh doanh, Sale, Tiếp thị'; 'Y tế'; 'Năng lượng';'Phiên dịch viên';'Giặt là'.\n
@@ -43,35 +43,30 @@ META_JOB_SCHEMA = {
             "properties": {
                 "postType": {
                     "type": "string",
-                    "description": """Phân loại nội dung phù hợp theo mẫu:
-                    "VIỆC LÀM": nếu trong nội dung có từ khóa liên quan đến công việc, lương, ngày phỏng vấn. Một số ví dụ của việc làm "CBTP, TOTTORI 1050y/h Kaiwa n4",
-                            hoặc "TKT CBTP - CHIBA, IBARAKI(NAM/N.U). LCB 1166-1226y. Tca 30-40h. Vtay 18-24M. 1ng/p, BONASU 20-30M.Htro gino 2"
-                    "ỨNG VIÊN: nếu trong nội dung có từ khóa liên quan đến tìm đơn , ứng viên . Một số ví dụ của ứng viên "Em tìm đơn cbtp Mie Aichi Có cc,N4 ạ"
-                            hoặc "Em tìm đơn thực phẩm cho nam & nữ .có hỗ trợ nhà ạ"
-                    "TIN RÁC:  các trường hợp không thuộc hai loại trên, ví dụ như "Yếu tiếng, sợ Kanji, chưa biết bắt đầu học Ginou2? Nhắn em ngay! Có lộ trình học, tài liệu chuẩn, APP ôn tập, mẹo bám sát đề thật giúp anh/chị đậu dễ dàng!"
-                            hoặc "Vận chuyển Việt - Nhật Nhận tất cả loại hàng hoá" hoặc "Ôn luyện Ginou 2 mà chưa có tài liệu, bộ đề . Chưa có app ôn luyện. Sợ kanji. Cần hỗ trợ nhắn mình"
+                    "description": """Phân loại nội dung theo phù hợp theo mẫu sau:
+                    "VIỆC LÀM NHẬT": nếu nội dung có từ khóa liên quan đến công việc, lương, ngày phỏng vấn. Một số ví dụ của việc làm "CBTP, TOTTORI 1050y/h Kaiwa n4",
+                                     "Thông báo đơn hàng Tokutei đầu Việt, ngành nghề chế biến thực phẩm ...",
+                                     
+                    "TIN RÁC": nếu nội dung không thuộc trường hợp trên, một số ví dụ "Các tài khoản ngân hàng số đẹp" hoặc có nhiều thông tin đơn hàng trong 1 tin . Không phải đơn thuộc nước Nhật Bản, "đơn Đài Loan,
+                               "đơn singapore", "đơn Hàn Quốc"...
                     """,
-                    "enum": ["VIỆC LÀM NHẬT", "ỨNG VIÊN", "TIN RÁC"],
-                    },
+                    "enum": ["VIỆC LÀM NHẬT", "TIN RÁC"]
+                },
                 "visa": {
                     "type": "string",
                     "description": f"""- Dưới đây là danh sách tiêu đề và từ khóa liên quan:\n
                     {VISA_JOB_KEYWORDS}\n
                     - Lưu ý: \n
+                        + dựa vào tên nhóm để trả về kết quả chính xác nhất. Ví dụ tên "Hoàng - Tokutei đầu Việt" thì đó là đơn đầu Việt
                         + các từ viết tắt đ.Việt -> đầu Việt, đ.Nhật -> đầu Nhật, tts -> thực tập sinh\n
                         + Nếu nội dung có có dạng như 'Phí A-B-C' -> Thực tập sinh 3 năm\n
                         + Nếu nội dung có nhắc đến ngày phỏng vấn , ngày thi tuyển -> Thực tập sinh 3 năm\n 
                     - Yêu cầu:\n
-                    Phân tích nội dung input để tìm ra loại visa xklđ(thường là Nhật Bản) phù hợp.\n
-                    Đối chiếu các từ khóa có trong input với danh sách từ khóa của từng tiêu đề và kết hợp với lưu ý, ưu tiên các trường hợp đặc biệt có trong lưu ý.\n
-                    Xác định tiêu đề nào chứa nhiều từ khóa phù hợp hoặc liên quan nhất với input.\n
-                    - Output: Bắt buộc phải chọn ra 1 tiêu đề phù hợp nhất từ danh sách đã đưa và trả về. không bao gồm câu từ AI. nếu không có từ khóa rõ ràng trả về 'Thực tập sinh 3 năm' """,
-                    "enum": [
-                        "Thực tập sinh 3 năm", "Thực tập sinh 1 năm", "Thực tập sinh 3 go",
-                        "Tokutei đầu Việt", "Tokutei đầu Nhật", "Kỹ sư đầu Nhật", "Kỹ sư đầu Việt"
-                    ],
-                },
-
+                    Đối chiếu các từ khóa có trong {VISA_JOB_KEYWORDS} với danh sách từ khóa nội dung đơn và kết hợp với lưu ý, ưu tiên các trường hợp đặc biệt có trong lưu ý.\n
+                    Xác định nội dung chứa nhiều từ khóa phù hợp hoặc liên quan nhất và trả về đúng loại visa\n
+                    - Output: Bắt buộc phải chọn ra 1 loại hình visa phù hợp nhất từ danh sách đã đưa và trả về. không bao gồm câu từ AI. nếu không có từ khóa rõ ràng trả về 'Thực tập sinh 3 năm' """,
+                    "enum": ["Thực tập sinh 3 năm", "Thực tập sinh 1 năm", "Tokutei đầu Việt", "Tokutei đầu Nhật", "Kỹ sư đầu Việt", "Kỹ sư đầu Nhật"]
+                    },
                 "job": {
                     "type": "string",
                     "description": "bất cứ ngành nghề , công việc nào được nhắc đến trong nội dung tin nhắn ví dụ (chế biến thực phẩm, đóng gói, hàn xì, bảo dưỡng ô tô, khách sạn...) , tham khảo nếu xuất hiện từ khóa viết tắt trong {CAREER_NOTE}. Nếu không có công việc nào thì trả về 'Không cung cấp'."
@@ -79,15 +74,14 @@ META_JOB_SCHEMA = {
 
                 "workLocation": {
                     "type": "string",
-                    "description": "Trả về bất cứ tỉnh, thành phố, khu vực nào được nhắc đến trong đơn hàng. Nếu không có thông tin về địa điểm làm việc thì trả về 'Empty'.",
+                    "description": "Trả về bất cứ tỉnh, thành phố, khu vực nào thuộc đất nước Nhật Bản được nhắc đến trong đơn hàng. Nếu không có thông tin về địa điểm làm việc thì trả về 'Empty'.",
                 },
 
 
                 "languageLevel": {
                     "type": "string",
                     "description": "Trình độ ngoại ngữ trong đơn nếu có nhiều N4,N3,N2 thì chọn N thấp nhất. Có các từ khóa như 'ko yc tiếng', 'không tiếng' => 'Không yêu cầu tiếng' ."
-                    "Nếu trong đơn có nhắc trình độ ngôn ngữ hoặc giao tiếp tương đương kaiwa N4 trả về 'Kaiwa N4'. Nếu trong đơn nói có chứng chỉ JLPT N4 thì trả về 'JLPT N4'."
-                    "nếu không có trình độ ngôn ngữ nào thì trả về 'Không cung cấp'.",
+                    "Nếu trong đơn có nhắc trình độ ngôn ngữ hoặc giao tiếp kaiwa N4 trả về 'Kaiwa N4'. Nếu trong đơn nói có chứng chỉ JLPT N4 thì trả về 'JLPT N4'. Nếu không có nhắc tới trình độ ngoại ngữ => 'Không cung cấp'",
                     "enum": ["Không yêu cầu tiếng","JLPT N5", "JLPT N4", "JLPT N3", "JLPT N2", "JLPT N1", "Kaiwa N5", "Kaiwa N4", "Kaiwa N3", "Kaiwa N2", "Kaiwa N1", "Kaiwa N1", "Kaiwa N1", "Không cung cấp"]
 
                 },
@@ -104,8 +98,9 @@ META_JOB_SCHEMA = {
 
                 "basicSalary": {
                     "type": "number",
-                    "description": """Mức lương cơ bản (lcb) của đơn hàng.
-                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ. Ví dụ lcb: 205.440 chỉ ghi 20
+                    "description": """Mức lương cơ bản của đơn hàng.
+                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
+                     - nếu lương là "203000" thì lấy chính xác con số "203000"
                      - nếu trong đơn có 20tr/f, 20tr/form, '1400-15-5300', 25-35%/1h  => không phải lương.
                      - nếu đơn hàng ghi như 'lcb:26 Man', 'lương cơ bản', '18m', 'lương 18', 'lg 21-25m', 'thu nhập 25m' ... => đó là lương cơ bản (man/tháng).
                      - nếu lương có khoảng như '20-25 man', thì lấy số đứng trước dấu '-'
@@ -117,9 +112,10 @@ META_JOB_SCHEMA = {
                 "realSalary": {
                     "type": "number",
                     "description": """Mức lương thực lĩnh (lương về tay) của đơn hàng.
-                     - nếu đơn hàng ghi như 'ltl 26', 'lương thực lĩnh', 'về tay'... => đó là lương thực lĩnh (man/tháng).
-                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ. Ví dụ lương thực lĩnh 205.440 chỉ ghi 20
+                     - Chỉ lấy con số, không lấy kèm đơn vị tiền tệ.
+                     - nếu lương là "176000" thì lấy chính xác con số "176000".
                      - nếu trong đơn có '20tr/f', '20tr/form', '1400-15-5300', '25-35%/1h', 'TC 30-40h'  => không phải lương.
+                     - nếu đơn hàng ghi như 'ltl 26', 'lương thực lĩnh', 'về tay'... => đó là lương thực lĩnh (man/tháng).
                      - nếu không có nhắc tới lương thực lĩnh => 'Empty'
                      """,
                 
@@ -127,7 +123,8 @@ META_JOB_SCHEMA = {
               
                 "success-candidate": {
                     "type": "string",
-                    "description": """Số lượng trúng tuyển
+                    "description": """Số lượng trúng tuyển, lưu ý chỉ trả về giá trị số
+                                    nếu 2-3 thì số lượng là 3
                                     nếu trong đơn ghi số lượng trúng tuyển ghi là 3 => 3. Nếu không có nhắc tới số lượng trúng tuyển => 'Empty'
                                     """,
                 },
@@ -138,10 +135,10 @@ META_JOB_SCHEMA = {
 
                 "date": {
                     "type": "string",
-                    "description": """ngày phỏng vấn trong đơn hàng nếu có ví dụ '24/02' hoặc 'ngày 24 tháng 2' => "24-02-2025". Nếu không có nhắc tới ngày phỏng vấn => 'Empty'""",
+                    "description": """ngày phỏng vấn trong đơn hàng nếu có ví dụ '24/02' hoặc 'ngày 24 tháng 2' => "24-02-2026". Nếu không có nhắc tới ngày phỏng vấn => 'Empty'""",
                 },
 
-                "fee": {
+                "phi": {
                     "type": "number",
                     "description": """đơn hàng có ghi 'Phí: 5600-1200-3tr', '5600-1000-17', '56-14', 'Phí 5,6k' => '5600' hoặc Nếu chỉ ghi 'phí 5000' => '5000',
                     có nhắc tới phí Net ví dụ 'phí NET: 500$' , 'Net 500$' => '500'. Nếu không có phí => 'Empty'
@@ -152,19 +149,19 @@ META_JOB_SCHEMA = {
                     "description": "đơn hàng có ghi 'Phí: 5600-1200-3tr', '5000-1200-10', '40-12' => '1200'. Nếu chỉ ghi '5400-2000' => '2000'. Nếu không có phí => 'Empty'"
                 },
 
-                "policy": {
+                "coche": {
                     "type": "number",
                     "description":  "đơn hàng có ghi 'Phí: 5600-1200-3tr', '5000-1000-3 triệu', '5000-1000-3'=> '3.0000.000', các đơn có ghi 15tr/form , 15 triệu/form, 15tr/f, ghi 15tr ở đầu nội dung => 15000000. Nếu chỉ ghi '5400-2000' => 'Empty'. Nếu không có phí => 'Empty'"
                 },
 
                 "min_age": {
                     "type": "number",
-                    "description": """Độ tuổi tối thiểu yêu cầu trong đơn hàng, ví dụ "18-30" => 18. Nếu không có nhắc tới độ tuổi tối thiểu => 'Empty'""",
+                    "description": """Độ tuổi tối thiểu yêu cầu trong đơn hàng, ví dụ "18-30" => 18. Nếu không có nhắc tới độ tuổi tối thiểu để mặc định là 18 """,
                 },
 
                 "max_age": {
                     "type": "number",
-                    "description": """Độ tuổi tối đa yêu cầu trong đơn hàng, ví dụ "18-30" => 30. Nếu không có nhắc tới độ tuổi tối đa => 'Empty'""",
+                    "description": """Độ tuổi tối đa yêu cầu trong đơn hàng, ví dụ "18-30" => 30. Nếu không có nhắc tới độ tuổi tối đa để mặc định là 35 """,
                 },
 
 
@@ -197,21 +194,20 @@ META_JOB_SCHEMA = {
                         "enum": ["Bao đỗ", "Tăng ca", "Lương tốt", "Vợ chồng", "Hỗ trợ chỗ ở", "không yêu cầu kinh nghiệm", "Thưởng"]
                     },
                 },
-
                "makeAI": {
                     "type": "string",
                     "description": """Mô tả đơn hàng chuẩn hóa bằng tiếng Việt, giữ nguyên nội dung chính, theo mẫu:  
                     'Nông nghiệp - Chiba: Tuyển nam (20-33 tuổi). Công việc: trồng trọt. Lương về tay 20 man/tháng. Phỏng vấn 24/02. Nhận xăm nhỏ kín.'  
 
-                    - **Loại bỏ:** Từ viết tắt, thông tin quảng cáo, số điện thoại. \n
+                    - **Loại bỏ:** Từ viết tắt, thông tin quảng cáo, số điện thoại. Thông tin phí ,cơ chế , back trong đơn hàng  \n
                     - **Chỉ giữ lại:** Các thông tin quan trọng như ngành nghề, địa điểm, độ tuổi, công việc, lương, ngày phỏng vấn, yêu cầu đặc biệt (xăm, VGB). \n
                     - **Không được trả về 'không cung cấp'.** Nếu một trường thông tin không có, **bỏ qua**, không ghi gì thay thế.  \n
                     - **Định dạng đúng theo mẫu**, không tự động thêm thông tin không có trong dữ liệu. """, 
                 },
 
-                "benefits" : {
+                "benefits": {
                     "type": "string",
-                    "description": "Gạch đầu dòng ra trong thông tin việc làm này có những quyền lợi, chế độ nào dành cho người lao động (trừ lương)"
+                    "description": "Gạch đầu dòng ra trong thông tin việc làm này có những quyền lợi, chế độ nào danh cho người lao động (trừ lương)"
                 }
             },
         "required": [
@@ -231,9 +227,9 @@ META_JOB_SCHEMA = {
                 "max_age",
                 "date",
                 "phone",
-                "fee",
+                "phi",
                 "back",
-                "policy",
+                "coche",
                 "benefits"
             ],
         "additionalProperties": False

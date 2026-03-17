@@ -1,6 +1,6 @@
 from openai import OpenAI
 from meta_schema import META_JOB_SCHEMA, CAREER_NOTE
-from meta_schema_type import META_UV_SCHEMA
+from meta_schema_uv import META_UV_SCHEMA
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -18,6 +18,7 @@ def analyzeAndSplitJobContent(rawText):
                     "- Chỉ thực hiện chuẩn hóa các từ viết tắt, lỗi chính tả, ký tự đặc biệt, hoặc cách ngắt chữ không tự nhiên.\n" +
                     "- lưu ý các từ viết tắt tham khảo ở" + CAREER_NOTE + "\n" +
                     "- ví dụ '$CBTP kanto ợ n.h.a.n n.a.m/n.u @ kai.wa.n2 / s A n..h.ậ..n  đ.unn.g n.gà..nh' → 'chế biến thực phẩm kanto, nhận nam nữ kaiwa n2, nhận đúng ngành'.\n" +
+                    "- Giữ nguyên cấu trúc nội dung gốc, không thay đổi ý nghĩa hay thêm suy diễn.\n" +
                     "- Kết quả trả về dưới dạng chuỗi văn bản rõ ràng, không chứa ký tự đặc biệt, lỗi định dạng hoặc JSON.\n" +
                     "- Nếu tin nhắn chứa nội dung quảng cáo, giới thiệu nhóm, hoặc thông tin không liên quan đến tuyển dụng thì loại bỏ chúng.\n" +
                     "- Nếu có thông tin liên hệ (số điện thoại, email, link), hãy giữ nguyên và đặt ở cuối tin nhắn.\n" +
@@ -30,7 +31,7 @@ def analyzeAndSplitJobContent(rawText):
                 "content": rawText,
             }
         ],
-        model="gpt-4.1",
+        model="gpt-4.1-2025-04-14",
     )
     return chat_completion
 
@@ -48,6 +49,7 @@ def analyzeJobInformation(rawText):
                     "Bạn là chuyên gia phân tích dữ liệu có 20 năm kinh nghiệm"
                     "Nhiệm vụ của bạn là phân tích nội dung đầu vào và xác định đúng loại visa bằng cách kiểm tra đầy đủ các tiêu chí:"
                     "\n Trước khi phân loại, bạn phải kiểm tra **tất cả từ khóa liên quan** trong nội dung."
+                    "\n Nếu một nội dung chứa từ khóa liên quan đến **nhiều loại visa khác nhau**, hãy ưu tiên loại visa có **nhiều từ khóa phù hợp hơn**."
                     "\n Nếu một nội dung có tỉnh thành của Nhật Bản, điều đó không có nghĩa là nó là 'đầu Nhật' trừ khi có từ khóa liên quan đến loại visa."
                     "\n không tự động gán loại visa nếu không có thông tin cụ thể."
                     "\nTrả về kết quả JSON theo định dạng yêu cầu. Trả về đúng kết quả schema và không thêm bất kỳ thông tin dư thừa nào")

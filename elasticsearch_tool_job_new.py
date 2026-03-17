@@ -10,16 +10,14 @@ import random
 import string
 from datetime import datetime
 from form_image import generate_job_posting_data
+from stringutils import generate_name_ascii
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 from util import columnIndex, formatVisa, process_japan_regions, get_lowest_language_level, formatGender
-
+# from openaitool import generateEmbedding
 DOMAIN = 'https://os.hellojob.jp'
-admin = os.getenv("ADMIN")
-password = os.getenv("PASSWORD")
-
 
 template = "{gender}; country: {country}; visa: {visa}; career: {career}; workLocation: {workLocation}; language: {language}; qualifications: {requiredQualifications}, haveTattoo: {haveTattoo}, vgb: {vgb}, specialConditions: {specialConditions}"
 
@@ -93,6 +91,8 @@ def createCrawledJob(json, newID, flagDate):
         visas = visa.split(',')
     career = None
     job = json[columnIndex('O')]
+    job_AI = json[columnIndex('P')]
+    
     filter = {}
     if job and len(job) > 0:
         job = job.replace('"', '')
@@ -197,6 +197,7 @@ def createCrawledJob(json, newID, flagDate):
     if markdown_details:
         markdown_details=gson.loads(markdown_details)
     else:
+        print("chạy cả trường hợp này")
         if formImage:
             markdown_details = generate_job_posting_data(formImage)
             if markdown_details and markdown_details.get('isValid'):
@@ -236,6 +237,7 @@ def createCrawledJob(json, newID, flagDate):
         "visa": visa,
         "career": career,
         "job": job,
+        "job_AI": job_AI,
         "workLocation": workLocation,
         "language": language,
         "languageLevel": languageLevel,
@@ -276,13 +278,16 @@ def createCrawledJob(json, newID, flagDate):
         "benefits": benefits,
         "formImageHJ":formImageHJ
     }
-    # print(document)
+    # lay nameAscii
+    nameAscii=generate_name_ascii(document)
+    document["nameAscii"]=nameAscii
+    
     ids = []
     if not markdown_details:
         return None
     es = OpenSearch(
         hosts=[DOMAIN],
-        http_auth=(admin, password)
+        http_auth=('product', 'Hellojob@16071993')
     )   
     for visaItem in visas:  
         id = f'DH{newID}'
@@ -312,7 +317,7 @@ def findLastID():
     }
     es = OpenSearch(
     hosts=[DOMAIN],
-    http_auth=(admin, password)
+    http_auth=('product', 'Hellojob@16071993')
     )
     response = es.search(index='hellojobv5-job-crawled', body=search_body)
     if len(response['hits']['hits']):

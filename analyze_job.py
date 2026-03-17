@@ -22,7 +22,7 @@ def authenticate_google_sheets():
 def analyze_job():
     start_time = time.time()
     service = authenticate_google_sheets()
-    RANGE_NAME = "Sunrise!D2:D"
+    RANGE_NAME = "ĐƠN HÀNG 14/7!D27:D"
     result = service.spreadsheets().values().get(
         spreadsheetId='1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI', range=RANGE_NAME
     ).execute()
@@ -54,11 +54,12 @@ def analyze_job():
                 except Exception:
                     decodedJobs = [choiceJsonStr]
                     pass
-                # print(f"{decodedJobs}")
+                print(f"{decodedJobs}")
                 for job in decodedJobs:
                     if len(job) >= 2:
                         # phân tích thông tin công việc
                         analyzeJobInfo = analyzeJobInformation(job)
+                        # print(f"{analyzeJobInfo}")
                         prompt_tokens = 0
                         completion_tokens = 0
                         if count == 0:
@@ -79,13 +80,18 @@ def analyze_job():
                         try:
                             jobInfor = rapidjson.loads(jobInforString)
                             print(f"{jobInfor}")
+                            
+                            # nếu là tin rác thì bỏ qua
+                            # if jobInfor.get('postType', '').lower() == 'TIN RÁC':
+                            #     print("Bỏ qua tin rác")
+                            #     continue
+                                
                             formatedJob=formatJob(jobInfor)
                             print(f"{formatedJob}")
                             print(f"===========")
                             new_row += formatedJob[:4] + [""] + formatedJob[4:]
-                            new_row += [prompt_tokens, completion_tokens,
-                                        prompt_price, completion_price]
-                            
+                            # new_row += [prompt_tokens, completion_tokens,
+                            #             prompt_price, completion_price]
                         except Exception as e:
                             print(e)
                             pass
@@ -101,11 +107,11 @@ def analyze_job():
 def append_row_to_google_sheet(service, values):
     sheet = service.spreadsheets()
     body = {
-        'values': [values] 
+        'values': [[""] * 9 + values]
     }
     result = sheet.values().append(
         spreadsheetId='1ccRbwgDPelMZmJlZSKtxbWweZ9UsgvgYjkpvMX1x1TI',
-        range='Sunrise!A2:J',
+        range='ĐƠN HÀNG PHÂN TÍCH!A2:J',
         valueInputOption='RAW',
         body=body
     ).execute()
@@ -130,10 +136,10 @@ def formatJob(data):
         "max_age",
         "date",
         "phone",
-        "fee",
+        "phi",
         "back",
-        "policy",
-        "benefits",
+        "coche",
+        "benefits"
     ]
 
     result = []
@@ -146,6 +152,10 @@ def formatJob(data):
                 value = ';'.join(sorted(set(value)))
             result.append(value)
     return result
+
+
+# get_contact()
+# time.sleep(10)
 
 if __name__ == "__main__":
     analyze_job()

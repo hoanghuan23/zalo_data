@@ -44,6 +44,7 @@ def analyPostType():
             try:
                 analysis = analysisPostType(raw_text)
                 post_type_raw = analysis.choices[0].message.content
+                print("DEBUG rapidjson:", type(rapidjson))
                 post_type_data = rapidjson.loads(post_type_raw)
 
                 write_range = f"'{sheet_name}'!K{idx}"

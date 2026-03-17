@@ -231,3 +231,22 @@ def get_lowest_language_level(input_string):
     else:
         return None
     
+
+
+# def formatGender(value):
+#     try:
+#         match value.lower():
+#             case "nam":
+#                 return 'MALE'
+#             case "nữ":
+#                 return "FEMALE"
+#             case 'cả nam và nữ':
+#                 return ""
+#             case 'nam và nữ':
+#                 return "BOTH"
+#             case 'cả hai':
+#                 return "BOTH"
+#             case _:
+#                 return None
+#     except Exception:
+#         return None

@@ -1,7 +1,7 @@
 import sys
 import os
-import time
 import rapidjson
+import re
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import base64
@@ -11,18 +11,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-import time
 import subprocess
 from PIL import Image
 import imagehash
-from datetime import datetime
+import time
+from datetime import datetime, timedelta, time as dt_time
 import sqlite3
 from openai import OpenAI
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
-from upload_image import upload_to_s3,delete_file_s3
+from upload_image import upload_to_s3, delete_file_s3
 from analyze_job import authenticate_google_sheets, formatJob
-from playwright_util import html_to_screenshot_and_url,generate_html_from_markdown
+from playwright_util import html_to_screenshot_and_url, generate_html_from_markdown
 from openaitool import (
     analyzeAndSplitJobContent,
     analyzeJobInformation,
@@ -70,7 +70,7 @@ def fetch_group_link():
             time.sleep(1)
 
             link_elements = browser.find_elements(
-                By.XPATH, '//div[@class="pi-group-profile-link__link"]'
+                By.CSS_SELECTOR, '.pi-group-profile-link__link.truncate'
             )
             if link_elements:
                 group_link = link_elements[0].text.strip()
@@ -106,7 +106,7 @@ def scroll_and_click_groups(browser, interval=20):
         print(f"loi" + {e})
 
 
-# chống trùng lặp ảnh
+# Lấy hash của ảnh để phân biệt các ảnh khác nhau
 def get_image_hash(filename):
     try:
         with Image.open(filename) as img:
@@ -119,43 +119,42 @@ def get_image_hash(filename):
 
 
 # mã ảnh hóa và chuyển nó sang chuỗi Base64
-def encode_image(image_path):
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode("utf-8")
+# def encode_image(image_path):
+#     with open(image_path, "rb") as image_file:
+#         return base64.b64encode(image_file.read()).decode("utf-8")
 
 
 # Truy xuất nội dung từ ảnh
 def extract_text_from_image(image_path):
     try:
-        base64_image = encode_image(image_path)
+        # base64_image = encode_image(image_path)
 
         response = client.chat.completions.create(
             # model="gpt-4.1-nano",
-            model="gpt-4o-mini",
+            model="gpt-4.1-mini",
             messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Trích xuất nguyên văn bản tiếng việt từ hình ảnh trả về toàn bộ văn bản gốc. "
+                        "Nếu không có chữ, trả về No_Text_Found."
+                    ),
+                },
                 {
                     "role": "user",
                     "content": [
-                        {
-                            "type": "text",
-                            "text": "Nhiệm vụ: Trích xuất nguyên văn bản tiếng Việt từ hình ảnh"
-                            "Quy tắc bắt buộc \n"
-                            "1. Chỉ trả về toàn bộ phần văn bản gốc \n"
-                            "2. Tuyệt đối không thêm lời dẫn , không thêm ký tự đặc biệt \n"
-                            "3. Đối với các hình ảnh không có văn bản (chỉ có người , đồ vật...) trả về cụm từ 'No_Text_Found' \n",
-                        },
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{base64_image}"
-                            },
-                        },
+                        {"type": "image_url", "image_url": {"url": image_path}}
                     ],
-                }
+                },
             ],
         )
-
         result = response.choices[0].message.content.strip()
+
+        # usage = response.usage
+        # print("Hàm trích xuất nội dung văn bản")
+        # print(f"Input tokens : {usage.prompt_tokens}")
+        # print(f"Output tokens: {usage.completion_tokens}")
+        # print(f"Total tokens : {usage.total_tokens}")
         return result
 
     except Exception as e:
@@ -166,7 +165,7 @@ def extract_text_from_image(image_path):
 # đẩy dữ liệu vào google sheet
 def append_row_to_google_sheet(service, row_values):
     sheet = service.spreadsheets()
-    num_of_none = columnIndex('AF') - columnIndex('I') + 1
+    num_of_none = columnIndex("AF") - columnIndex("I") + 1
     append_values = row_values[:-5] + [""] * num_of_none + row_values[-4:]
 
     body = {"values": [[""] + append_values]}
@@ -215,7 +214,7 @@ def append_row_to_sqlite_and_sheet(values):
         )
     """
     )
-    sqlValues=values[:-4]
+    sqlValues = values[:-4]
     placeholders = ",".join(["?" for _ in sqlValues])
     cursor.execute(
         f'INSERT INTO zalo_messages ({" ,".join(columns)}) VALUES ({placeholders})',
@@ -259,11 +258,17 @@ def message_exit_data(content=None, image_hash=None):
 def fetch_message_zalo():
     time.sleep(5)
     try:
+        
         chat_items = browser.find_elements(By.CLASS_NAME, "chat-item")
         group_names = browser.find_element(By.CLASS_NAME, "header-title")
         group_name = group_names.text.replace("&nbsp", " ")
-        last_time_push = None
+        
+        chat_dates = browser.find_elements(By.CLASS_NAME, "chat-date")
+
         now = datetime.now()
+        current_date_ctx = datetime.now().date()
+        last_time_push = datetime.now().strftime("%H:%M")
+
         for chat_item in chat_items:
             try:
                 # sender_name_element = chat_item.find_elements(By.XPATH, './/div[@class="message-sender-name-content clickable"]/div[@class="truncate"]')
@@ -279,6 +284,62 @@ def fetch_message_zalo():
             except:
                 user_name = last_user_name
 
+            # try:
+            #     for chat_date in chat_dates:
+            #         date_header_elements = chat_date.find_elements(
+            #             By.CSS_SELECTOR,
+            #             "span[data-translate-inner='STR_DATE_TIME']",
+            #         )
+
+            #         if date_header_elements:
+            #             # print("Thời gian date header:", date_header_elements[0].text)
+                        
+            #             header_text = date_header_elements[0].text.strip().lower()
+            #             # print("header_text", header_text)
+                        
+            #             date_match = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", header_text)
+            #             if date_match:
+            #                 d, m, y = map(int, date_match.groups())
+            #                 current_date_ctx = datetime(y, m, d).date()
+            #             elif "hôm qua" in header_text:
+            #                 current_date_ctx = datetime.now().date() - timedelta(days=1)
+            #             elif "hôm nay" in header_text:
+            #                 current_date_ctx = datetime.now().date()
+            #             else:
+            #                 current_date_ctx = datetime.now().date()
+
+            #             # print("current_date_ctx", current_date_ctx)
+                        
+            #             time_in_header = re.search(r"(\d{1,2}):(\d{2})", header_text)
+            #             if time_in_header:
+            #                 last_time_push = time_in_header.group(0)
+                        
+
+            #     time_elements = chat_item.find_elements(
+            #         By.CSS_SELECTOR, ".card-send-time__sendTime"
+            #     )
+            #     if time_elements:
+            #         time_text = time_elements[0].text.strip()
+            #         if time_text:
+            #             last_time_push = time_text
+            #         elif time_in_header:
+            #             last_time_push = time_in_header.group(0)
+            #     # print("Thời gian đăng", last_time_push)
+                
+            #     try:
+            #         h, m = map(int, last_time_push.split(":"))
+            #     except:
+            #         print("Lỗi parse time:", e)
+            #         h, m = now.hour(), now.minute()
+
+            #     final_datetime = datetime.combine(current_date_ctx, dt_time(h, m))
+
+            #     created_at = int(final_datetime.timestamp())
+            #     ngay_thang_nam = final_datetime.strftime("Ngày %d Tháng %m Năm %Y")
+
+            # except Exception as e:
+            #     print("Lỗi thời gian", e)
+
             message_text = None
             messages = chat_item.find_elements(
                 By.CSS_SELECTOR, '[data-component="message-text-content"]'
@@ -291,10 +352,9 @@ def fetch_message_zalo():
                 if message_exit_data(message_text):
                     # print("đã có tin nhắn này")
                     continue
-            
-            # created_at = int(now.timestamp())
-            # ngay_thang_nam = now.strftime("Ngày %d Tháng %m Năm %Y")
 
+            created_at = int(now.timestamp())
+            ngay_thang_nam = now.strftime("Ngày %d Tháng %m Năm %Y")
 
             image_urls = []
             # images = chat_item.find_elements(
@@ -313,43 +373,37 @@ def fetch_message_zalo():
                             filename = f"zalo_image_{int(time.time() * 1000)}.jpg"
                             result = download_image(browser, img_url, filename)
                             if result:
-                                s3_url, img_hash, extracted_text,markdown_array,s3_url_HJ = result
+                                (
+                                    s3_url,
+                                    img_hash,
+                                    extracted_text,
+                                    markdown_array,
+                                    s3_url_HJ,
+                                ) = result
                                 if s3_url and extracted_text and markdown_array:
-                                    markdown_array=json.dumps(markdown_array,ensure_ascii=False,default=str)
-                                    image_urls.append((s3_url, img_hash, extracted_text,markdown_array,s3_url_HJ))
+                                    markdown_array = json.dumps(
+                                        markdown_array, ensure_ascii=False, default=str
+                                    )
+                                    image_urls.append(
+                                        (
+                                            s3_url,
+                                            img_hash,
+                                            extracted_text,
+                                            markdown_array,
+                                            s3_url_HJ,
+                                        )
+                                    )
                     except Exception as e:
                         print(f"Loi khi xu ly anh: {e}")
 
-            if message_text or image_urls:
-                if message_text:
-                    unique_messages.add(message_text)
-                    
-                try:
-                    time_elements = chat_item.find_elements(
-                        By.CSS_SELECTOR, '.card-send-time__sendTime'
-                    )
-
-                    if time_elements:
-                        time_text = time_elements[0].text.strip()
-                        last_time_push = time_text
-                    else:
-                        time_text = last_time_push
-
-                    if time_text:
-                        h, m = map(int, time_text.split(':'))
-                    else:
-                        h, m = 0, 0
-
-                except Exception as e:
-                    print(f"Lỗi lấy thời gian: {e}")
-                    h, m = 0, 0
-                 
-                created_at = int(now.replace(hour=h, minute=m, second=0, microsecond=0).timestamp())
-                print(f"Thời gian đăng {created_at}")
-                ngay_thang_nam = now.strftime("Ngày %d Tháng %m Năm %Y")
-
                 if len(image_urls) > 0:
-                    for idx, (s3_url, img_hash, extracted_text,markdown_array,s3_url_HJ) in enumerate(image_urls):
+                    for idx, (
+                        s3_url,
+                        img_hash,
+                        extracted_text,
+                        markdown_array,
+                        s3_url_HJ,
+                    ) in enumerate(image_urls):
                         new_row = [
                             group_name,
                             user_name,
@@ -362,14 +416,13 @@ def fetch_message_zalo():
                             message_text,
                             len(image_urls),
                             s3_url_HJ,
-                            markdown_array
+                            markdown_array,
                         ]
 
                         append_row_to_sqlite_and_sheet(new_row)
                         print(
                             f"Da luu anh {idx+1}: {s3_url} (text: {'co' if extracted_text else 'trong'})"
                         )
-
 
                     # append_row_to_sqlite_and_sheet(new_row)
                     # print(f"Da luu tin nhan chi co text")
@@ -428,14 +481,13 @@ def download_image(driver, blob_url, filename):
             return None
 
         s3_url = upload_to_s3(file_path)
-        s3_url_HJ=None
+        s3_url_HJ = None
+        time.sleep(5)
         markdown_details = generate_job_posting_data(s3_url)
-        if markdown_details and markdown_details.get('isValid'):
-            markdown_details = markdown_details.get('details')
-            # phải xử lý ảnh để lấy link form dơn của HJ
-            # Code logic     
-        
-            extracted_text = extract_text_from_image(file_path)
+        if markdown_details and markdown_details.get("isValid"):
+            markdown_details = markdown_details.get("details")
+
+            extracted_text = extract_text_from_image(s3_url)
             try:
                 os.remove(file_path)
             except Exception as e:
@@ -443,7 +495,7 @@ def download_image(driver, blob_url, filename):
             print(f"Đã trích xuất văn bản từ ảnh: {extracted_text[:100]}...")
             if not extracted_text:
                 return None
-            return s3_url, img_hash, extracted_text,markdown_details,s3_url_HJ       
+            return s3_url, img_hash, extracted_text, markdown_details, s3_url_HJ
         else:
             delete_file_s3(s3_url)
             try:
@@ -563,16 +615,17 @@ def analyze_and_update_sheet(spreadsheet_id, sheet_name, row_index):
         group_name = row[0]
         message = row[2]
         total_image = row[-3]
-        raw_message=row[-4]
-        
+        # print("kiểu dữ liệu total_image: ", type(total_image))
+        raw_message = row[-4]
+
         print(f"Raw_message: {raw_message}")
 
-        combinex_text = f"""Tên nhóm đăng bài: {group_name}.
-        Nội dung bài viết: {message}"""
-        if total_image == 1 and raw_message:
-            combinex_text += f""".
-            {raw_message}"""
-        print(f"dữ liệu truyền vào {combinex_text}")
+        combinex_text = (
+            f"""Tên nhóm đăng bài: {group_name}. Nội dung bài viết: {message}"""
+        )
+        if int(total_image) == 1 and raw_message:
+            combinex_text += f""".{raw_message}"""
+        # print(f"dữ liệu gồm Raw_message {combinex_text}")
 
         processed_status = row[-5]
 
@@ -592,7 +645,7 @@ def analyze_and_update_sheet(spreadsheet_id, sheet_name, row_index):
                 job_data = rapidjson.loads(job_info_content)
                 # print(job_data)
                 formatted_job = formatJob(job_data)
-                
+
                 print(f"Đã phân tích {formatted_job}")
 
                 columnI = [f"=image(h{row_index})"]
@@ -628,21 +681,21 @@ def analyze_and_update_sheet(spreadsheet_id, sheet_name, row_index):
                     valueInputOption="RAW",
                     body=zalo_body,
                 ).execute()
-                
-                markdown_array=json.loads(row[-1])
-                visa=job_data.get('visa')
-                
-                htmlContent=generate_html_from_markdown(visa,markdown_array)
-                s3Url=html_to_screenshot_and_url(htmlContent)
+
+                markdown_array = json.loads(row[-1])
+                visa = job_data.get("visa")
+
+                htmlContent = generate_html_from_markdown(visa, markdown_array)
+                s3Url = html_to_screenshot_and_url(htmlContent)
                 formImageHJColumn = f"{sheet_name}!AI{row_index}"
-                formImageHJBody={"values": [[s3Url]]}
+                formImageHJBody = {"values": [[s3Url]]}
                 service.spreadsheets().values().update(
                     spreadsheetId=spreadsheet_id,
                     range=formImageHJColumn,
                     valueInputOption="RAW",
                     body=formImageHJBody,
                 ).execute()
-                
+
                 # matching giữa visa và việc làm AI để cho ra việc làm phân tích
                 job = update_job_row_by_row(row_index)
                 job_status = f"{sheet_name}!O{row_index}"
@@ -665,17 +718,17 @@ def analyze_and_update_sheet(spreadsheet_id, sheet_name, row_index):
 
 
 def start_crawling():
-    refresh_interval = 120 * 60  # 10 phút
-    last_refresh = time.time()
+    # refresh_interval = 120 * 60  # 10 phút
+    # last_refresh = time.time()
     while True:
         time.sleep(10)
         try:
-            current_time = time.time()
-            if current_time - last_refresh > refresh_interval:
-                print("Đang làm mới trình duyệt...")
-                browser.refresh()
-                time.sleep(5)
-                last_refresh = current_time
+            # current_time = time.time()
+            # if current_time - last_refresh > refresh_interval:
+                # print("Đang làm mới trình duyệt...")
+                # browser.refresh()
+                # time.sleep(5)
+                # last_refresh = current_time
             scroll_and_click_groups(browser)
             time.sleep(5)
         except Exception as e:

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from upload_image import generate_random_image_name
 
 load_dotenv()       
-bucket_name='cdn.hellojob.jp'
+bucket_name='cdn1.hellojob.jp'
 aws_access_key= os.getenv('AWS_ACCESS_KEY')
 aws_secret_key= os.getenv('AWS_SECRET_KEY')
 region_name='ap-southeast-1'
@@ -32,7 +32,7 @@ def html_to_screenshot_and_url(html_string: str) -> str:
         )
         page = context.new_page()
 
-        page.set_content(html_string, wait_until="domcontentloaded")
+        page.set_content(html_string, wait_until="networkidle")
 
         # Nếu cần chờ thêm render (tùy trường hợp có JS nặng)
         # page.wait_for_timeout(2000)
@@ -111,8 +111,7 @@ def generate_html_from_markdown(
 
     table_html = ""
 
-    for item in details:
-        stt = item.get("stt", "")
+    for idx, item in enumerate(details, start=1):
         hang_muc = item.get("hangMuc", "")
         noi_dung = item.get("noiDung", "")
 
@@ -123,7 +122,7 @@ def generate_html_from_markdown(
 
         table_html += f"""
         <tr>
-            <td style="{stt_style}">{stt}</td>
+            <td style="{stt_style}">{idx}</td>
             <td style="{cell_style}">{hang_muc}</td>
             <td style="{cell_style}">{desc}</td>
         </tr>
